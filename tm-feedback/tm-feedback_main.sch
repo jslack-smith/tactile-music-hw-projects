@@ -252,6 +252,9 @@ DIN A4, landscape with extra doc field</description>
 <modules>
 <module name="MOTOR_DRIVER" prefix="" dx="30.48" dy="20.32">
 <ports>
+<port name="3V3" side="top" coord="0" direction="pwr"/>
+<port name="GND" side="bottom" coord="0" direction="pwr"/>
+<port name="PWM" side="left" coord="-2.54" direction="in"/>
 </ports>
 <variantdefs>
 </variantdefs>
@@ -273,8 +276,12 @@ DIN A4, landscape with extra doc field</description>
 </sheet>
 </sheets>
 </module>
-<module name="BLUETOOTH" prefix="" dx="30.48" dy="20.32">
+<module name="BLUETOOTH" prefix="" dx="40.64" dy="20.32">
 <ports>
+<port name="3V3" side="top" coord="0" direction="pwr"/>
+<port name="GND" side="bottom" coord="0" direction="pwr"/>
+<port name="UART_TX" side="right" coord="-2.54" direction="out"/>
+<port name="UART_RX" side="left" coord="-2.54" direction="in"/>
 </ports>
 <variantdefs>
 </variantdefs>
@@ -298,8 +305,14 @@ DIN A4, landscape with extra doc field</description>
 </sheet>
 </sheets>
 </module>
-<module name="MICROCONTROLLER" prefix="" dx="30.48" dy="20.32">
+<module name="MICROCONTROLLER" prefix="" dx="40.64" dy="20.32">
 <ports>
+<port name="3V3" side="top" coord="0" direction="pwr"/>
+<port name="GND" side="bottom" coord="0" direction="pwr"/>
+<port name="MOTOR_PWM_1" side="right" coord="7.62" direction="out"/>
+<port name="MOTOR_PWM_2" side="right" coord="5.08" direction="out"/>
+<port name="UART_TX" side="right" coord="-2.54" direction="out"/>
+<port name="UART_RX" side="left" coord="-2.54" direction="in"/>
 </ports>
 <variantdefs>
 </variantdefs>
@@ -323,16 +336,22 @@ DIN A4, landscape with extra doc field</description>
 </module>
 <module name="BUTTON" prefix="" dx="30.48" dy="20.32">
 <ports>
+<port name="BTN_OUT" side="right" coord="-2.54" direction="out"/>
+<port name="GND" side="bottom" coord="0" direction="pwr"/>
+<port name="3V3" side="top" coord="0" direction="pwr"/>
 </ports>
 <variantdefs>
 </variantdefs>
 <parts>
+<part name="FRAME1" library="frames" deviceset="DINA4_L" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
+<instance part="FRAME1" gate="G$1" x="0" y="0"/>
+<instance part="FRAME1" gate="G$2" x="162.56" y="0"/>
 </instances>
 <busses>
 </busses>
@@ -343,16 +362,23 @@ DIN A4, landscape with extra doc field</description>
 </module>
 <module name="POWER_SUPPLY" prefix="" dx="30.48" dy="20.32">
 <ports>
+<port name="D_3V3" side="bottom" coord="-12.7" direction="pwr"/>
+<port name="D_GND" side="bottom" coord="-7.62" direction="pwr"/>
+<port name="A_3V3" side="bottom" coord="7.62" direction="pwr"/>
+<port name="A_GND" side="bottom" coord="12.7" direction="pwr"/>
 </ports>
 <variantdefs>
 </variantdefs>
 <parts>
+<part name="FRAME1" library="frames" deviceset="DINA4_L" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
+<instance part="FRAME1" gate="G$1" x="0" y="0"/>
+<instance part="FRAME1" gate="G$2" x="162.56" y="0"/>
 </instances>
 <busses>
 </busses>
@@ -370,12 +396,12 @@ DIN A4, landscape with extra doc field</description>
 <plain>
 </plain>
 <moduleinsts>
-<moduleinst name="MOTOR_DRIVER1" module="MOTOR_DRIVER" x="233.68" y="124.46"/>
-<moduleinst name="MOTOR_DRIVER2" module="MOTOR_DRIVER" x="233.68" y="93.98"/>
-<moduleinst name="BLUETOOTH1" module="BLUETOOTH" x="22.86" y="111.76"/>
-<moduleinst name="MICROCONTROLLER1" module="MICROCONTROLLER" x="86.36" y="111.76"/>
-<moduleinst name="BUTTON1" module="BUTTON" x="86.36" y="73.66"/>
-<moduleinst name="POWER_SUPPLY1" module="POWER_SUPPLY" x="86.36" y="154.94"/>
+<moduleinst name="MOTOR_DRIVER1" module="MOTOR_DRIVER" x="177.8" y="116.84"/>
+<moduleinst name="MOTOR_DRIVER2" module="MOTOR_DRIVER" x="177.8" y="81.28"/>
+<moduleinst name="BLUETOOTH1" module="BLUETOOTH" x="40.64" y="104.14"/>
+<moduleinst name="MICROCONTROLLER1" module="MICROCONTROLLER" x="104.14" y="104.14"/>
+<moduleinst name="BUTTON1" module="BUTTON" x="104.14" y="66.04"/>
+<moduleinst name="POWER_SUPPLY1" module="POWER_SUPPLY" x="104.14" y="154.94"/>
 </moduleinsts>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
