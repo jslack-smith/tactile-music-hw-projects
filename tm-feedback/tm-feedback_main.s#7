@@ -152,8 +152,8 @@ DIN A4, landscape with extra doc field</description>
 <plain>
 </plain>
 <moduleinsts>
-<moduleinst name="MOTOR_DRIVER1" module="MOTOR_DRIVER" x="231.14" y="132.08"/>
-<moduleinst name="MOTOR_DRIVER2" module="MOTOR_DRIVER" x="231.14" y="101.6"/>
+<moduleinst name="MOTOR_DRIVER1" module="MOTOR_DRIVER" x="241.3" y="149.86"/>
+<moduleinst name="MOTOR_DRIVER2" module="MOTOR_DRIVER" x="241.3" y="119.38"/>
 </moduleinsts>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>

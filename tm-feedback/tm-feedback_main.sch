@@ -321,6 +321,46 @@ DIN A4, landscape with extra doc field</description>
 </sheet>
 </sheets>
 </module>
+<module name="BUTTON" prefix="" dx="30.48" dy="20.32">
+<ports>
+</ports>
+<variantdefs>
+</variantdefs>
+<parts>
+</parts>
+<sheets>
+<sheet>
+<plain>
+</plain>
+<instances>
+</instances>
+<busses>
+</busses>
+<nets>
+</nets>
+</sheet>
+</sheets>
+</module>
+<module name="POWER_SUPPLY" prefix="" dx="30.48" dy="20.32">
+<ports>
+</ports>
+<variantdefs>
+</variantdefs>
+<parts>
+</parts>
+<sheets>
+<sheet>
+<plain>
+</plain>
+<instances>
+</instances>
+<busses>
+</busses>
+<nets>
+</nets>
+</sheet>
+</sheets>
+</module>
 </modules>
 <parts>
 <part name="FRAME1" library="frames" deviceset="DINA4_L" device=""/>
@@ -334,6 +374,8 @@ DIN A4, landscape with extra doc field</description>
 <moduleinst name="MOTOR_DRIVER2" module="MOTOR_DRIVER" x="233.68" y="93.98"/>
 <moduleinst name="BLUETOOTH1" module="BLUETOOTH" x="22.86" y="111.76"/>
 <moduleinst name="MICROCONTROLLER1" module="MICROCONTROLLER" x="86.36" y="111.76"/>
+<moduleinst name="BUTTON1" module="BUTTON" x="86.36" y="73.66"/>
+<moduleinst name="POWER_SUPPLY1" module="POWER_SUPPLY" x="86.36" y="154.94"/>
 </moduleinsts>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
