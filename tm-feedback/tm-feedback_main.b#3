@@ -9,10 +9,6 @@
 <grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
@@ -67,53 +63,6 @@
 <wire x1="0" y1="80" x2="0" y2="0" width="0" layer="20"/>
 </plain>
 <libraries>
-<library name="tactile-music">
-<packages>
-<package name="RN4020">
-<description>Microchip's RN4020 Bluetooth Module</description>
-<smd name="10" x="-3" y="-9.5" dx="0.8" dy="1.5" layer="1"/>
-<smd name="11" x="-1.8" y="-9.5" dx="0.8" dy="1.5" layer="1"/>
-<smd name="12" x="-0.6" y="-9.5" dx="0.8" dy="1.5" layer="1"/>
-<smd name="13" x="0.6" y="-9.5" dx="0.8" dy="1.5" layer="1"/>
-<smd name="14" x="1.8" y="-9.5" dx="0.8" dy="1.5" layer="1"/>
-<smd name="15" x="3" y="-9.5" dx="0.8" dy="1.5" layer="1"/>
-<smd name="8" x="-5.5" y="-7.25" dx="0.8" dy="1.5" layer="1" rot="R90"/>
-<smd name="7" x="-5.5" y="-6.05" dx="0.8" dy="1.5" layer="1" rot="R90"/>
-<smd name="6" x="-5.5" y="-4.85" dx="0.8" dy="1.5" layer="1" rot="R90"/>
-<smd name="5" x="-5.5" y="-3.65" dx="0.8" dy="1.5" layer="1" rot="R90"/>
-<smd name="4" x="-5.5" y="-2.45" dx="0.8" dy="1.5" layer="1" rot="R90"/>
-<smd name="3" x="-5.5" y="-1.25" dx="0.8" dy="1.5" layer="1" rot="R90"/>
-<smd name="2" x="-5.5" y="-0.05" dx="0.8" dy="1.5" layer="1" rot="R90"/>
-<smd name="1" x="-5.5" y="1.15" dx="0.8" dy="1.5" layer="1" rot="R90"/>
-<smd name="17" x="5.5" y="-7.25" dx="0.8" dy="1.5" layer="1" rot="R90"/>
-<smd name="18" x="5.5" y="-6.05" dx="0.8" dy="1.5" layer="1" rot="R90"/>
-<smd name="19" x="5.5" y="-4.85" dx="0.8" dy="1.5" layer="1" rot="R90"/>
-<smd name="20" x="5.5" y="-3.65" dx="0.8" dy="1.5" layer="1" rot="R90"/>
-<smd name="21" x="5.5" y="-2.45" dx="0.8" dy="1.5" layer="1" rot="R90"/>
-<smd name="22" x="5.5" y="-1.25" dx="0.8" dy="1.5" layer="1" rot="R90"/>
-<smd name="23" x="5.5" y="-0.05" dx="0.8" dy="1.5" layer="1" rot="R90"/>
-<smd name="24" x="5.5" y="1.15" dx="0.8" dy="1.5" layer="1" rot="R90"/>
-<smd name="9A" x="-4.95" y="-8.75" dx="1" dy="1.4" layer="1" roundness="100"/>
-<smd name="16A" x="4.95" y="-8.75" dx="1" dy="1.4" layer="1" roundness="100"/>
-<smd name="1A" x="-4.95" y="2.95" dx="1" dy="1.6" layer="1" roundness="100"/>
-<smd name="24A" x="4.95" y="2.95" dx="1" dy="1.6" layer="1" roundness="100"/>
-<smd name="9" x="-5.75" y="-9.75" dx="1.2" dy="1.2" layer="1" roundness="100"/>
-<smd name="16" x="5.75" y="-9.75" dx="1.2" dy="1.2" layer="1" roundness="100"/>
-<wire x1="-5.75" y1="-8.95" x2="-5.75" y2="-7.85" width="0.127" layer="51"/>
-<wire x1="-4.95" y1="-9.75" x2="-3.6" y2="-9.75" width="0.127" layer="51"/>
-<wire x1="3.6" y1="-9.75" x2="4.95" y2="-9.75" width="0.127" layer="51"/>
-<wire x1="5.75" y1="-7.85" x2="5.75" y2="-8.95" width="0.127" layer="51"/>
-<wire x1="-5.75" y1="1.75" x2="-5.75" y2="9.75" width="0.127" layer="51"/>
-<wire x1="-5.75" y1="9.75" x2="5.75" y2="9.75" width="0.127" layer="51"/>
-<wire x1="5.75" y1="9.75" x2="5.75" y2="1.75" width="0.127" layer="51"/>
-<rectangle x1="-3.9" y1="3.2" x2="-1.7" y2="4.8" layer="39"/>
-<wire x1="-5.5" y1="4.8" x2="-4.1" y2="4.8" width="0.127" layer="51"/>
-<wire x1="-1.5" y1="4.8" x2="5.5" y2="4.8" width="0.127" layer="51"/>
-<text x="8.15" y="8.55" size="1.27" layer="25">&gt;NAME</text>
-<text x="8.15" y="6.55" size="1.27" layer="27">&gt;VALUE</text>
-</package>
-</packages>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -303,21 +252,8 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="BLUETOOTH1:U$1" library="tactile-music" package="RN4020" value="RN4020" x="7.62" y="-11.43"/>
 </elements>
 <signals>
-<signal name="BLUETOOTH1:VDD">
-<contactref element="BLUETOOTH1:U$1" pad="23"/>
-</signal>
-<signal name="N$9">
-<contactref element="BLUETOOTH1:U$1" pad="9"/>
-<contactref element="BLUETOOTH1:U$1" pad="16"/>
-<contactref element="BLUETOOTH1:U$1" pad="1"/>
-<contactref element="BLUETOOTH1:U$1" pad="24"/>
-<wire x1="2.12" y1="-10.28" x2="1.87" y2="-21.18" width="0" layer="19" extent="1-1"/>
-<wire x1="13.12" y1="-10.28" x2="2.12" y2="-10.28" width="0" layer="19" extent="1-1"/>
-<wire x1="13.37" y1="-21.18" x2="13.12" y2="-10.28" width="0" layer="19" extent="1-1"/>
-</signal>
 </signals>
 </board>
 </drawing>

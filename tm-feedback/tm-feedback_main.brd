@@ -306,7 +306,10 @@ design rules under a new name.</description>
 <element name="BLUETOOTH1:U$1" library="tactile-music" package="RN4020" value="RN4020" x="7.62" y="-11.43"/>
 </elements>
 <signals>
-<signal name="BLUETOOTH1:GND">
+<signal name="BLUETOOTH1:VDD">
+<contactref element="BLUETOOTH1:U$1" pad="23"/>
+</signal>
+<signal name="D_GND">
 <contactref element="BLUETOOTH1:U$1" pad="9"/>
 <contactref element="BLUETOOTH1:U$1" pad="16"/>
 <contactref element="BLUETOOTH1:U$1" pad="1"/>
@@ -314,9 +317,6 @@ design rules under a new name.</description>
 <wire x1="2.12" y1="-10.28" x2="1.87" y2="-21.18" width="0" layer="19" extent="1-1"/>
 <wire x1="13.12" y1="-10.28" x2="2.12" y2="-10.28" width="0" layer="19" extent="1-1"/>
 <wire x1="13.37" y1="-21.18" x2="13.12" y2="-10.28" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="BLUETOOTH1:VDD">
-<contactref element="BLUETOOTH1:U$1" pad="23"/>
 </signal>
 </signals>
 </board>
