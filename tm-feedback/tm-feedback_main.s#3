@@ -256,15 +256,12 @@ DIN A4, landscape with extra doc field</description>
 <variantdefs>
 </variantdefs>
 <parts>
-<part name="FRAME1" library="frames" deviceset="DINA4_L" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="FRAME1" gate="G$1" x="0" y="0"/>
-<instance part="FRAME1" gate="G$2" x="162.56" y="0"/>
 </instances>
 <busses>
 </busses>
