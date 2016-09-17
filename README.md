@@ -4,3 +4,6 @@ This repo is for EAGLE project files.
 
 How to use:
 * clone this repo into your EAGLE projects folder
+
+Notes:
+* Use the DINA4_L (A4, landscape) frame on all sheets
