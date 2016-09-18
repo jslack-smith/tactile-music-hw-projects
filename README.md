@@ -7,3 +7,5 @@ How to use:
 
 Notes:
 * Use the DINA4_L (A4, landscape) frame on all sheets
+* Use R-US_R0805 for resistors
+* Use LEDCHIPLED_0805 for LED's
