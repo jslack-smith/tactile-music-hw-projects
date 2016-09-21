@@ -8848,7 +8848,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <parts>
 <part name="FRAME1" library="frames" deviceset="DINA4_L" device=""/>
 <part name="U$1" library="tactile-music" deviceset="PMF370XN" device=""/>
-<part name="R1" library="rcl" deviceset="R-US_" device="R0805"/>
+<part name="R1" library="rcl" deviceset="R-US_" device="R0805" value="10k"/>
 <part name="R2" library="rcl" deviceset="R-US_" device="R0805"/>
 <part name="LED1" library="led" deviceset="LED" device="CHIPLED_0805"/>
 <part name="U$2" library="tactile-music" deviceset="DB2S308" device=""/>

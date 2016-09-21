@@ -193,6 +193,27 @@ DIN A4, landscape with extra doc field</description>
 <text x="-1.6" y="-1" size="0.5" layer="25" rot="R90">&gt;NAME</text>
 <text x="-0.7" y="-1" size="0.5" layer="27" rot="R90">&gt;VALUE</text>
 </package>
+<package name="JST-SMD-2">
+<description>JST SMD Right Angle Connector</description>
+<smd name="3" x="-1.85" y="-3.8" dx="3.4" dy="1.5" layer="1" rot="R90"/>
+<smd name="4" x="1.85" y="-3.8" dx="3.4" dy="1.5" layer="1" rot="R90"/>
+<smd name="1" x="-1" y="2" dx="4" dy="1" layer="1" rot="R90"/>
+<smd name="2" x="1" y="2" dx="4" dy="1" layer="1" rot="R90"/>
+<wire x1="3.95" y1="-5.4" x2="3.95" y2="2.15" width="0.127" layer="51"/>
+<wire x1="-3.95" y1="-5.4" x2="-3.95" y2="2.1" width="0.127" layer="51"/>
+<wire x1="-3.95" y1="-5.4" x2="3.95" y2="-5.4" width="0.127" layer="51"/>
+<wire x1="-3.95" y1="2.15" x2="3.95" y2="2.15" width="0.127" layer="51"/>
+<wire x1="-3.1" y1="-5.4" x2="-4.1" y2="-5.4" width="0.127" layer="21"/>
+<wire x1="-4.1" y1="-5.4" x2="-4.1" y2="2.3" width="0.127" layer="21"/>
+<wire x1="-4.1" y1="2.3" x2="-2" y2="2.3" width="0.127" layer="21"/>
+<wire x1="-0.25" y1="2.3" x2="0.25" y2="2.3" width="0.127" layer="21"/>
+<wire x1="2" y1="2.3" x2="4.1" y2="2.3" width="0.127" layer="21"/>
+<wire x1="4.1" y1="2.3" x2="4.1" y2="-5.4" width="0.127" layer="21"/>
+<wire x1="4.1" y1="-5.4" x2="3.1" y2="-5.4" width="0.127" layer="21"/>
+<wire x1="-0.6" y1="-5.4" x2="0.6" y2="-5.4" width="0.127" layer="21"/>
+<text x="4.6" y="0.9" size="1.27" layer="25">&gt;NAME</text>
+<text x="4.6" y="-1.3" size="1.27" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="RN4020">
@@ -277,6 +298,19 @@ DIN A4, landscape with extra doc field</description>
 <text x="-2.54" y="-1.27" size="1.27" layer="96" rot="R90">&gt;VALUE</text>
 <wire x1="0" y1="0" x2="0" y2="2.54" width="0.254" layer="94"/>
 </symbol>
+<symbol name="JST-2">
+<description>JST Connector</description>
+<wire x1="-5.08" y1="5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
+<pin name="1" x="-6.35" y="2.54" length="middle"/>
+<pin name="2" x="-6.35" y="-2.54" length="middle"/>
+<text x="-5.08" y="6.35" size="1.778" layer="95">&gt;NAME</text>
+<text x="-5.08" y="-8.89" size="1.778" layer="96">&gt;VALUE</text>
+<circle x="-1.27" y="2.54" radius="1.27" width="0.254" layer="94"/>
+<circle x="-1.27" y="-2.54" radius="1.27" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="RN4020">
@@ -345,6 +379,23 @@ DIN A4, landscape with extra doc field</description>
 <connects>
 <connect gate="G$1" pin="ANODE" pad="2"/>
 <connect gate="G$1" pin="CATHODE" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="JST-SMD-2">
+<description>JST SMD Right Angle Connecter 2 Pins</description>
+<gates>
+<gate name="G$1" symbol="JST-2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="JST-SMD-2">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -8750,6 +8801,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="LED1" library="led" deviceset="LED" device="CHIPLED_0805"/>
 <part name="U$2" library="tactile-music" deviceset="DB2S308" device=""/>
 <part name="JP1" library="jumper" deviceset="JP1E" device=""/>
+<part name="U$3" library="tactile-music" deviceset="JST-SMD-2" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8764,6 +8816,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <instance part="LED1" gate="G$1" x="121.92" y="129.54"/>
 <instance part="U$2" gate="G$1" x="134.62" y="129.54" rot="R180"/>
 <instance part="JP1" gate="A" x="121.92" y="139.7"/>
+<instance part="U$3" gate="G$1" x="154.94" y="127"/>
 </instances>
 <busses>
 </busses>

@@ -2574,8 +2574,8 @@ design rules under a new name.</description>
 <element name="BLUETOOTH1:U$1" library="tactile-music" package="RN4020" value="RN4020" x="7.62" y="-11.43"/>
 <element name="MOTOR_DRIVER1:U$1" library="tactile-music" package="SOT323(SC-70)" value="PMF370XN" x="5.08" y="-27.94"/>
 <element name="MOTOR_DRIVER2:U$1" library="tactile-music" package="SOT323(SC-70)" value="PMF370XN" x="5.08" y="-39.37"/>
-<element name="MOTOR_DRIVER1:R1" library="rcl" package="R0805" value="" x="2.54" y="-48.26"/>
-<element name="MOTOR_DRIVER2:R1" library="rcl" package="R0805" value="" x="2.54" y="-53.34"/>
+<element name="MOTOR_DRIVER1:R1" library="rcl" package="R0805" value="10k" x="2.54" y="-48.26"/>
+<element name="MOTOR_DRIVER2:R1" library="rcl" package="R0805" value="10k" x="2.54" y="-53.34"/>
 <element name="MOTOR_DRIVER1:R2" library="rcl" package="R0805" value="" x="2.54" y="-58.42"/>
 <element name="MOTOR_DRIVER2:R2" library="rcl" package="R0805" value="" x="2.54" y="-63.5"/>
 <element name="MOTOR_DRIVER1:LED1" library="led" package="CHIPLED_0805" value="" x="-3.81" y="-62.23"/>
