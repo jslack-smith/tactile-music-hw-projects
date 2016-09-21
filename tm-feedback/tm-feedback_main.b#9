@@ -2523,6 +2523,7 @@ design rules under a new name.</description>
 <element name="BLUETOOTH1:R1" library="resistor" package="R0805" value="" x="-16.51" y="-78.74"/>
 <element name="BLUETOOTH1:LED1" library="led" package="CHIPLED_0805" value="" x="-22.86" y="-77.47"/>
 <element name="MICROCONTROLLER1:LED1" library="led" package="CHIPLED_0805" value="" x="-29.21" y="-77.47"/>
+<element name="BUTTON1:R1" library="resistor" package="R0805" value="" x="-29.21" y="-83.82"/>
 </elements>
 <signals>
 <signal name="BLUETOOTH1:VDD">
