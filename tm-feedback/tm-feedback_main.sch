@@ -11736,18 +11736,38 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <port name="3V3" side="top" coord="0" direction="pwr"/>
 <port name="GND" side="bottom" coord="0" direction="pwr"/>
 <port name="UART_TX" side="right" coord="-2.54" direction="out"/>
-<port name="UART_RX" side="left" coord="-2.54" direction="in"/>
+<port name="UART_RX" side="right" coord="-5.08" direction="in"/>
+<port name="UART_CTS" side="right" coord="7.62" direction="io"/>
+<port name="UART_RTS" side="right" coord="5.08" direction="io"/>
+<port name="CMD/MLDP" side="left" coord="-2.54" direction="io"/>
+<port name="WAKE_SW" side="left" coord="-5.08" direction="io"/>
+<port name="WAKE_HW" side="left" coord="-7.62" direction="io"/>
+<port name="CONN" side="left" coord="7.62" direction="io"/>
+<port name="MLDP_EV" side="left" coord="5.08" direction="io"/>
+<port name="WS" side="left" coord="2.54" direction="io"/>
 </ports>
 <variantdefs>
 </variantdefs>
 <parts>
-<part name="FRAME1" library="frames" deviceset="DINA4_L" device=""/>
+<part name="BLUETOOTH_MODULE" library="frames" deviceset="DINA4_L" device="" value="Bluetooth Module"/>
 <part name="U$1" library="tactile-music" deviceset="RN4020" device=""/>
-<part name="R1" library="resistor" deviceset="R-US_" device="R0805"/>
-<part name="LED1" library="led" deviceset="LED" device="CHIPLED_0805"/>
 <part name="C1" library="rcl" deviceset="C-EU" device="C0805"/>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
 <part name="GND" library="supply1" deviceset="GND" device=""/>
+<part name="GND1" library="supply1" deviceset="GND" device=""/>
+<part name="GND2" library="supply1" deviceset="GND" device=""/>
+<part name="R2" library="resistor" deviceset="R-US_" device="R0805"/>
+<part name="GND3" library="supply1" deviceset="GND" device=""/>
+<part name="R3" library="resistor" deviceset="R-US_" device="R0805"/>
+<part name="LED2" library="led" deviceset="LED" device="CHIPLED_0805"/>
+<part name="GND4" library="supply1" deviceset="GND" device=""/>
+<part name="R4" library="resistor" deviceset="R-US_" device="R0805"/>
+<part name="LED3" library="led" deviceset="LED" device="CHIPLED_0805"/>
+<part name="GND5" library="supply1" deviceset="GND" device=""/>
+<part name="R1" library="resistor" deviceset="R-US_" device="R0805"/>
+<part name="LED1" library="led" deviceset="LED" device="CHIPLED_0805"/>
+<part name="GND6" library="supply1" deviceset="GND" device=""/>
+<part name="GND7" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11755,14 +11775,26 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <plain>
 </plain>
 <instances>
-<instance part="FRAME1" gate="G$1" x="0" y="0"/>
-<instance part="FRAME1" gate="G$2" x="162.56" y="0"/>
+<instance part="BLUETOOTH_MODULE" gate="G$1" x="0" y="0"/>
+<instance part="BLUETOOTH_MODULE" gate="G$2" x="162.56" y="0"/>
 <instance part="U$1" gate="G$1" x="121.92" y="116.84"/>
-<instance part="R1" gate="G$1" x="38.1" y="93.98"/>
-<instance part="LED1" gate="G$1" x="38.1" y="78.74"/>
 <instance part="C1" gate="G$1" x="170.18" y="137.16" rot="R180"/>
 <instance part="P+1" gate="VCC" x="170.18" y="129.54" rot="R180"/>
 <instance part="GND" gate="1" x="170.18" y="149.86" rot="R180"/>
+<instance part="GND1" gate="1" x="142.24" y="71.12"/>
+<instance part="GND2" gate="1" x="101.6" y="71.12"/>
+<instance part="R2" gate="G$1" x="71.12" y="101.6" rot="R90"/>
+<instance part="GND3" gate="1" x="71.12" y="91.44"/>
+<instance part="R3" gate="G$1" x="73.66" y="45.72" rot="R90"/>
+<instance part="LED2" gate="G$1" x="73.66" y="35.56"/>
+<instance part="GND4" gate="1" x="73.66" y="25.4"/>
+<instance part="R4" gate="G$1" x="86.36" y="45.72" rot="R90"/>
+<instance part="LED3" gate="G$1" x="86.36" y="35.56"/>
+<instance part="GND5" gate="1" x="86.36" y="25.4"/>
+<instance part="R1" gate="G$1" x="99.06" y="45.72" rot="R90"/>
+<instance part="LED1" gate="G$1" x="99.06" y="35.56"/>
+<instance part="GND6" gate="1" x="99.06" y="25.4"/>
+<instance part="GND7" gate="1" x="86.36" y="139.7" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -11786,6 +11818,151 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="GND" gate="1" pin="GND"/>
 <wire x1="170.18" y1="142.24" x2="170.18" y2="147.32" width="0.1524" layer="91"/>
 <junction x="170.18" y="142.24"/>
+</segment>
+<segment>
+<pinref part="GND1" gate="1" pin="GND"/>
+<pinref part="U$1" gate="G$1" pin="GND@2"/>
+<wire x1="142.24" y1="73.66" x2="142.24" y2="78.74" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND2" gate="1" pin="GND"/>
+<pinref part="U$1" gate="G$1" pin="GND@1"/>
+<wire x1="101.6" y1="73.66" x2="101.6" y2="78.74" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND3" gate="1" pin="GND"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="71.12" y1="93.98" x2="71.12" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="LED2" gate="G$1" pin="C"/>
+<pinref part="GND4" gate="1" pin="GND"/>
+<wire x1="73.66" y1="30.48" x2="73.66" y2="27.94" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="LED3" gate="G$1" pin="C"/>
+<pinref part="GND5" gate="1" pin="GND"/>
+<wire x1="86.36" y1="30.48" x2="86.36" y2="27.94" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="LED1" gate="G$1" pin="C"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="99.06" y1="30.48" x2="99.06" y2="27.94" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="GND@3"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+<wire x1="91.44" y1="139.7" x2="88.9" y2="139.7" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="UART_TX" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="UART_TX"/>
+<wire x1="91.44" y1="119.38" x2="73.66" y2="119.38" width="0.1524" layer="91"/>
+<label x="73.66" y="119.38" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="UART_RX" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="UART_RX"/>
+<wire x1="91.44" y1="114.3" x2="73.66" y2="114.3" width="0.1524" layer="91"/>
+<label x="73.66" y="114.3" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="WAKE_SW" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="WAKE_SW"/>
+<wire x1="91.44" y1="109.22" x2="71.12" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="109.22" x2="71.12" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="71.12" y1="106.68" x2="71.12" y2="109.22" width="0.1524" layer="91"/>
+<junction x="71.12" y="109.22"/>
+<label x="60.96" y="109.22" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="UART_RTS" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="RTS/PIO6"/>
+<wire x1="152.4" y1="109.22" x2="170.18" y2="109.22" width="0.1524" layer="91"/>
+<label x="157.48" y="109.22" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="CMD/MLDP" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="CMD/MLDP"/>
+<wire x1="91.44" y1="104.14" x2="73.66" y2="104.14" width="0.1524" layer="91"/>
+<label x="73.66" y="104.14" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="LED2" gate="G$1" pin="A"/>
+<wire x1="73.66" y1="40.64" x2="73.66" y2="38.1" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="LED3" gate="G$1" pin="A"/>
+<wire x1="86.36" y1="40.64" x2="86.36" y2="38.1" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="LED1" gate="G$1" pin="A"/>
+<wire x1="99.06" y1="40.64" x2="99.06" y2="38.1" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="CONN" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="PIO1/SCK"/>
+<wire x1="109.22" y1="78.74" x2="109.22" y2="63.5" width="0.1524" layer="91"/>
+<label x="109.22" y="63.5" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="73.66" y1="50.8" x2="73.66" y2="55.88" width="0.1524" layer="91"/>
+<label x="73.66" y="53.34" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="MLDP_EV" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="MLDP_EV/PIO2/CS"/>
+<wire x1="114.3" y1="78.74" x2="114.3" y2="63.5" width="0.1524" layer="91"/>
+<label x="114.3" y="63.5" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="86.36" y1="50.8" x2="86.36" y2="55.88" width="0.1524" layer="91"/>
+<label x="86.36" y="53.34" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="WS" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="WS/PIO3/MOSI"/>
+<wire x1="119.38" y1="78.74" x2="119.38" y2="63.5" width="0.1524" layer="91"/>
+<label x="119.38" y="63.5" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="99.06" y1="50.8" x2="99.06" y2="55.88" width="0.1524" layer="91"/>
+<label x="99.06" y="53.34" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="UART_CTS" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="CTS/PIO5"/>
+<wire x1="129.54" y1="78.74" x2="129.54" y2="63.5" width="0.1524" layer="91"/>
+<label x="129.54" y="63.5" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="WAKE_HW" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="WAKE_HW"/>
+<wire x1="134.62" y1="78.74" x2="134.62" y2="63.5" width="0.1524" layer="91"/>
+<label x="134.62" y="63.5" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 </nets>
