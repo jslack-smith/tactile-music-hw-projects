@@ -11274,6 +11274,12 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <pin name="+3V3" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
+<symbol name="VCC">
+<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="VCC" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="GND" prefix="GND">
@@ -11293,6 +11299,19 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="+3V3" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VCC" prefix="P+">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="VCC" symbol="VCC" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -11726,9 +11745,13 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="U$1" library="tactile-music" deviceset="RN4020" device=""/>
 <part name="R1" library="resistor" deviceset="R-US_" device="R0805"/>
 <part name="LED1" library="led" deviceset="LED" device="CHIPLED_0805"/>
+<part name="C1" library="rcl" deviceset="C-EU" device="C0805"/>
+<part name="P+1" library="supply1" deviceset="VCC" device=""/>
+<part name="GND" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
+<description>Bluetooth Module</description>
 <plain>
 </plain>
 <instances>
@@ -11737,10 +11760,34 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <instance part="U$1" gate="G$1" x="121.92" y="116.84"/>
 <instance part="R1" gate="G$1" x="38.1" y="93.98"/>
 <instance part="LED1" gate="G$1" x="38.1" y="78.74"/>
+<instance part="C1" gate="G$1" x="170.18" y="137.16" rot="R180"/>
+<instance part="P+1" gate="VCC" x="170.18" y="129.54" rot="R180"/>
+<instance part="GND" gate="1" x="170.18" y="149.86" rot="R180"/>
 </instances>
 <busses>
 </busses>
 <nets>
+<net name="3V3" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="VDD"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="152.4" y1="134.62" x2="170.18" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="P+1" gate="VCC" pin="VCC"/>
+<wire x1="170.18" y1="134.62" x2="170.18" y2="132.08" width="0.1524" layer="91"/>
+<junction x="170.18" y="134.62"/>
+</segment>
+</net>
+<net name="GND" class="0">
+<segment>
+<pinref part="C1" gate="G$1" pin="2"/>
+<wire x1="170.18" y1="142.24" x2="152.4" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="GND@4"/>
+<wire x1="152.4" y1="142.24" x2="152.4" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="GND" gate="1" pin="GND"/>
+<wire x1="170.18" y1="142.24" x2="170.18" y2="147.32" width="0.1524" layer="91"/>
+<junction x="170.18" y="142.24"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
