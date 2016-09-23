@@ -8941,6 +8941,9 @@ Source: AVX .. aphvc.pdf</description>
 <text x="218.44" y="116.84" size="1.778" layer="91">Motor indicator LED</text>
 <text x="129.54" y="106.68" size="1.778" layer="91">To motor</text>
 <text x="210.82" y="106.68" size="1.778" layer="91">To motor</text>
+<text x="5.08" y="121.92" size="1.778" layer="91">Application circuits use 4.7uF for C1
+ but may need to use the larger 10uF
+ because we're driving a step load (the motors)</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -9174,4 +9177,10 @@ Source: AVX .. aphvc.pdf</description>
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
