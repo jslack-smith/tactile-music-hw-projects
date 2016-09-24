@@ -196,22 +196,20 @@ DIN A4, landscape with extra doc field</description>
 </package>
 <package name="JST-SMD-2">
 <description>JST SMD Right Angle Connector</description>
-<smd name="3" x="-1.85" y="-3.8" dx="3.4" dy="1.5" layer="1" rot="R90"/>
-<smd name="4" x="1.85" y="-3.8" dx="3.4" dy="1.5" layer="1" rot="R90"/>
+<smd name="3" x="-3.35" y="-3.1" dx="2" dy="1.5" layer="1" rot="R90"/>
+<smd name="4" x="3.35" y="-3.1" dx="2" dy="1.5" layer="1" rot="R90"/>
 <smd name="1" x="-1" y="2" dx="4" dy="1" layer="1" rot="R90"/>
 <smd name="2" x="1" y="2" dx="4" dy="1" layer="1" rot="R90"/>
-<wire x1="3.95" y1="-5.4" x2="3.95" y2="2.15" width="0.127" layer="51"/>
-<wire x1="-3.95" y1="-5.4" x2="-3.95" y2="2.1" width="0.127" layer="51"/>
-<wire x1="-3.95" y1="-5.4" x2="3.95" y2="-5.4" width="0.127" layer="51"/>
-<wire x1="-3.95" y1="2.15" x2="3.95" y2="2.15" width="0.127" layer="51"/>
-<wire x1="-3.1" y1="-5.4" x2="-4.1" y2="-5.4" width="0.127" layer="21"/>
-<wire x1="-4.1" y1="-5.4" x2="-4.1" y2="2.3" width="0.127" layer="21"/>
-<wire x1="-4.1" y1="2.3" x2="-2" y2="2.3" width="0.127" layer="21"/>
-<wire x1="-0.25" y1="2.3" x2="0.25" y2="2.3" width="0.127" layer="21"/>
-<wire x1="2" y1="2.3" x2="4.1" y2="2.3" width="0.127" layer="21"/>
-<wire x1="4.1" y1="2.3" x2="4.1" y2="-5.4" width="0.127" layer="21"/>
-<wire x1="4.1" y1="-5.4" x2="3.1" y2="-5.4" width="0.127" layer="21"/>
-<wire x1="-0.6" y1="-5.4" x2="0.6" y2="-5.4" width="0.127" layer="21"/>
+<wire x1="4.05" y1="-5.5" x2="4.05" y2="2.15" width="0.127" layer="51"/>
+<wire x1="-4.05" y1="-5.5" x2="-4.05" y2="2.1" width="0.127" layer="51"/>
+<wire x1="-4.05" y1="-5.5" x2="4.05" y2="-5.5" width="0.127" layer="51"/>
+<wire x1="-4.05" y1="2.15" x2="4.05" y2="2.15" width="0.127" layer="51"/>
+<wire x1="-4.3" y1="-5.5" x2="-4.3" y2="2.4" width="0.127" layer="21"/>
+<wire x1="-4.3" y1="2.4" x2="-2" y2="2.4" width="0.127" layer="21"/>
+<wire x1="-0.25" y1="2.4" x2="0.25" y2="2.4" width="0.127" layer="21"/>
+<wire x1="2" y1="2.4" x2="4.3" y2="2.4" width="0.127" layer="21"/>
+<wire x1="4.3" y1="2.4" x2="4.3" y2="-5.5" width="0.127" layer="21"/>
+<wire x1="-0.6" y1="-5.5" x2="0.6" y2="-5.5" width="0.127" layer="21"/>
 <text x="4.6" y="0.9" size="1.27" layer="25">&gt;NAME</text>
 <text x="4.6" y="-1.3" size="1.27" layer="27">&gt;VALUE</text>
 </package>
@@ -658,6 +656,7 @@ Microchip / 44 pin</description>
 </devices>
 </deviceset>
 <deviceset name="PMF370XN">
+<description>MOSFET</description>
 <gates>
 <gate name="G$1" symbol="PMF370XN" x="0" y="0"/>
 </gates>
@@ -11966,120 +11965,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </class>
 </classes>
 <modules>
-<module name="MOTOR_DRIVER" prefix="" dx="30.48" dy="20.32">
-<ports>
-<port name="3V3" side="top" coord="0" direction="pwr"/>
-<port name="GND" side="bottom" coord="0" direction="pwr"/>
-<port name="PWM" side="left" coord="-2.54" direction="in"/>
-</ports>
-<variantdefs>
-</variantdefs>
-<parts>
-<part name="FRAME1" library="frames" deviceset="DINA4_L" device=""/>
-<part name="U$1" library="tactile-music" deviceset="PMF370XN" device=""/>
-<part name="R1" library="rcl" deviceset="R-US_" device="R0805" value="10k"/>
-<part name="R2" library="rcl" deviceset="R-US_" device="R0805"/>
-<part name="LED1" library="led" deviceset="LED" device="CHIPLED_0805"/>
-<part name="U$2" library="tactile-music" deviceset="DB2S308" device=""/>
-<part name="JP1" library="jumper" deviceset="JP1E" device=""/>
-<part name="MOTOR" library="tactile-music" deviceset="JST-SMD-2" device=""/>
-<part name="GND1" library="supply1" deviceset="GND" device=""/>
-<part name="GND2" library="supply1" deviceset="GND" device=""/>
-<part name="3V3" library="supply1" deviceset="+3V3" device=""/>
-</parts>
-<sheets>
-<sheet>
-<plain>
-</plain>
-<instances>
-<instance part="FRAME1" gate="G$1" x="0" y="0"/>
-<instance part="FRAME1" gate="G$2" x="162.56" y="0"/>
-<instance part="U$1" gate="G$1" x="147.32" y="93.98"/>
-<instance part="R1" gate="G$1" x="124.46" y="83.82" rot="R90"/>
-<instance part="R2" gate="G$1" x="172.72" y="116.84" rot="R90"/>
-<instance part="LED1" gate="G$1" x="172.72" y="129.54"/>
-<instance part="U$2" gate="G$1" x="132.08" y="124.46" rot="R180"/>
-<instance part="JP1" gate="A" x="170.18" y="137.16"/>
-<instance part="MOTOR" gate="G$1" x="154.94" y="121.92"/>
-<instance part="GND1" gate="1" x="147.32" y="73.66"/>
-<instance part="GND2" gate="1" x="124.46" y="73.66"/>
-<instance part="3V3" gate="G$1" x="147.32" y="142.24"/>
-</instances>
-<busses>
-</busses>
-<nets>
-<net name="3V3" class="0">
-<segment>
-<pinref part="3V3" gate="G$1" pin="+3V3"/>
-<pinref part="MOTOR" gate="G$1" pin="1"/>
-<wire x1="147.32" y1="139.7" x2="147.32" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="A" pin="1"/>
-<wire x1="147.32" y1="134.62" x2="147.32" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="134.62" x2="147.32" y2="134.62" width="0.1524" layer="91"/>
-<junction x="147.32" y="134.62"/>
-<wire x1="147.32" y1="134.62" x2="132.08" y2="134.62" width="0.1524" layer="91"/>
-<junction x="147.32" y="134.62"/>
-<pinref part="U$2" gate="G$1" pin="CATHODE"/>
-<wire x1="132.08" y1="134.62" x2="132.08" y2="127" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="MOTOR" gate="G$1" pin="2"/>
-<pinref part="U$1" gate="G$1" pin="D"/>
-<wire x1="147.32" y1="119.38" x2="147.32" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="147.32" y1="109.22" x2="147.32" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="172.72" y1="111.76" x2="172.72" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="172.72" y1="109.22" x2="147.32" y2="109.22" width="0.1524" layer="91"/>
-<junction x="147.32" y="109.22"/>
-<pinref part="U$2" gate="G$1" pin="ANODE"/>
-<wire x1="132.08" y1="119.38" x2="132.08" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="109.22" x2="147.32" y2="109.22" width="0.1524" layer="91"/>
-<junction x="147.32" y="109.22"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="JP1" gate="A" pin="2"/>
-<pinref part="LED1" gate="G$1" pin="A"/>
-<wire x1="172.72" y1="134.62" x2="172.72" y2="132.08" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="LED1" gate="G$1" pin="C"/>
-<pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="172.72" y1="124.46" x2="172.72" y2="121.92" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="GND" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="S"/>
-<pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="147.32" y1="86.36" x2="147.32" y2="76.2" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="R1" gate="G$1" pin="1"/>
-<pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="124.46" y1="78.74" x2="124.46" y2="76.2" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="PWM" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="G"/>
-<wire x1="139.7" y1="91.44" x2="124.46" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="124.46" y1="91.44" x2="124.46" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="91.44" x2="111.76" y2="91.44" width="0.1524" layer="91"/>
-<junction x="124.46" y="91.44"/>
-<label x="106.68" y="91.44" size="1.778" layer="95"/>
-</segment>
-</net>
-</nets>
-</sheet>
-</sheets>
-</module>
 <module name="BLUETOOTH" prefix="" dx="30.48" dy="20.32">
 <ports>
 <port name="3V3" side="top" coord="0" direction="pwr"/>
@@ -12732,58 +12617,238 @@ debugging</text>
 <part name="R2" library="resistor" deviceset="R-US_" device="R0805"/>
 <part name="U$1" library="tactile-music" deviceset="DB2S308" device=""/>
 <part name="C1" library="rcl" deviceset="C-EU" device="C0805"/>
+<part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
+<part name="GND1" library="supply1" deviceset="GND" device=""/>
+<part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
+<part name="GND2" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="63.5" y="119.38" size="1.778" layer="98">TACTILE_SWITCH goes here</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="G$2" x="162.56" y="0"/>
-<instance part="R1" gate="G$1" x="45.72" y="121.92"/>
-<instance part="U1" gate="A" x="121.92" y="124.46"/>
-<instance part="R2" gate="G$1" x="30.48" y="139.7" rot="R90"/>
-<instance part="U$1" gate="G$1" x="48.26" y="132.08" rot="R90"/>
-<instance part="C1" gate="G$1" x="63.5" y="109.22" rot="R180"/>
+<instance part="R1" gate="G$1" x="86.36" y="137.16" rot="R90"/>
+<instance part="U1" gate="A" x="147.32" y="124.46"/>
+<instance part="R2" gate="G$1" x="99.06" y="124.46" rot="R180"/>
+<instance part="U$1" gate="G$1" x="99.06" y="129.54" smashed="yes" rot="R90">
+<attribute name="NAME" x="97.79" y="134.62" size="1.27" layer="95" rot="R180"/>
+<attribute name="VALUE" x="100.33" y="127" size="1.27" layer="96" rot="R180"/>
+</instance>
+<instance part="C1" gate="G$1" x="114.3" y="116.84" rot="R180"/>
+<instance part="+3V1" gate="G$1" x="127" y="134.62"/>
+<instance part="GND1" gate="1" x="127" y="109.22"/>
+<instance part="+3V2" gate="G$1" x="86.36" y="147.32"/>
+<instance part="GND2" gate="1" x="86.36" y="109.22"/>
 </instances>
 <busses>
 </busses>
 <nets>
+<net name="+3V3" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="VCC"/>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
+<wire x1="129.54" y1="129.54" x2="127" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="127" y1="129.54" x2="127" y2="132.08" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="+3V2" gate="G$1" pin="+3V3"/>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="86.36" y1="144.78" x2="86.36" y2="142.24" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="GND" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="GND"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+<wire x1="129.54" y1="114.3" x2="127" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="127" y1="114.3" x2="127" y2="111.76" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C1" gate="G$1" pin="1"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+<wire x1="114.3" y1="114.3" x2="86.36" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="114.3" x2="86.36" y2="111.76" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="C1" gate="G$1" pin="2"/>
+<wire x1="114.3" y1="124.46" x2="114.3" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="U1" gate="A" pin="A"/>
+<wire x1="114.3" y1="124.46" x2="129.54" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="104.14" y1="124.46" x2="114.3" y2="124.46" width="0.1524" layer="91"/>
+<junction x="114.3" y="124.46"/>
+<pinref part="U$1" gate="G$1" pin="CATHODE"/>
+<wire x1="101.6" y1="129.54" x2="114.3" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="129.54" x2="114.3" y2="124.46" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="86.36" y1="132.08" x2="86.36" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="129.54" x2="86.36" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="124.46" x2="93.98" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="ANODE"/>
+<wire x1="93.98" y1="129.54" x2="86.36" y2="129.54" width="0.1524" layer="91"/>
+<junction x="86.36" y="129.54"/>
+</segment>
+</net>
+<net name="BTN_OUT" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="Y"/>
+<wire x1="165.1" y1="129.54" x2="170.18" y2="129.54" width="0.1524" layer="91"/>
+<label x="170.18" y="129.54" size="1.778" layer="95"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
 </module>
 <module name="POWER_SUPPLY" prefix="" dx="30.48" dy="20.32">
 <ports>
-<port name="D_3V3" side="right" coord="7.62" direction="pwr"/>
-<port name="D_GND" side="right" coord="5.08" direction="pwr"/>
-<port name="A_3V3" side="right" coord="-5.08" direction="pwr"/>
-<port name="A_GND" side="right" coord="-7.62" direction="pwr"/>
+<port name="V+" side="right" coord="-5.08" direction="pwr"/>
+<port name="GND" side="right" coord="-7.62" direction="pwr"/>
+<port name="+3V3" side="right" coord="7.62" direction="pwr"/>
 </ports>
 <variantdefs>
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" deviceset="DINA4_L" device=""/>
 <part name="LED1" library="led" deviceset="LED" device="CHIPLED_0805"/>
-<part name="R1" library="resistor" deviceset="R-US_" device="R0805"/>
+<part name="R1" library="resistor" deviceset="R-US_" device="R0805" value="60"/>
 <part name="U$1" library="tactile-music" deviceset="MCP1824T-3302E/OT" device=""/>
-<part name="U$2" library="tactile-music" deviceset="MCP1824T-3302E/OT" device=""/>
+<part name="BATTERY" library="tactile-music" deviceset="JST-SMD-2" device=""/>
+<part name="U$3" library="tactile-music" deviceset="PMF370XN" device=""/>
+<part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
+<part name="C1" library="rcl" deviceset="C-EU" device="C0805"/>
+<part name="C2" library="rcl" deviceset="C-EU" device="C0805"/>
+<part name="R2" library="resistor" deviceset="R-US_" device="R0805" value="60"/>
+<part name="GND1" library="supply1" deviceset="GND" device=""/>
+<part name="GND2" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="40.64" y="116.84" size="1.778" layer="98">Reverse voltage protection</text>
+<text x="66.04" y="144.78" size="1.778" layer="98">Power-on 
+LED</text>
+<text x="63.5" y="160.02" size="1.778" layer="98">Power switch</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="G$2" x="162.56" y="0"/>
-<instance part="LED1" gate="G$1" x="121.92" y="116.84"/>
-<instance part="R1" gate="G$1" x="121.92" y="101.6" rot="R90"/>
-<instance part="U$1" gate="A" x="86.36" y="149.86"/>
-<instance part="U$2" gate="A" x="144.78" y="147.32"/>
+<instance part="LED1" gate="G$1" x="81.28" y="147.32"/>
+<instance part="R1" gate="G$1" x="81.28" y="134.62" rot="R90"/>
+<instance part="U$1" gate="A" x="127" y="149.86"/>
+<instance part="BATTERY" gate="G$1" x="30.48" y="149.86" rot="R180"/>
+<instance part="U$3" gate="G$1" x="60.96" y="127" rot="R270"/>
+<instance part="+3V1" gate="G$1" x="157.48" y="167.64"/>
+<instance part="C1" gate="G$1" x="99.06" y="147.32" rot="R180"/>
+<instance part="C2" gate="G$1" x="170.18" y="154.94" rot="R180"/>
+<instance part="R2" gate="G$1" x="157.48" y="154.94" rot="R90"/>
+<instance part="GND1" gate="1" x="96.52" y="124.46"/>
+<instance part="GND2" gate="1" x="170.18" y="144.78"/>
 </instances>
 <busses>
 </busses>
 <nets>
+<net name="BATT_V+" class="0">
+<segment>
+<pinref part="BATTERY" gate="G$1" pin="2"/>
+<wire x1="38.1" y1="152.4" x2="58.42" y2="152.4" width="0.1524" layer="91"/>
+<pinref part="U$3" gate="G$1" pin="G"/>
+<wire x1="58.42" y1="134.62" x2="58.42" y2="152.4" width="0.1524" layer="91"/>
+<label x="38.1" y="152.4" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="BATT_V-" class="0">
+<segment>
+<pinref part="BATTERY" gate="G$1" pin="1"/>
+<wire x1="38.1" y1="147.32" x2="45.72" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="147.32" x2="45.72" y2="127" width="0.1524" layer="91"/>
+<pinref part="U$3" gate="G$1" pin="S"/>
+<wire x1="45.72" y1="127" x2="53.34" y2="127" width="0.1524" layer="91"/>
+<label x="38.1" y="147.32" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="R1" gate="G$1" pin="2"/>
+<pinref part="LED1" gate="G$1" pin="C"/>
+<wire x1="81.28" y1="139.7" x2="81.28" y2="142.24" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="GND" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="D"/>
+<wire x1="68.58" y1="127" x2="81.28" y2="127" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="127" x2="96.52" y2="127" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="127" x2="96.52" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="A" pin="GND"/>
+<wire x1="96.52" y1="142.24" x2="99.06" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="99.06" y1="142.24" x2="109.22" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="129.54" x2="81.28" y2="127" width="0.1524" layer="91"/>
+<junction x="81.28" y="127"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="99.06" y1="144.78" x2="99.06" y2="142.24" width="0.1524" layer="91"/>
+<junction x="99.06" y="142.24"/>
+<label x="81.28" y="124.46" size="1.778" layer="95"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+<junction x="96.52" y="127"/>
+</segment>
+<segment>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="170.18" y1="152.4" x2="170.18" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+</segment>
+</net>
+<net name="V+" class="0">
+<segment>
+<pinref part="LED1" gate="G$1" pin="A"/>
+<wire x1="81.28" y1="152.4" x2="81.28" y2="149.86" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="2"/>
+<wire x1="81.28" y1="152.4" x2="99.06" y2="152.4" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="A" pin="VIN"/>
+<wire x1="99.06" y1="152.4" x2="109.22" y2="152.4" width="0.1524" layer="91"/>
+<junction x="99.06" y="152.4"/>
+<label x="81.28" y="152.4" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="+3V3" class="0">
+<segment>
+<pinref part="U$1" gate="A" pin="VOUT"/>
+<wire x1="144.78" y1="152.4" x2="149.86" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="152.4" x2="149.86" y2="160.02" width="0.1524" layer="91"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="149.86" y1="160.02" x2="152.4" y2="160.02" width="0.1524" layer="91"/>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
+<wire x1="152.4" y1="160.02" x2="157.48" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="160.02" x2="157.48" y2="165.1" width="0.1524" layer="91"/>
+<junction x="157.48" y="160.02"/>
+<pinref part="U$1" gate="A" pin="~SHDN"/>
+<wire x1="109.22" y1="147.32" x2="106.68" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="147.32" x2="106.68" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="132.08" x2="152.4" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="132.08" x2="152.4" y2="160.02" width="0.1524" layer="91"/>
+<junction x="152.4" y="160.02"/>
+<pinref part="C2" gate="G$1" pin="2"/>
+<wire x1="157.48" y1="160.02" x2="170.18" y2="160.02" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="U$1" gate="A" pin="PWRGD"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="144.78" y1="149.86" x2="157.48" y2="149.86" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
@@ -12791,14 +12856,22 @@ debugging</text>
 </modules>
 <parts>
 <part name="FRAME1" library="frames" deviceset="DINA4_L" device=""/>
+<part name="OFF-BOARD_POWER" library="tactile-music" deviceset="JST-SMD-2" device=""/>
+<part name="MOTOR_DRIVERS" library="tactile-music" deviceset="JST-SMD-2" device=""/>
+<part name="GND1" library="supply1" deviceset="GND" device=""/>
+<part name="GND2" library="supply1" deviceset="GND" device=""/>
+<part name="GND3" library="supply1" deviceset="GND" device=""/>
+<part name="GND4" library="supply1" deviceset="GND" device=""/>
+<part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V3" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V4" library="supply1" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <moduleinsts>
-<moduleinst name="MOTOR_DRIVER1" module="MOTOR_DRIVER" x="177.8" y="109.22"/>
-<moduleinst name="MOTOR_DRIVER2" module="MOTOR_DRIVER" x="177.8" y="60.96"/>
 <moduleinst name="BLUETOOTH1" module="BLUETOOTH" x="40.64" y="109.22"/>
 <moduleinst name="MICROCONTROLLER1" module="MICROCONTROLLER" x="104.14" y="109.22"/>
 <moduleinst name="BUTTON1" module="BUTTON" x="40.64" y="60.96"/>
@@ -12807,104 +12880,45 @@ debugging</text>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="G$2" x="162.56" y="0"/>
+<instance part="OFF-BOARD_POWER" gate="G$1" x="144.78" y="152.4"/>
+<instance part="MOTOR_DRIVERS" gate="G$1" x="144.78" y="114.3"/>
+<instance part="GND1" gate="1" x="127" y="149.86"/>
+<instance part="GND2" gate="1" x="40.64" y="88.9"/>
+<instance part="GND3" gate="1" x="40.64" y="40.64"/>
+<instance part="GND4" gate="1" x="104.14" y="88.9"/>
+<instance part="+3V1" gate="G$1" x="127" y="172.72"/>
+<instance part="+3V2" gate="G$1" x="104.14" y="129.54"/>
+<instance part="+3V3" gate="G$1" x="40.64" y="129.54"/>
+<instance part="+3V4" gate="G$1" x="40.64" y="81.28"/>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="N$15" class="0">
+<net name="GND" class="0">
 <segment>
-<portref moduleinst="MICROCONTROLLER1" port="MOTOR_PWM_1"/>
-<wire x1="129.54" y1="116.84" x2="149.86" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="116.84" x2="149.86" y2="106.68" width="0.1524" layer="91"/>
-<portref moduleinst="MOTOR_DRIVER1" port="PWM"/>
-<wire x1="149.86" y1="106.68" x2="157.48" y2="106.68" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$16" class="0">
-<segment>
-<portref moduleinst="MICROCONTROLLER1" port="MOTOR_PWM_2"/>
-<wire x1="129.54" y1="114.3" x2="147.32" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="147.32" y1="114.3" x2="147.32" y2="58.42" width="0.1524" layer="91"/>
-<portref moduleinst="MOTOR_DRIVER2" port="PWM"/>
-<wire x1="147.32" y1="58.42" x2="157.48" y2="58.42" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="D_3V3" class="0">
-<segment>
-<portref moduleinst="POWER_SUPPLY1" port="D_3V3"/>
-<wire x1="124.46" y1="167.64" x2="127" y2="167.64" width="0.1524" layer="91"/>
-<label x="127" y="167.64" size="1.778" layer="95"/>
-</segment>
-<segment>
-<portref moduleinst="BLUETOOTH1" port="3V3"/>
-<wire x1="40.64" y1="124.46" x2="40.64" y2="127" width="0.1524" layer="91"/>
-<label x="40.64" y="127" size="1.778" layer="95"/>
-</segment>
-<segment>
-<portref moduleinst="MICROCONTROLLER1" port="3V3"/>
-<wire x1="104.14" y1="124.46" x2="104.14" y2="127" width="0.1524" layer="91"/>
-<label x="104.14" y="127" size="1.778" layer="95"/>
-</segment>
-<segment>
-<portref moduleinst="BUTTON1" port="3V3"/>
-<wire x1="40.64" y1="76.2" x2="40.64" y2="78.74" width="0.1524" layer="91"/>
-<label x="40.64" y="78.74" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="D_GND" class="0">
-<segment>
-<portref moduleinst="POWER_SUPPLY1" port="D_GND"/>
-<wire x1="124.46" y1="165.1" x2="127" y2="165.1" width="0.1524" layer="91"/>
-<label x="127" y="165.1" size="1.778" layer="95"/>
-</segment>
-<segment>
-<portref moduleinst="BLUETOOTH1" port="GND"/>
-<wire x1="40.64" y1="93.98" x2="40.64" y2="91.44" width="0.1524" layer="91"/>
-<label x="40.64" y="88.9" size="1.778" layer="95"/>
-</segment>
-<segment>
-<portref moduleinst="MICROCONTROLLER1" port="GND"/>
-<wire x1="104.14" y1="93.98" x2="104.14" y2="91.44" width="0.1524" layer="91"/>
-<label x="104.14" y="88.9" size="1.778" layer="95"/>
-</segment>
-<segment>
-<portref moduleinst="BUTTON1" port="GND"/>
-<wire x1="40.64" y1="45.72" x2="40.64" y2="43.18" width="0.1524" layer="91"/>
-<label x="40.64" y="40.64" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="A_3V3" class="0">
-<segment>
-<portref moduleinst="POWER_SUPPLY1" port="A_3V3"/>
-<wire x1="124.46" y1="154.94" x2="127" y2="154.94" width="0.1524" layer="91"/>
-<label x="127" y="154.94" size="1.778" layer="95"/>
-</segment>
-<segment>
-<portref moduleinst="MOTOR_DRIVER1" port="3V3"/>
-<wire x1="177.8" y1="124.46" x2="177.8" y2="127" width="0.1524" layer="91"/>
-<label x="177.8" y="127" size="1.778" layer="95"/>
-</segment>
-<segment>
-<portref moduleinst="MOTOR_DRIVER2" port="3V3"/>
-<wire x1="177.8" y1="76.2" x2="177.8" y2="78.74" width="0.1524" layer="91"/>
-<label x="177.8" y="78.74" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="A_GND" class="0">
-<segment>
-<portref moduleinst="POWER_SUPPLY1" port="A_GND"/>
+<portref moduleinst="POWER_SUPPLY1" port="GND"/>
 <wire x1="124.46" y1="152.4" x2="127" y2="152.4" width="0.1524" layer="91"/>
-<label x="127" y="152.4" size="1.778" layer="95"/>
+<wire x1="127" y1="152.4" x2="134.62" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="152.4" x2="134.62" y2="149.86" width="0.1524" layer="91"/>
+<pinref part="OFF-BOARD_POWER" gate="G$1" pin="2"/>
+<wire x1="134.62" y1="149.86" x2="137.16" y2="149.86" width="0.1524" layer="91"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+<junction x="127" y="152.4"/>
 </segment>
 <segment>
-<portref moduleinst="MOTOR_DRIVER1" port="GND"/>
-<wire x1="177.8" y1="93.98" x2="177.8" y2="91.44" width="0.1524" layer="91"/>
-<label x="177.8" y="88.9" size="1.778" layer="95"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+<portref moduleinst="BLUETOOTH1" port="GND"/>
+<wire x1="40.64" y1="91.44" x2="40.64" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<portref moduleinst="MOTOR_DRIVER2" port="GND"/>
-<wire x1="177.8" y1="45.72" x2="177.8" y2="43.18" width="0.1524" layer="91"/>
-<label x="177.8" y="40.64" size="1.778" layer="95"/>
+<pinref part="GND4" gate="1" pin="GND"/>
+<portref moduleinst="MICROCONTROLLER1" port="GND"/>
+<wire x1="104.14" y1="91.44" x2="104.14" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND3" gate="1" pin="GND"/>
+<portref moduleinst="BUTTON1" port="GND"/>
+<wire x1="40.64" y1="43.18" x2="40.64" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -12921,6 +12935,52 @@ debugging</text>
 <portref moduleinst="BLUETOOTH1" port="UART_TX"/>
 <portref moduleinst="MICROCONTROLLER1" port="UART_RX"/>
 <wire x1="60.96" y1="106.68" x2="78.74" y2="106.68" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="MOTOR_DRIVERS" gate="G$1" pin="1"/>
+<portref moduleinst="MICROCONTROLLER1" port="MOTOR_PWM_1"/>
+<wire x1="129.54" y1="116.84" x2="137.16" y2="116.84" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<portref moduleinst="MICROCONTROLLER1" port="MOTOR_PWM_2"/>
+<wire x1="129.54" y1="114.3" x2="134.62" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="114.3" x2="134.62" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="MOTOR_DRIVERS" gate="G$1" pin="2"/>
+<wire x1="134.62" y1="111.76" x2="137.16" y2="111.76" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="OFF-BOARD_POWER" gate="G$1" pin="1"/>
+<portref moduleinst="POWER_SUPPLY1" port="V+"/>
+<wire x1="124.46" y1="154.94" x2="137.16" y2="154.94" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="+3V3" class="0">
+<segment>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
+<portref moduleinst="POWER_SUPPLY1" port="+3V3"/>
+<wire x1="124.46" y1="167.64" x2="127" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="127" y1="167.64" x2="127" y2="170.18" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="+3V3" gate="G$1" pin="+3V3"/>
+<portref moduleinst="BLUETOOTH1" port="3V3"/>
+<wire x1="40.64" y1="124.46" x2="40.64" y2="127" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="+3V2" gate="G$1" pin="+3V3"/>
+<portref moduleinst="MICROCONTROLLER1" port="3V3"/>
+<wire x1="104.14" y1="124.46" x2="104.14" y2="127" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="+3V4" gate="G$1" pin="+3V3"/>
+<portref moduleinst="BUTTON1" port="3V3"/>
+<wire x1="40.64" y1="76.2" x2="40.64" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
