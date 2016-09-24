@@ -184,9 +184,6 @@ DIN A4, landscape with extra doc field</description>
 <package name="SOD-523">
 <smd name="2" x="0" y="0.9" dx="0.7" dy="0.8" layer="1" rot="R90"/>
 <smd name="1" x="0" y="-0.9" dx="0.7" dy="0.8" layer="1" rot="R90"/>
-<dimension x1="0" y1="0.85" x2="0" y2="-0.85" x3="2.35" y3="0" textsize="0.5" layer="47" width="0.1"/>
-<dimension x1="-0.25" y1="1.25" x2="-0.25" y2="0.55" x3="-1.7" y3="0.9" textsize="0.5" layer="47" width="0.1"/>
-<dimension x1="-0.4" y1="0.95" x2="0.4" y2="0.95" x3="0" y3="1.15" textsize="0.5" layer="47" width="0.1"/>
 <wire x1="0.45" y1="0.4" x2="0.45" y2="-0.4" width="0.127" layer="21"/>
 <wire x1="-0.45" y1="0.4" x2="-0.45" y2="-0.4" width="0.127" layer="21"/>
 <wire x1="0.7" y1="-0.25" x2="0.85" y2="-0.25" width="0.127" layer="21"/>
@@ -427,6 +424,24 @@ package type TQ</description>
 <wire x1="-5.7" y1="2.35" x2="-5.7" y2="1.2" width="0.127" layer="27"/>
 <wire x1="-5.7" y1="-2.35" x2="-5.7" y2="-1.2" width="0.127" layer="27"/>
 </package>
+<package name="JS102011SAQN">
+<description>STDP Switch</description>
+<smd name="2" x="0" y="1.5" dx="1.2" dy="3" layer="1"/>
+<smd name="3" x="2.5" y="1.5" dx="1.2" dy="3" layer="1"/>
+<smd name="1" x="-2.5" y="1.5" dx="1.2" dy="3" layer="1"/>
+<hole x="3.4" y="-1.5" drill="0.9"/>
+<hole x="-3.4" y="-1.5" drill="0.9"/>
+<wire x1="-4.5" y1="-2" x2="4.5" y2="-2" width="0.127" layer="51"/>
+<wire x1="4.5" y1="-2" x2="4.5" y2="1.6" width="0.127" layer="51"/>
+<wire x1="4.5" y1="1.6" x2="-4.5" y2="1.6" width="0.127" layer="51"/>
+<wire x1="-4.5" y1="1.6" x2="-4.5" y2="-2" width="0.127" layer="51"/>
+<wire x1="-4.65" y1="-2" x2="-4.65" y2="1.75" width="0.127" layer="21"/>
+<wire x1="-4.65" y1="1.75" x2="-3.45" y2="1.75" width="0.127" layer="21"/>
+<wire x1="3.45" y1="1.75" x2="4.65" y2="1.75" width="0.127" layer="21"/>
+<wire x1="4.65" y1="1.75" x2="4.65" y2="-2" width="0.127" layer="21"/>
+<text x="-5.08" y="5.08" size="1.27" layer="25">&gt;NAMES</text>
+<text x="-5.08" y="3.81" size="1.27" layer="27">&gt;VALUES</text>
+</package>
 </packages>
 <symbols>
 <symbol name="RN4020">
@@ -525,10 +540,10 @@ package type TQ</description>
 <circle x="-1.27" y="-2.54" radius="1.27" width="0.254" layer="94"/>
 </symbol>
 <symbol name="MCP1824T-3302E/OT">
-<pin name="VIN" x="-17.78" y="2.54" length="middle" direction="in"/>
+<pin name="VIN" x="-17.78" y="2.54" length="middle" direction="pwr"/>
 <pin name="~SHDN" x="-17.78" y="-2.54" length="middle" direction="in"/>
-<pin name="GND" x="-17.78" y="-7.62" length="middle" direction="pas"/>
-<pin name="VOUT" x="17.78" y="2.54" length="middle" direction="out" rot="R180"/>
+<pin name="GND" x="-17.78" y="-7.62" length="middle" direction="pwr"/>
+<pin name="VOUT" x="17.78" y="2.54" length="middle" direction="pwr" rot="R180"/>
 <pin name="PWRGD" x="17.78" y="0" length="middle" direction="out" rot="R180"/>
 <wire x1="-12.7" y1="7.62" x2="-12.7" y2="-12.7" width="0.4064" layer="94"/>
 <wire x1="-12.7" y1="-12.7" x2="12.7" y2="-12.7" width="0.4064" layer="94"/>
@@ -613,6 +628,18 @@ Microchip / 44 pin</description>
 <wire x1="1.27" y1="-2.54" x2="-1.27" y2="-2.54" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
 <wire x1="2.54" y1="2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+</symbol>
+<symbol name="SPDT_SWITCH">
+<description>SPDT Switch</description>
+<pin name="C" x="-5.08" y="0" visible="off" length="short"/>
+<pin name="1" x="2.54" y="2.54" visible="off" length="short" rot="R180"/>
+<pin name="3" x="2.54" y="-2.54" visible="off" length="short" rot="R180"/>
+<text x="-13.97" y="10.16" size="1.778" layer="95">&gt;NAME</text>
+<text x="-13.97" y="7.62" size="1.778" layer="96">&gt;VALUE</text>
+<circle x="-2.54" y="0" radius="0.508" width="0.254" layer="94"/>
+<circle x="0" y="2.54" radius="0.508" width="0.254" layer="94"/>
+<circle x="0" y="-2.54" radius="0.508" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="0" y2="1.524" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -828,6 +855,24 @@ PIC with Digital Signal Processor from microchip.</description>
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="JS102011SAQN">
+<description>SPDT Switch</description>
+<gates>
+<gate name="G$1" symbol="SPDT_SWITCH" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="JS102011SAQN">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="C" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -12731,6 +12776,7 @@ debugging</text>
 <part name="R2" library="resistor" deviceset="R-US_" device="R0805" value="60"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
+<part name="POWER_SW" library="tactile-music" deviceset="JS102011SAQN" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12738,7 +12784,7 @@ debugging</text>
 <text x="40.64" y="116.84" size="1.778" layer="98">Reverse voltage protection</text>
 <text x="66.04" y="144.78" size="1.778" layer="98">Power-on 
 LED</text>
-<text x="63.5" y="160.02" size="1.778" layer="98">Power switch</text>
+<text x="66.04" y="160.02" size="1.778" layer="98">Power switch</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -12754,6 +12800,7 @@ LED</text>
 <instance part="R2" gate="G$1" x="157.48" y="154.94" rot="R90"/>
 <instance part="GND1" gate="1" x="96.52" y="124.46"/>
 <instance part="GND2" gate="1" x="170.18" y="144.78"/>
+<instance part="POWER_SW" gate="G$1" x="71.12" y="154.94"/>
 </instances>
 <busses>
 </busses>
@@ -12765,6 +12812,10 @@ LED</text>
 <pinref part="U$3" gate="G$1" pin="G"/>
 <wire x1="58.42" y1="134.62" x2="58.42" y2="152.4" width="0.1524" layer="91"/>
 <label x="38.1" y="152.4" size="1.778" layer="95"/>
+<pinref part="POWER_SW" gate="G$1" pin="C"/>
+<wire x1="58.42" y1="152.4" x2="66.04" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="152.4" x2="66.04" y2="154.94" width="0.1524" layer="91"/>
+<junction x="58.42" y="152.4"/>
 </segment>
 </net>
 <net name="BATT_V-" class="0">
@@ -12819,6 +12870,9 @@ LED</text>
 <wire x1="99.06" y1="152.4" x2="109.22" y2="152.4" width="0.1524" layer="91"/>
 <junction x="99.06" y="152.4"/>
 <label x="81.28" y="152.4" size="1.778" layer="95"/>
+<pinref part="POWER_SW" gate="G$1" pin="3"/>
+<wire x1="73.66" y1="152.4" x2="81.28" y2="152.4" width="0.1524" layer="91"/>
+<junction x="81.28" y="152.4"/>
 </segment>
 </net>
 <net name="+3V3" class="0">

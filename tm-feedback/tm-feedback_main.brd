@@ -117,9 +117,6 @@
 <package name="SOD-523">
 <smd name="2" x="0" y="0.9" dx="0.7" dy="0.8" layer="1" rot="R90"/>
 <smd name="1" x="0" y="-0.9" dx="0.7" dy="0.8" layer="1" rot="R90"/>
-<dimension x1="0" y1="0.85" x2="0" y2="-0.85" x3="2.35" y3="0" textsize="0.5" layer="47" width="0.1"/>
-<dimension x1="-0.25" y1="1.25" x2="-0.25" y2="0.55" x3="-1.7" y3="0.9" textsize="0.5" layer="47" width="0.1"/>
-<dimension x1="-0.4" y1="0.95" x2="0.4" y2="0.95" x3="0" y3="1.15" textsize="0.5" layer="47" width="0.1"/>
 <wire x1="0.45" y1="0.4" x2="0.45" y2="-0.4" width="0.127" layer="21"/>
 <wire x1="-0.45" y1="0.4" x2="-0.45" y2="-0.4" width="0.127" layer="21"/>
 <wire x1="0.7" y1="-0.25" x2="0.85" y2="-0.25" width="0.127" layer="21"/>
@@ -376,6 +373,24 @@ package type TQ</description>
 <text x="2" y="0.8" size="0.5" layer="25">&gt;NAME</text>
 <text x="2" y="-0.05" size="0.5" layer="27">&gt;VALUE</text>
 <dimension x1="1.05" y1="0.65" x2="1.05" y2="-0.65" x3="5.35" y3="0" textsize="0.5" layer="47"/>
+</package>
+<package name="JS102011SAQN">
+<description>STDP Switch</description>
+<smd name="2" x="0" y="1.5" dx="1.2" dy="3" layer="1"/>
+<smd name="3" x="2.5" y="1.5" dx="1.2" dy="3" layer="1"/>
+<smd name="1" x="-2.5" y="1.5" dx="1.2" dy="3" layer="1"/>
+<hole x="3.4" y="-1.5" drill="0.9"/>
+<hole x="-3.4" y="-1.5" drill="0.9"/>
+<wire x1="-4.5" y1="-2" x2="4.5" y2="-2" width="0.127" layer="51"/>
+<wire x1="4.5" y1="-2" x2="4.5" y2="1.6" width="0.127" layer="51"/>
+<wire x1="4.5" y1="1.6" x2="-4.5" y2="1.6" width="0.127" layer="51"/>
+<wire x1="-4.5" y1="1.6" x2="-4.5" y2="-2" width="0.127" layer="51"/>
+<wire x1="-4.65" y1="-2" x2="-4.65" y2="1.75" width="0.127" layer="21"/>
+<wire x1="-4.65" y1="1.75" x2="-3.45" y2="1.75" width="0.127" layer="21"/>
+<wire x1="3.45" y1="1.75" x2="4.65" y2="1.75" width="0.127" layer="21"/>
+<wire x1="4.65" y1="1.75" x2="4.65" y2="-2" width="0.127" layer="21"/>
+<text x="-5.08" y="5.08" size="1.27" layer="25">&gt;NAMES</text>
+<text x="-5.08" y="3.81" size="1.27" layer="27">&gt;VALUES</text>
 </package>
 </packages>
 </library>
@@ -2927,6 +2942,7 @@ design rules under a new name.</description>
 <element name="POWER_SUPPLY1:C1" library="rcl" package="C0805" value="" x="-97.79" y="-416.56"/>
 <element name="POWER_SUPPLY1:C2" library="rcl" package="C0805" value="" x="-97.79" y="-421.64"/>
 <element name="POWER_SUPPLY1:R2" library="resistor" package="R0805" value="60" x="-97.79" y="-426.72"/>
+<element name="POWER_SUPPLY1:POWER_SW" library="tactile-music" package="JS102011SAQN" value="JS102011SAQN" x="-93.98" y="-436.88"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -3136,7 +3152,9 @@ design rules under a new name.</description>
 <contactref element="POWER_SUPPLY1:LED1" pad="A"/>
 <contactref element="POWER_SUPPLY1:C1" pad="2"/>
 <contactref element="POWER_SUPPLY1:U$1" pad="1"/>
+<contactref element="POWER_SUPPLY1:POWER_SW" pad="3"/>
 <wire x1="-96.84" y1="-416.56" x2="-96.25" y2="-373.92" width="0" layer="19" extent="1-1"/>
+<wire x1="-91.48" y1="-435.38" x2="-96.84" y2="-416.56" width="0" layer="19" extent="1-1"/>
 <wire x1="-59.7916" y1="-138.7602" x2="-96.25" y2="-373.92" width="0" layer="19" extent="1-1"/>
 <wire x1="-16.51" y1="-63.28" x2="-59.7916" y2="-138.7602" width="0" layer="19" extent="1-1"/>
 </signal>
@@ -3153,7 +3171,9 @@ design rules under a new name.</description>
 <signal name="POWER_SUPPLY1:BATT_V+">
 <contactref element="POWER_SUPPLY1:BATTERY" pad="2"/>
 <contactref element="POWER_SUPPLY1:U$3" pad="1"/>
+<contactref element="POWER_SUPPLY1:POWER_SW" pad="2"/>
 <wire x1="-94.25" y1="-394.24" x2="-94.2" y2="-408.32" width="0" layer="19" extent="1-1"/>
+<wire x1="-93.98" y1="-435.38" x2="-94.2" y2="-408.32" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="POWER_SUPPLY1:BATT_V-">
 <contactref element="POWER_SUPPLY1:BATTERY" pad="1"/>
