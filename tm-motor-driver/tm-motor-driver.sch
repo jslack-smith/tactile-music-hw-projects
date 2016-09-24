@@ -150,8 +150,8 @@ DIN A4, landscape with extra doc field</description>
 </package>
 <package name="JST-SMD-2">
 <description>JST SMD Right Angle Connector</description>
-<smd name="3" x="-3.35" y="-3.8" dx="3.4" dy="1.5" layer="1" rot="R90"/>
-<smd name="4" x="3.35" y="-3.8" dx="3.4" dy="1.5" layer="1" rot="R90"/>
+<smd name="3" x="-3.35" y="-3.1" dx="2" dy="1.5" layer="1" rot="R90"/>
+<smd name="4" x="3.35" y="-3.1" dx="2" dy="1.5" layer="1" rot="R90"/>
 <smd name="1" x="-1" y="2" dx="4" dy="1" layer="1" rot="R90"/>
 <smd name="2" x="1" y="2" dx="4" dy="1" layer="1" rot="R90"/>
 <wire x1="4.05" y1="-5.5" x2="4.05" y2="2.15" width="0.127" layer="51"/>
