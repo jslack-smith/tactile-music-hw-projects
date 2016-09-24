@@ -8708,12 +8708,12 @@ Source: AVX .. aphvc.pdf</description>
 </class>
 </classes>
 <parts>
-<part name="FRAME1" library="frames" deviceset="DINA4_L" device=""/>
+<part name="FRAME1" library="frames" deviceset="DINA4_L" device="" value="Motor Driver"/>
 <part name="D_0" library="tactile-music" deviceset="DB2S308" device=""/>
 <part name="MOSFET_0" library="tactile-music" deviceset="PMF370XN" device=""/>
 <part name="MOTOR_0" library="tactile-music" deviceset="JST-SMD-2" device=""/>
 <part name="R1" library="resistor" deviceset="R-US_" device="R0805" value="10k"/>
-<part name="LED_0" library="led" deviceset="LED" device="CHIPLED_0805"/>
+<part name="LED_0" library="led" deviceset="LED" device="CHIPLED_0805" value="RED"/>
 <part name="VREG" library="tactile-music" deviceset="MCP1824T-3302E/OT" device=""/>
 <part name="R2" library="resistor" deviceset="R-US_" device="R0805" value="60"/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
@@ -8724,7 +8724,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="MOSFET_1" library="tactile-music" deviceset="PMF370XN" device=""/>
 <part name="MOTOR_1" library="tactile-music" deviceset="JST-SMD-2" device=""/>
 <part name="R3" library="resistor" deviceset="R-US_" device="R0805" value="10k"/>
-<part name="LED_1" library="led" deviceset="LED" device="CHIPLED_0805"/>
+<part name="LED_1" library="led" deviceset="LED" device="CHIPLED_0805" value="RED"/>
 <part name="R4" library="resistor" deviceset="R-US_" device="R0805" value="60"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
@@ -8740,16 +8740,29 @@ Source: AVX .. aphvc.pdf</description>
 <sheets>
 <sheet>
 <plain>
-<text x="7.62" y="160.02" size="1.778" layer="91">From common board</text>
-<text x="43.18" y="165.1" size="1.778" layer="91">V_SHDN-HIGH = 45/100*V_in</text>
-<text x="137.16" y="116.84" size="1.778" layer="91">Motor indicator LED</text>
-<text x="218.44" y="116.84" size="1.778" layer="91">Motor indicator LED</text>
+<text x="7.62" y="160.02" size="1.778" layer="98">From common board</text>
+<text x="43.18" y="165.1" size="1.778" layer="98">V_SHDN-HIGH = 45/100*V_in</text>
+<text x="137.16" y="116.84" size="1.778" layer="98">Motor indicator LED</text>
+<text x="218.44" y="116.84" size="1.778" layer="98">Motor indicator LED</text>
 <text x="129.54" y="106.68" size="1.778" layer="91">To motor</text>
 <text x="210.82" y="106.68" size="1.778" layer="91">To motor</text>
-<text x="5.08" y="88.9" size="1.778" layer="91">From common board</text>
-<text x="12.7" y="121.92" size="1.778" layer="91">Application circuits use 4.7uF for C1
+<text x="5.08" y="88.9" size="1.778" layer="98">From common board</text>
+<text x="12.7" y="121.92" size="1.778" layer="98">Application circuits use 4.7uF for C1
  but may need to use the larger 10uF
  because we're driving a step load (the motors)</text>
+<text x="53.34" y="101.6" size="1.778" layer="98">Diodes are best placed 
+on the motor itself. 
+Attempt that first before 
+soldering diodes on the PCB.</text>
+<wire x1="78.74" y1="99.06" x2="78.74" y2="91.44" width="0.1524" layer="98"/>
+<wire x1="78.74" y1="91.44" x2="172.72" y2="91.44" width="0.1524" layer="98"/>
+<wire x1="172.72" y1="91.44" x2="172.72" y2="104.14" width="0.1524" layer="98"/>
+<wire x1="172.72" y1="104.14" x2="177.8" y2="104.14" width="0.1524" layer="98"/>
+<wire x1="177.8" y1="104.14" x2="175.26" y2="106.68" width="0.1524" layer="98"/>
+<wire x1="177.8" y1="104.14" x2="175.26" y2="101.6" width="0.1524" layer="98"/>
+<wire x1="88.9" y1="106.68" x2="93.98" y2="106.68" width="0.1524" layer="98"/>
+<wire x1="91.44" y1="109.22" x2="93.98" y2="106.68" width="0.1524" layer="98"/>
+<wire x1="93.98" y1="106.68" x2="91.44" y2="104.14" width="0.1524" layer="98"/>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -8971,9 +8984,6 @@ Source: AVX .. aphvc.pdf</description>
 <errors>
 <approved hash="104,1,45.72,152.4,VREG,VIN,BATT_V+,,,"/>
 <approved hash="104,1,81.28,152.4,VREG,VOUT,+3V3,,,"/>
-<approved hash="113,1,131.976,90.066,FRAME1,,,,,"/>
-<approved hash="113,1,145.102,102.87,LED_0,,,,,"/>
-<approved hash="113,1,226.382,102.87,LED_1,,,,,"/>
 </errors>
 </schematic>
 </drawing>
