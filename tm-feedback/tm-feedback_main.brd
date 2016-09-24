@@ -2820,7 +2820,7 @@ design rules under a new name.</description>
 <element name="BUTTON1:R2" library="resistor" package="R0805" value="" x="-63.5" y="-168.91"/>
 <element name="BUTTON1:U$1" library="tactile-music" package="SOD-523" value="DB2S308" x="-69.85" y="-163.83"/>
 <element name="BUTTON1:C1" library="rcl" package="C0805" value="" x="-71.12" y="-173.99"/>
-<element name="BLUETOOTH1:C1" library="rcl" package="C0805" value="" x="-71.12" y="-179.07"/>
+<element name="BLUETOOTH1:C1" library="rcl" package="C0805" value="4.7uF" x="-71.12" y="-179.07"/>
 <element name="BLUETOOTH1:R2" library="resistor" package="R0805" value="" x="-71.12" y="-184.15"/>
 <element name="BLUETOOTH1:R3" library="resistor" package="R0805" value="" x="-71.12" y="-189.23"/>
 <element name="BLUETOOTH1:LED2" library="led" package="CHIPLED_0805" value="" x="-77.47" y="-187.96"/>
@@ -2835,11 +2835,11 @@ design rules under a new name.</description>
 <contactref element="BLUETOOTH1:U$1" pad="16"/>
 <contactref element="BLUETOOTH1:U$1" pad="1"/>
 <contactref element="BLUETOOTH1:C1" pad="2"/>
-<contactref element="BLUETOOTH1:U$1" pad="24"/>
 <contactref element="BLUETOOTH1:R2" pad="1"/>
 <contactref element="BLUETOOTH1:LED2" pad="C"/>
 <contactref element="BLUETOOTH1:LED3" pad="C"/>
 <contactref element="BLUETOOTH1:LED1" pad="C"/>
+<contactref element="BLUETOOTH1:U$1" pad="24"/>
 <wire x1="-72.07" y1="-184.15" x2="-70.17" y2="-179.07" width="0" layer="19" extent="1-1"/>
 <wire x1="-77.47" y1="-186.91" x2="-72.07" y2="-184.15" width="0" layer="19" extent="1-1"/>
 <wire x1="-77.47" y1="-205.96" x2="-77.47" y2="-186.91" width="0" layer="19" extent="1-1"/>

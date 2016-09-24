@@ -11739,19 +11739,19 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <port name="UART_RX" side="right" coord="-5.08" direction="in"/>
 <port name="UART_CTS" side="right" coord="7.62" direction="io"/>
 <port name="UART_RTS" side="right" coord="5.08" direction="io"/>
-<port name="CMD/MLDP" side="left" coord="-2.54" direction="io"/>
-<port name="WAKE_SW" side="left" coord="-5.08" direction="io"/>
-<port name="WAKE_HW" side="left" coord="-7.62" direction="io"/>
-<port name="CONN" side="left" coord="7.62" direction="io"/>
-<port name="MLDP_EV" side="left" coord="5.08" direction="io"/>
-<port name="WS" side="left" coord="2.54" direction="io"/>
+<port name="CMD/MLDP" side="left" coord="-2.54" direction="in"/>
+<port name="WAKE_SW" side="left" coord="-5.08" direction="in"/>
+<port name="WAKE_HW" side="left" coord="-7.62" direction="in"/>
+<port name="CONN" side="left" coord="7.62" direction="out"/>
+<port name="MLDP_EV" side="left" coord="5.08" direction="out"/>
+<port name="WS" side="left" coord="2.54" direction="out"/>
 </ports>
 <variantdefs>
 </variantdefs>
 <parts>
 <part name="BLUETOOTH_MODULE" library="frames" deviceset="DINA4_L" device="" value="Bluetooth Module"/>
 <part name="U$1" library="tactile-music" deviceset="RN4020" device=""/>
-<part name="C1" library="rcl" deviceset="C-EU" device="C0805"/>
+<part name="C1" library="rcl" deviceset="C-EU" device="C0805" value="4.7uF"/>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
 <part name="GND" library="supply1" deviceset="GND" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
@@ -11812,12 +11812,13 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <net name="GND" class="0">
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
-<wire x1="170.18" y1="142.24" x2="152.4" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="GND@4"/>
-<wire x1="152.4" y1="142.24" x2="152.4" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="GND" gate="1" pin="GND"/>
-<wire x1="170.18" y1="142.24" x2="170.18" y2="147.32" width="0.1524" layer="91"/>
-<junction x="170.18" y="142.24"/>
+<wire x1="170.18" y1="142.24" x2="170.18" y2="144.78" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="GND@4"/>
+<wire x1="170.18" y1="144.78" x2="170.18" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="144.78" x2="152.4" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="144.78" x2="170.18" y2="144.78" width="0.1524" layer="91"/>
+<junction x="170.18" y="144.78"/>
 </segment>
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
