@@ -13278,7 +13278,7 @@ LED</text>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="G$2" x="162.56" y="0"/>
-<instance part="OFF-BOARD_PWR" gate="G$1" x="144.78" y="152.4"/>
+<instance part="OFF-BOARD_PWR" gate="G$1" x="144.78" y="152.4" rot="MR180"/>
 <instance part="MOTOR_DRIVERS" gate="G$1" x="152.4" y="121.92" rot="MR180"/>
 <instance part="GND1" gate="1" x="127" y="149.86"/>
 <instance part="GND2" gate="1" x="40.64" y="93.98"/>
@@ -13297,12 +13297,12 @@ LED</text>
 <segment>
 <portref moduleinst="PS" port="GND"/>
 <wire x1="124.46" y1="152.4" x2="127" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="127" y1="152.4" x2="134.62" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="152.4" x2="134.62" y2="149.86" width="0.1524" layer="91"/>
-<pinref part="OFF-BOARD_PWR" gate="G$1" pin="2"/>
-<wire x1="134.62" y1="149.86" x2="137.16" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
+<wire x1="127" y1="152.4" x2="132.08" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="152.4" x2="132.08" y2="149.86" width="0.1524" layer="91"/>
 <junction x="127" y="152.4"/>
+<pinref part="OFF-BOARD_PWR" gate="G$1" pin="1"/>
+<wire x1="132.08" y1="149.86" x2="137.16" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
@@ -13326,13 +13326,6 @@ LED</text>
 <wire x1="76.2" y1="58.42" x2="76.2" y2="93.98" width="0.1524" layer="91"/>
 <portref moduleinst="UC" port="BTN_SIGNAL"/>
 <wire x1="76.2" y1="93.98" x2="78.74" y2="93.98" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="OFF-BOARD_PWR" gate="G$1" pin="1"/>
-<portref moduleinst="PS" port="V+"/>
-<wire x1="124.46" y1="154.94" x2="137.16" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -13467,20 +13460,27 @@ LED</text>
 <wire x1="144.78" y1="93.98" x2="129.54" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="PWM_1" class="0">
 <segment>
 <pinref part="MOTOR_DRIVERS" gate="G$1" pin="2"/>
 <portref moduleinst="UC" port="MOTOR_PWM_1"/>
 <wire x1="129.54" y1="124.46" x2="144.78" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$4" class="0">
+<net name="PWM_2" class="0">
 <segment>
 <portref moduleinst="UC" port="MOTOR_PWM_2"/>
 <wire x1="129.54" y1="121.92" x2="139.7" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="139.7" y1="121.92" x2="139.7" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="MOTOR_DRIVERS" gate="G$1" pin="1"/>
 <wire x1="139.7" y1="119.38" x2="144.78" y2="119.38" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="OFF-BOARD_PWR" gate="G$1" pin="2"/>
+<portref moduleinst="PS" port="V+"/>
+<wire x1="124.46" y1="154.94" x2="137.16" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
