@@ -13210,9 +13210,11 @@ LED</text>
 <wire x1="99.06" y1="152.4" x2="109.22" y2="152.4" width="0.1524" layer="91"/>
 <junction x="99.06" y="152.4"/>
 <label x="81.28" y="152.4" size="1.778" layer="95"/>
-<pinref part="POWER_SW" gate="G$1" pin="3"/>
-<wire x1="73.66" y1="152.4" x2="81.28" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="152.4" x2="78.74" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="152.4" x2="78.74" y2="157.48" width="0.1524" layer="91"/>
 <junction x="81.28" y="152.4"/>
+<pinref part="POWER_SW" gate="G$1" pin="1"/>
+<wire x1="78.74" y1="157.48" x2="73.66" y2="157.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -13251,7 +13253,7 @@ LED</text>
 </modules>
 <parts>
 <part name="FRAME1" library="frames" deviceset="DINA4_L" device="" value="Top Level"/>
-<part name="OFF-BOARD_POWER" library="tactile-music" deviceset="PICOBLADE" device=""/>
+<part name="OFF-BOARD_PWR" library="tactile-music" deviceset="PICOBLADE" device=""/>
 <part name="MOTOR_DRIVERS" library="tactile-music" deviceset="PICOBLADE" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
@@ -13268,16 +13270,16 @@ LED</text>
 <plain>
 </plain>
 <moduleinsts>
-<moduleinst name="BLUETOOTH1" module="BLUETOOTH" x="40.64" y="111.76"/>
-<moduleinst name="MICROCONTROLLER1" module="MICROCONTROLLER" x="104.14" y="109.22"/>
-<moduleinst name="BUTTON1" module="BUTTON" x="40.64" y="60.96"/>
-<moduleinst name="POWER_SUPPLY1" module="POWER_SUPPLY" x="104.14" y="160.02"/>
+<moduleinst name="BT" module="BLUETOOTH" x="40.64" y="111.76"/>
+<moduleinst name="UC" module="MICROCONTROLLER" x="104.14" y="109.22"/>
+<moduleinst name="BTN" module="BUTTON" x="40.64" y="60.96"/>
+<moduleinst name="PS" module="POWER_SUPPLY" x="104.14" y="160.02"/>
 </moduleinsts>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="G$2" x="162.56" y="0"/>
-<instance part="OFF-BOARD_POWER" gate="G$1" x="144.78" y="152.4"/>
-<instance part="MOTOR_DRIVERS" gate="G$1" x="152.4" y="121.92"/>
+<instance part="OFF-BOARD_PWR" gate="G$1" x="144.78" y="152.4"/>
+<instance part="MOTOR_DRIVERS" gate="G$1" x="152.4" y="121.92" rot="MR180"/>
 <instance part="GND1" gate="1" x="127" y="149.86"/>
 <instance part="GND2" gate="1" x="40.64" y="93.98"/>
 <instance part="GND3" gate="1" x="40.64" y="40.64"/>
@@ -13293,182 +13295,167 @@ LED</text>
 <nets>
 <net name="GND" class="0">
 <segment>
-<portref moduleinst="POWER_SUPPLY1" port="GND"/>
+<portref moduleinst="PS" port="GND"/>
 <wire x1="124.46" y1="152.4" x2="127" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="127" y1="152.4" x2="134.62" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="152.4" x2="134.62" y2="149.86" width="0.1524" layer="91"/>
-<pinref part="OFF-BOARD_POWER" gate="G$1" pin="2"/>
+<pinref part="OFF-BOARD_PWR" gate="G$1" pin="2"/>
 <wire x1="134.62" y1="149.86" x2="137.16" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <junction x="127" y="152.4"/>
 </segment>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
-<portref moduleinst="BLUETOOTH1" port="GND"/>
+<portref moduleinst="BT" port="GND"/>
 </segment>
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
-<portref moduleinst="MICROCONTROLLER1" port="GND"/>
+<portref moduleinst="UC" port="GND"/>
 <wire x1="104.14" y1="66.04" x2="104.14" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND3" gate="1" pin="GND"/>
-<portref moduleinst="BUTTON1" port="GND"/>
+<portref moduleinst="BTN" port="GND"/>
 <wire x1="40.64" y1="43.18" x2="40.64" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
-<portref moduleinst="BUTTON1" port="BTN_OUT"/>
+<portref moduleinst="BTN" port="BTN_OUT"/>
 <wire x1="60.96" y1="58.42" x2="76.2" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="58.42" x2="76.2" y2="93.98" width="0.1524" layer="91"/>
-<portref moduleinst="MICROCONTROLLER1" port="BTN_SIGNAL"/>
+<portref moduleinst="UC" port="BTN_SIGNAL"/>
 <wire x1="76.2" y1="93.98" x2="78.74" y2="93.98" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="MOTOR_DRIVERS" gate="G$1" pin="1"/>
-<portref moduleinst="MICROCONTROLLER1" port="MOTOR_PWM_1"/>
-<wire x1="129.54" y1="124.46" x2="144.78" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="OFF-BOARD_POWER" gate="G$1" pin="1"/>
-<portref moduleinst="POWER_SUPPLY1" port="V+"/>
+<pinref part="OFF-BOARD_PWR" gate="G$1" pin="1"/>
+<portref moduleinst="PS" port="V+"/>
 <wire x1="124.46" y1="154.94" x2="137.16" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
-<portref moduleinst="POWER_SUPPLY1" port="+3V3"/>
+<portref moduleinst="PS" port="+3V3"/>
 <wire x1="124.46" y1="167.64" x2="127" y2="167.64" width="0.1524" layer="91"/>
 <wire x1="127" y1="167.64" x2="127" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
-<portref moduleinst="MICROCONTROLLER1" port="3V3"/>
+<portref moduleinst="UC" port="3V3"/>
 <wire x1="104.14" y1="134.62" x2="104.14" y2="139.7" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
-<portref moduleinst="BUTTON1" port="+3V3"/>
+<portref moduleinst="BTN" port="+3V3"/>
 <wire x1="40.64" y1="76.2" x2="40.64" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
-<portref moduleinst="BLUETOOTH1" port="3V3"/>
+<portref moduleinst="BT" port="3V3"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
-<portref moduleinst="BLUETOOTH1" port="UART_CTS"/>
-<portref moduleinst="MICROCONTROLLER1" port="UART1_!RTS"/>
+<portref moduleinst="BT" port="UART_CTS"/>
+<portref moduleinst="UC" port="UART1_!RTS"/>
 <wire x1="60.96" y1="119.38" x2="78.74" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$6" class="0">
 <segment>
-<portref moduleinst="BLUETOOTH1" port="UART_RTS"/>
-<portref moduleinst="MICROCONTROLLER1" port="UART1_!CTS"/>
+<portref moduleinst="BT" port="UART_RTS"/>
+<portref moduleinst="UC" port="UART1_!CTS"/>
 <wire x1="60.96" y1="116.84" x2="78.74" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
-<portref moduleinst="BLUETOOTH1" port="UART_TX"/>
+<portref moduleinst="BT" port="UART_TX"/>
 <wire x1="60.96" y1="109.22" x2="68.58" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="109.22" x2="68.58" y2="114.3" width="0.1524" layer="91"/>
-<portref moduleinst="MICROCONTROLLER1" port="UART1_RX"/>
+<portref moduleinst="UC" port="UART1_RX"/>
 <wire x1="68.58" y1="114.3" x2="78.74" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">
 <segment>
-<portref moduleinst="BLUETOOTH1" port="UART_RX"/>
-<portref moduleinst="MICROCONTROLLER1" port="UART1_TX"/>
+<portref moduleinst="BT" port="UART_RX"/>
+<portref moduleinst="UC" port="UART1_TX"/>
 <wire x1="60.96" y1="106.68" x2="78.74" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
 <segment>
-<portref moduleinst="BLUETOOTH1" port="WAKE_HW"/>
+<portref moduleinst="BT" port="WAKE_HW"/>
 <wire x1="20.32" y1="104.14" x2="17.78" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="104.14" x2="17.78" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="88.9" x2="58.42" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="88.9" x2="58.42" y2="104.14" width="0.1524" layer="91"/>
-<portref moduleinst="MICROCONTROLLER1" port="BLE_WAKE_HW"/>
+<portref moduleinst="UC" port="BLE_WAKE_HW"/>
 <wire x1="58.42" y1="104.14" x2="78.74" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$10" class="0">
 <segment>
-<portref moduleinst="BLUETOOTH1" port="WAKE_SW"/>
+<portref moduleinst="BT" port="WAKE_SW"/>
 <wire x1="20.32" y1="106.68" x2="15.24" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="106.68" x2="15.24" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="86.36" x2="60.96" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="86.36" x2="60.96" y2="101.6" width="0.1524" layer="91"/>
-<portref moduleinst="MICROCONTROLLER1" port="BLE_WAKE_SW"/>
+<portref moduleinst="UC" port="BLE_WAKE_SW"/>
 <wire x1="60.96" y1="101.6" x2="78.74" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$11" class="0">
 <segment>
-<portref moduleinst="BLUETOOTH1" port="CMD/MLDP"/>
+<portref moduleinst="BT" port="CMD/MLDP"/>
 <wire x1="20.32" y1="109.22" x2="12.7" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="109.22" x2="12.7" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="83.82" x2="63.5" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="83.82" x2="63.5" y2="99.06" width="0.1524" layer="91"/>
-<portref moduleinst="MICROCONTROLLER1" port="BLE_CMD"/>
+<portref moduleinst="UC" port="BLE_CMD"/>
 <wire x1="63.5" y1="99.06" x2="78.74" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$12" class="0">
 <segment>
-<portref moduleinst="BLUETOOTH1" port="CONN"/>
+<portref moduleinst="BT" port="CONN"/>
 <wire x1="20.32" y1="119.38" x2="20.32" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="132.08" x2="60.96" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="132.08" x2="60.96" y2="121.92" width="0.1524" layer="91"/>
-<portref moduleinst="MICROCONTROLLER1" port="BLE_CONN"/>
+<portref moduleinst="UC" port="BLE_CONN"/>
 <wire x1="60.96" y1="121.92" x2="78.74" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$13" class="0">
 <segment>
-<portref moduleinst="BLUETOOTH1" port="MLDP_EV"/>
+<portref moduleinst="BT" port="MLDP_EV"/>
 <wire x1="20.32" y1="116.84" x2="17.78" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="116.84" x2="17.78" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="134.62" x2="63.5" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="134.62" x2="63.5" y2="124.46" width="0.1524" layer="91"/>
-<portref moduleinst="MICROCONTROLLER1" port="BLE_MLDP_EV"/>
+<portref moduleinst="UC" port="BLE_MLDP_EV"/>
 <wire x1="63.5" y1="124.46" x2="78.74" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$14" class="0">
 <segment>
-<portref moduleinst="BLUETOOTH1" port="WS"/>
+<portref moduleinst="BT" port="WS"/>
 <wire x1="20.32" y1="114.3" x2="15.24" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="114.3" x2="15.24" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="137.16" x2="66.04" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="137.16" x2="66.04" y2="127" width="0.1524" layer="91"/>
-<portref moduleinst="MICROCONTROLLER1" port="BLE_WS"/>
+<portref moduleinst="UC" port="BLE_WS"/>
 <wire x1="66.04" y1="127" x2="78.74" y2="127" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<portref moduleinst="MICROCONTROLLER1" port="MOTOR_PWM_2"/>
-<wire x1="129.54" y1="121.92" x2="144.78" y2="121.92" width="0.1524" layer="91"/>
-<pinref part="MOTOR_DRIVERS" gate="G$1" pin="2"/>
-<wire x1="144.78" y1="121.92" x2="144.78" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$15" class="0">
 <segment>
 <pinref part="ANALOG_SENSOR" gate="G$1" pin="1"/>
-<portref moduleinst="MICROCONTROLLER1" port="ANALOG_1"/>
+<portref moduleinst="UC" port="ANALOG_1"/>
 <wire x1="144.78" y1="96.52" x2="129.54" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -13476,8 +13463,24 @@ LED</text>
 <segment>
 <pinref part="ANALOG_SENSOR" gate="G$1" pin="2"/>
 <wire x1="144.78" y1="91.44" x2="144.78" y2="93.98" width="0.1524" layer="91"/>
-<portref moduleinst="MICROCONTROLLER1" port="ANALOG_2"/>
+<portref moduleinst="UC" port="ANALOG_2"/>
 <wire x1="144.78" y1="93.98" x2="129.54" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="MOTOR_DRIVERS" gate="G$1" pin="2"/>
+<portref moduleinst="UC" port="MOTOR_PWM_1"/>
+<wire x1="129.54" y1="124.46" x2="144.78" y2="124.46" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<portref moduleinst="UC" port="MOTOR_PWM_2"/>
+<wire x1="129.54" y1="121.92" x2="139.7" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="121.92" x2="139.7" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="MOTOR_DRIVERS" gate="G$1" pin="1"/>
+<wire x1="139.7" y1="119.38" x2="144.78" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

@@ -22,9 +22,9 @@
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
@@ -2888,480 +2888,640 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="BLUETOOTH1:U$1" library="tactile-music" package="RN4020" value="RN4020" x="71.586" y="20.6856" rot="R270"/>
-<element name="POWER_SUPPLY1:LED1" library="led" package="CHIPLED_0805" value="RED" x="16.6116" y="45.8724"/>
-<element name="POWER_SUPPLY1:R1" library="resistor" package="R0805" value="60" x="21.8948" y="46.0248"/>
-<element name="MICROCONTROLLER1:R1" library="resistor" package="R0805" value="330Ω" x="21.2852" y="25.908"/>
-<element name="BUTTON1:R1" library="resistor" package="R0805" value="33k" x="60.4012" y="1.524"/>
-<element name="MICROCONTROLLER1:JP1" library="pinhead" package="1X06/90" value="PICKIT" x="-1.9304" y="19.7612" rot="R90"/>
-<element name="MICROCONTROLLER1:JP2" library="pinhead" package="1X04/90" value="UART_PC" x="35.2044" y="-1.778" rot="R180"/>
-<element name="POWER_SUPPLY1:U$1" library="tactile-music" package="SOT95P270X145-5N" value="MCP1824T-3302E/OT" x="18.3896" y="40.7416">
-<attribute name="MPN" value="MCP1824T-3302E/OT" x="18.3896" y="40.7416" size="1.778" layer="27" display="off"/>
-<attribute name="SUPPLIER" value="Microchip" x="18.3896" y="40.7416" size="1.778" layer="27" display="off"/>
-<attribute name="OC_NEWARK" value="40M0704" x="18.3896" y="40.7416" size="1.778" layer="27" display="off"/>
-<attribute name="PACKAGE" value="SOT23-5" x="18.3896" y="40.7416" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="1578387" x="18.3896" y="40.7416" size="1.778" layer="27" display="off"/>
+<element name="BT:U$1" library="tactile-music" package="RN4020" value="RN4020" x="71.586" y="20.6856" smashed="yes" rot="R270">
+<attribute name="NAME" x="80.136" y="12.5356" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="78.136" y="12.5356" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="BUTTON1:U1" library="tactile-music" package="SOT65P212X110-5N" value="74AUP1G17GW" x="52.9336" y="8.4328">
+<element name="PS:LED1" library="led" package="CHIPLED_0805" value="RED" x="16" y="42" smashed="yes" rot="R90">
+<attribute name="NAME" x="17.27" y="40.73" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="17.27" y="44.54" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="PS:R1" library="resistor" package="R0805" value="60" x="12.1052" y="41.9752" smashed="yes" rot="R180">
+<attribute name="NAME" x="12.7402" y="40.7052" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="12.7402" y="44.5152" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="UC:R1" library="resistor" package="R0805" value="330Ω" x="21.2852" y="25.908" smashed="yes">
+<attribute name="NAME" x="20.6502" y="27.178" size="1.27" layer="25"/>
+<attribute name="VALUE" x="20.6502" y="23.368" size="1.27" layer="27"/>
+</element>
+<element name="BTN:R1" library="resistor" package="R0805" value="33k" x="60.4012" y="1.524" smashed="yes">
+<attribute name="NAME" x="59.7662" y="2.794" size="1.27" layer="25"/>
+<attribute name="VALUE" x="59.7662" y="-1.016" size="1.27" layer="27"/>
+</element>
+<element name="UC:JP1" library="pinhead" package="1X06/90" value="PICKIT" x="-1.9304" y="19.7612" smashed="yes" rot="R90">
+<attribute name="NAME" x="1.8796" y="11.5062" size="1.27" layer="25" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="1.8796" y="29.2862" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="UC:JP2" library="pinhead" package="1X04/90" value="UART_PC" x="35.2044" y="-1.778" smashed="yes" rot="R180">
+<attribute name="NAME" x="40.9194" y="2.032" size="1.27" layer="25" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="28.2194" y="2.667" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="PS:U$1" library="tactile-music" package="SOT95P270X145-5N" value="MCP1824T-3302E/OT" x="8" y="38" smashed="yes" rot="R270">
+<attribute name="MPN" value="MCP1824T-3302E/OT" x="8" y="38" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="SUPPLIER" value="Microchip" x="8" y="38" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="OC_NEWARK" value="40M0704" x="8" y="38" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PACKAGE" value="SOT23-5" x="8" y="38" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="OC_FARNELL" value="1578387" x="8" y="38" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="NAME" x="10.1082" y="42.7752" size="2.0828" layer="25" ratio="10" rot="SR270"/>
+<attribute name="VALUE" x="4.0122" y="43.715" size="2.0828" layer="27" ratio="10" rot="SR270"/>
+</element>
+<element name="BTN:U1" library="tactile-music" package="SOT65P212X110-5N" value="74AUP1G17GW" x="52.9336" y="8.4328" smashed="yes">
 <attribute name="MPN" value="74AUP1G17GW " x="52.9336" y="8.4328" size="1.778" layer="27" display="off"/>
 <attribute name="SUPPLIER" value="NXP " x="52.9336" y="8.4328" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="55W4625 " x="52.9336" y="8.4328" size="1.778" layer="27" display="off"/>
 <attribute name="PACKAGE" value="TSSOP-5" x="52.9336" y="8.4328" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="2164682 " x="52.9336" y="8.4328" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="48.2092" y="10.3378" size="2.0828" layer="25" ratio="10" rot="SR0"/>
+<attribute name="VALUE" x="47.2948" y="4.445" size="2.0828" layer="27" ratio="10" rot="SR0"/>
 </element>
-<element name="BUTTON1:R2" library="resistor" package="R0805" value="18k" x="66.9544" y="2.3876"/>
-<element name="BUTTON1:U$1" library="tactile-music" package="SOD-523" value="DB2S308" x="60.6044" y="7.4676"/>
-<element name="BUTTON1:C1" library="rcl" package="C0805" value="1uF" x="54.0816" y="2.1764" rot="R180"/>
-<element name="BLUETOOTH1:C1" library="rcl" package="C0805" value="4.7uF" x="71.9404" y="11.169"/>
-<element name="BLUETOOTH1:R2" library="resistor" package="R0805" value="10kΩ" x="64.6246" y="30.4922"/>
-<element name="BLUETOOTH1:R3" library="resistor" package="R0805" value="60Ω" x="52.0192" y="24.9428"/>
-<element name="BLUETOOTH1:LED2" library="led" package="CHIPLED_0805" value="GREEN" x="52.1716" y="27.432" rot="R270"/>
-<element name="BLUETOOTH1:R4" library="resistor" package="R0805" value="60Ω" x="51.9684" y="20.1676"/>
-<element name="BLUETOOTH1:LED3" library="led" package="CHIPLED_0805" value="RED" x="52.07" y="22.5044" rot="R270"/>
-<element name="BLUETOOTH1:R1" library="resistor" package="R0805" value="60Ω" x="51.9684" y="15.3924"/>
-<element name="BLUETOOTH1:LED1" library="led" package="CHIPLED_0805" value="BLUE" x="52.07" y="17.7292" rot="R270"/>
-<element name="MICROCONTROLLER1:C1" library="rcl" package="C0805" value="" x="15.1892" y="11.5316"/>
-<element name="MICROCONTROLLER1:U1" library="tactile-music" package="TQFP44" value="DSPIC33EP512MC504" x="32.8676" y="20.7264" rot="R270"/>
-<element name="MICROCONTROLLER1:R2" library="resistor" package="R0805" value="10kΩ" x="44.0944" y="34.4932"/>
-<element name="MICROCONTROLLER1:SJ1" library="jumper" package="SJ" value="MCLR_CAP" x="44.0944" y="30.226"/>
-<element name="MICROCONTROLLER1:C2" library="rcl" package="C0805" value="0.1uF" x="49.9872" y="34.8996"/>
-<element name="MICROCONTROLLER1:C3" library="rcl" package="C0805" value="10uF" x="47.3456" y="38.5064"/>
-<element name="MICROCONTROLLER1:C4" library="rcl" package="C0805" value="0.1uF" x="55.2704" y="35.6108"/>
-<element name="MICROCONTROLLER1:C5" library="rcl" package="C0805" value="0.1uF" x="48.768" y="32.1056"/>
-<element name="MICROCONTROLLER1:U2" library="tactile-music" package="CRYSTAL-FOOTPRINT" value="MCRSD20000F183000RR" x="38.608" y="8.9916" smashed="yes">
+<element name="BTN:R2" library="resistor" package="R0805" value="18k" x="66.9544" y="2.3876" smashed="yes">
+<attribute name="NAME" x="66.3194" y="3.6576" size="1.27" layer="25"/>
+<attribute name="VALUE" x="66.3194" y="-0.1524" size="1.27" layer="27"/>
+</element>
+<element name="BTN:U$1" library="tactile-music" package="SOD-523" value="DB2S308" x="60.6044" y="7.4676" smashed="yes">
+<attribute name="NAME" x="59.0044" y="6.4676" size="0.5" layer="25" rot="R90"/>
+<attribute name="VALUE" x="59.9044" y="6.4676" size="0.5" layer="27" rot="R90"/>
+</element>
+<element name="BTN:C1" library="rcl" package="C0805" value="1uF" x="54.0816" y="2.1764" smashed="yes" rot="R180">
+<attribute name="NAME" x="55.3516" y="0.9064" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="55.3516" y="4.7164" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="BT:C1" library="rcl" package="C0805" value="4.7uF" x="71.9404" y="11.169" smashed="yes">
+<attribute name="NAME" x="70.6704" y="12.439" size="1.27" layer="25"/>
+<attribute name="VALUE" x="70.6704" y="8.629" size="1.27" layer="27"/>
+</element>
+<element name="BT:R2" library="resistor" package="R0805" value="10kΩ" x="64.6246" y="30.4922" smashed="yes">
+<attribute name="NAME" x="63.9896" y="31.7622" size="1.27" layer="25"/>
+<attribute name="VALUE" x="63.9896" y="27.9522" size="1.27" layer="27"/>
+</element>
+<element name="BT:R3" library="resistor" package="R0805" value="60Ω" x="52.0192" y="24.9428" smashed="yes">
+<attribute name="NAME" x="51.3842" y="26.2128" size="1.27" layer="25"/>
+<attribute name="VALUE" x="51.3842" y="22.4028" size="1.27" layer="27"/>
+</element>
+<element name="BT:LED2" library="led" package="CHIPLED_0805" value="GREEN" x="52.1716" y="27.432" smashed="yes" rot="R270">
+<attribute name="NAME" x="50.9016" y="28.702" size="1.27" layer="25"/>
+<attribute name="VALUE" x="50.9016" y="24.892" size="1.27" layer="27"/>
+</element>
+<element name="BT:R4" library="resistor" package="R0805" value="60Ω" x="51.9684" y="20.1676" smashed="yes">
+<attribute name="NAME" x="51.3334" y="21.4376" size="1.27" layer="25"/>
+<attribute name="VALUE" x="51.3334" y="17.6276" size="1.27" layer="27"/>
+</element>
+<element name="BT:LED3" library="led" package="CHIPLED_0805" value="RED" x="52.07" y="22.5044" smashed="yes" rot="R270">
+<attribute name="NAME" x="50.8" y="23.7744" size="1.27" layer="25"/>
+<attribute name="VALUE" x="50.8" y="19.9644" size="1.27" layer="27"/>
+</element>
+<element name="BT:R1" library="resistor" package="R0805" value="60Ω" x="51.9684" y="15.3924" smashed="yes">
+<attribute name="NAME" x="51.3334" y="16.6624" size="1.27" layer="25"/>
+<attribute name="VALUE" x="51.3334" y="12.8524" size="1.27" layer="27"/>
+</element>
+<element name="BT:LED1" library="led" package="CHIPLED_0805" value="BLUE" x="52.07" y="17.7292" smashed="yes" rot="R270">
+<attribute name="NAME" x="50.8" y="18.9992" size="1.27" layer="25"/>
+<attribute name="VALUE" x="50.8" y="15.1892" size="1.27" layer="27"/>
+</element>
+<element name="UC:C1" library="rcl" package="C0805" value="" x="15.1892" y="11.5316" smashed="yes">
+<attribute name="NAME" x="13.9192" y="12.8016" size="1.27" layer="25"/>
+<attribute name="VALUE" x="13.9192" y="8.9916" size="1.27" layer="27"/>
+</element>
+<element name="UC:U1" library="tactile-music" package="TQFP44" value="DSPIC33EP512MC504" x="32.8676" y="20.7264" smashed="yes" rot="R270">
+<attribute name="NAME" x="39.7256" y="24.7904" size="1.778" layer="25" rot="R270"/>
+<attribute name="VALUE" x="31.0975" y="24.7904" size="1.778" layer="27" rot="R270"/>
+</element>
+<element name="UC:R2" library="resistor" package="R0805" value="10kΩ" x="44.0944" y="34.4932" smashed="yes">
+<attribute name="NAME" x="43.4594" y="35.7632" size="1.27" layer="25"/>
+<attribute name="VALUE" x="43.4594" y="31.9532" size="1.27" layer="27"/>
+</element>
+<element name="UC:SJ1" library="jumper" package="SJ" value="MCLR_CAP" x="44.0944" y="30.226" smashed="yes">
+<attribute name="NAME" x="42.4434" y="31.369" size="1.27" layer="25" ratio="10"/>
+<attribute name="VALUE" x="44.4945" y="30.226" size="0.02" layer="27"/>
+</element>
+<element name="UC:C2" library="rcl" package="C0805" value="0.1uF" x="49.9872" y="34.8996" smashed="yes">
+<attribute name="NAME" x="48.7172" y="36.1696" size="1.27" layer="25"/>
+<attribute name="VALUE" x="48.7172" y="32.3596" size="1.27" layer="27"/>
+</element>
+<element name="UC:C3" library="rcl" package="C0805" value="10uF" x="47.3456" y="38.5064" smashed="yes">
+<attribute name="NAME" x="46.0756" y="39.7764" size="1.27" layer="25"/>
+<attribute name="VALUE" x="46.0756" y="35.9664" size="1.27" layer="27"/>
+</element>
+<element name="UC:C4" library="rcl" package="C0805" value="0.1uF" x="55.2704" y="35.6108" smashed="yes">
+<attribute name="NAME" x="54.0004" y="36.8808" size="1.27" layer="25"/>
+<attribute name="VALUE" x="54.0004" y="33.0708" size="1.27" layer="27"/>
+</element>
+<element name="UC:C5" library="rcl" package="C0805" value="0.1uF" x="48.768" y="32.1056" smashed="yes">
+<attribute name="NAME" x="47.498" y="33.3756" size="1.27" layer="25"/>
+<attribute name="VALUE" x="47.498" y="29.5656" size="1.27" layer="27"/>
+</element>
+<element name="UC:U2" library="tactile-music" package="CRYSTAL-FOOTPRINT" value="MCRSD20000F183000RR" x="38.608" y="8.9916" smashed="yes">
 <attribute name="NAME" x="35.608" y="12.1916" size="1.27" layer="25"/>
 <attribute name="VALUE" x="35.508" y="4.5916" size="1.27" layer="27"/>
 </element>
-<element name="MICROCONTROLLER1:C6" library="rcl" package="C0805" value="27pF" x="10.56" y="13.9"/>
-<element name="MICROCONTROLLER1:C7" library="rcl" package="C0805" value="27pF" x="10.56" y="8.82"/>
-<element name="MICROCONTROLLER1:LED2" library="led" package="CHIPLED_0805" value="RED" x="4.21" y="7.55"/>
-<element name="MICROCONTROLLER1:R3" library="resistor" package="R0805" value="69Ω" x="4.21" y="2.47"/>
-<element name="MICROCONTROLLER1:LED3" library="led" package="CHIPLED_0805" value="GREEN" x="10.21" y="22.07"/>
-<element name="MICROCONTROLLER1:R4" library="resistor" package="R0805" value="60Ω" x="10.21" y="16.99"/>
-<element name="MICROCONTROLLER1:LED4" library="led" package="CHIPLED_0805" value="RED" x="14.21" y="20.59"/>
-<element name="MICROCONTROLLER1:R5" library="resistor" package="R0805" value="60Ω" x="14.21" y="16.51"/>
-<element name="MICROCONTROLLER1:LED1" library="led" package="CHIPLED_0805" value="GREEN" x="16.29" y="24.59"/>
-<element name="MICROCONTROLLER1:R6" library="resistor" package="R0805" value="60Ω" x="26.21" y="31.43"/>
-<element name="OFF-BOARD_POWER" library="tactile-music" package="PICOBLADE" value="PICOBLADE" x="34.4932" y="46.5328" rot="R180"/>
-<element name="MOTOR_DRIVERS" library="tactile-music" package="PICOBLADE" value="PICOBLADE" x="49.1236" y="46.9392" rot="R180"/>
-<element name="POWER_SUPPLY1:BATTERY" library="tactile-music" package="PICOBLADE" value="PICOBLADE" x="2.4384" y="43.2308" rot="R270"/>
-<element name="POWER_SUPPLY1:U$3" library="tactile-music" package="SOT323(SC-70)" value="PMF370XN" x="11.8364" y="37.7444"/>
-<element name="POWER_SUPPLY1:C1" library="rcl" package="C0805" value="" x="11.3284" y="42.672"/>
-<element name="POWER_SUPPLY1:C2" library="rcl" package="C0805" value="" x="8.2804" y="37.1856"/>
-<element name="POWER_SUPPLY1:R2" library="resistor" package="R0805" value="60" x="15.1892" y="33.9344"/>
-<element name="POWER_SUPPLY1:POWER_SW" library="tactile-music" package="JS102011SAQN" value="JS102011SAQN" x="10.668" y="46.736"/>
-<element name="ANALOG_SENSOR" library="tactile-music" package="PICOBLADE" value="PICOBLADE" x="20.574" y="2.3368"/>
-<element name="MICROCONTROLLER1:R7" library="resistor" package="R0805" value="10kΩ" x="18.6436" y="21.4884"/>
-<element name="MICROCONTROLLER1:R8" library="resistor" package="R0805" value="10kΩ" x="18.8468" y="18.1864"/>
-<element name="MICROCONTROLLER1:R9" library="resistor" package="R0805" value="10kΩ" x="19.8628" y="14.0716"/>
-<element name="BUTTON1:PAIRING_SW" library="tactile-music" package="THRU-TACTILE-BTN" value="MC32881_TACTILE" x="70.7952" y="6.568"/>
-<element name="BLUETOOTH1:SJ2" library="jumper" package="SJ" value="" x="55.88" y="26.2128" rot="R270"/>
-<element name="BLUETOOTH1:SJ3" library="jumper" package="SJ" value="" x="55.88" y="21.336" rot="R270"/>
-<element name="BLUETOOTH1:SJ1" library="jumper" package="SJ" value="" x="55.88" y="16.4592" rot="R270"/>
+<element name="UC:C6" library="rcl" package="C0805" value="27pF" x="10.56" y="13.9" smashed="yes">
+<attribute name="NAME" x="9.29" y="15.17" size="1.27" layer="25"/>
+<attribute name="VALUE" x="9.29" y="11.36" size="1.27" layer="27"/>
+</element>
+<element name="UC:C7" library="rcl" package="C0805" value="27pF" x="10.56" y="8.82" smashed="yes">
+<attribute name="NAME" x="9.29" y="10.09" size="1.27" layer="25"/>
+<attribute name="VALUE" x="9.29" y="6.28" size="1.27" layer="27"/>
+</element>
+<element name="UC:LED2" library="led" package="CHIPLED_0805" value="RED" x="4.21" y="7.55" smashed="yes">
+<attribute name="NAME" x="2.94" y="6.28" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="6.75" y="6.28" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="UC:R3" library="resistor" package="R0805" value="69Ω" x="4.21" y="2.47" smashed="yes">
+<attribute name="NAME" x="3.575" y="3.74" size="1.27" layer="25"/>
+<attribute name="VALUE" x="3.575" y="-0.07" size="1.27" layer="27"/>
+</element>
+<element name="UC:LED3" library="led" package="CHIPLED_0805" value="GREEN" x="10.21" y="22.07" smashed="yes">
+<attribute name="NAME" x="8.94" y="20.8" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="12.75" y="20.8" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="UC:R4" library="resistor" package="R0805" value="60Ω" x="10.21" y="16.99" smashed="yes">
+<attribute name="NAME" x="9.575" y="18.26" size="1.27" layer="25"/>
+<attribute name="VALUE" x="9.575" y="14.45" size="1.27" layer="27"/>
+</element>
+<element name="UC:LED4" library="led" package="CHIPLED_0805" value="RED" x="14.21" y="20.59" smashed="yes">
+<attribute name="NAME" x="12.94" y="19.32" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="16.75" y="19.32" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="UC:R5" library="resistor" package="R0805" value="60Ω" x="14.21" y="16.51" smashed="yes">
+<attribute name="NAME" x="13.575" y="17.78" size="1.27" layer="25"/>
+<attribute name="VALUE" x="13.575" y="13.97" size="1.27" layer="27"/>
+</element>
+<element name="UC:LED1" library="led" package="CHIPLED_0805" value="GREEN" x="16.29" y="24.59" smashed="yes">
+<attribute name="NAME" x="15.02" y="23.32" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="18.83" y="23.32" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="UC:R6" library="resistor" package="R0805" value="60Ω" x="26.21" y="31.43" smashed="yes">
+<attribute name="NAME" x="25.575" y="32.7" size="1.27" layer="25"/>
+<attribute name="VALUE" x="25.575" y="28.89" size="1.27" layer="27"/>
+</element>
+<element name="OFF-BOARD_PWR" library="tactile-music" package="PICOBLADE" value="PICOBLADE" x="24" y="47" smashed="yes" rot="R180">
+<attribute name="NAME" x="31.3" y="44.4" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="21.9" y="44.4" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="MOTOR_DRIVERS" library="tactile-music" package="PICOBLADE" value="PICOBLADE" x="34.1236" y="46.9392" smashed="yes" rot="R180">
+<attribute name="NAME" x="41.4236" y="44.3392" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="32.0236" y="44.3392" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="PS:BATTERY" library="tactile-music" package="PICOBLADE" value="PICOBLADE" x="3" y="43" smashed="yes" rot="R270">
+<attribute name="NAME" x="5.6" y="50.3" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="5.6" y="40.9" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="PS:U$3" library="tactile-music" package="SOT323(SC-70)" value="PMF370XN" x="8" y="43" smashed="yes">
+<attribute name="NAME" x="10" y="43.8" size="0.5" layer="25"/>
+<attribute name="VALUE" x="10" y="42.95" size="0.5" layer="27"/>
+</element>
+<element name="PS:C1" library="rcl" package="C0805" value="" x="16" y="39" smashed="yes">
+<attribute name="NAME" x="14.73" y="40.27" size="1.27" layer="25"/>
+<attribute name="VALUE" x="14.73" y="36.46" size="1.27" layer="27"/>
+</element>
+<element name="PS:C2" library="rcl" package="C0805" value="" x="3" y="34" smashed="yes">
+<attribute name="NAME" x="1.73" y="35.27" size="1.27" layer="25"/>
+<attribute name="VALUE" x="1.73" y="31.46" size="1.27" layer="27"/>
+</element>
+<element name="PS:R2" library="resistor" package="R0805" value="60" x="8" y="34" smashed="yes">
+<attribute name="NAME" x="7.365" y="35.27" size="1.27" layer="25"/>
+<attribute name="VALUE" x="7.365" y="31.46" size="1.27" layer="27"/>
+</element>
+<element name="PS:POWER_SW" library="tactile-music" package="JS102011SAQN" value="JS102011SAQN" x="14" y="47" smashed="yes" rot="R180">
+<attribute name="NAME" x="19.08" y="41.92" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="19.08" y="43.19" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="ANALOG_SENSOR" library="tactile-music" package="PICOBLADE" value="PICOBLADE" x="20.574" y="2.3368" smashed="yes">
+<attribute name="NAME" x="13.274" y="4.9368" size="1.27" layer="25"/>
+<attribute name="VALUE" x="22.674" y="4.9368" size="1.27" layer="27"/>
+</element>
+<element name="UC:R7" library="resistor" package="R0805" value="10kΩ" x="18.6436" y="21.4884" smashed="yes">
+<attribute name="NAME" x="18.0086" y="22.7584" size="1.27" layer="25"/>
+<attribute name="VALUE" x="18.0086" y="18.9484" size="1.27" layer="27"/>
+</element>
+<element name="UC:R8" library="resistor" package="R0805" value="10kΩ" x="18.8468" y="18.1864" smashed="yes">
+<attribute name="NAME" x="18.2118" y="19.4564" size="1.27" layer="25"/>
+<attribute name="VALUE" x="18.2118" y="15.6464" size="1.27" layer="27"/>
+</element>
+<element name="UC:R9" library="resistor" package="R0805" value="10kΩ" x="19.8628" y="14.0716" smashed="yes">
+<attribute name="NAME" x="19.2278" y="15.3416" size="1.27" layer="25"/>
+<attribute name="VALUE" x="19.2278" y="11.5316" size="1.27" layer="27"/>
+</element>
+<element name="BTN:PAIRING_SW" library="tactile-music" package="THRU-TACTILE-BTN" value="MC32881_TACTILE" x="70.7952" y="6.568" smashed="yes">
+<attribute name="NAME" x="75.0952" y="6.068" size="1.27" layer="25"/>
+<attribute name="VALUE" x="75.0952" y="4.168" size="1.27" layer="27"/>
+</element>
+<element name="BT:SJ2" library="jumper" package="SJ" value="" x="55.88" y="26.2128" smashed="yes" rot="R270">
+<attribute name="NAME" x="57.023" y="27.8638" size="1.27" layer="25" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="55.88" y="25.8127" size="0.02" layer="27" rot="R270"/>
+</element>
+<element name="BT:SJ3" library="jumper" package="SJ" value="" x="55.88" y="21.336" smashed="yes" rot="R270">
+<attribute name="NAME" x="57.023" y="22.987" size="1.27" layer="25" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="55.88" y="20.9359" size="0.02" layer="27" rot="R270"/>
+</element>
+<element name="BT:SJ1" library="jumper" package="SJ" value="" x="55.88" y="16.4592" smashed="yes" rot="R270">
+<attribute name="NAME" x="57.023" y="18.1102" size="1.27" layer="25" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="55.88" y="16.0591" size="0.02" layer="27" rot="R270"/>
+</element>
 </elements>
 <signals>
 <signal name="GND" airwireshidden="yes">
-<contactref element="OFF-BOARD_POWER" pad="2"/>
-<contactref element="POWER_SUPPLY1:U$3" pad="3"/>
-<contactref element="POWER_SUPPLY1:U$1" pad="2"/>
-<contactref element="POWER_SUPPLY1:R1" pad="1"/>
-<contactref element="POWER_SUPPLY1:C1" pad="1"/>
-<contactref element="POWER_SUPPLY1:C2" pad="1"/>
-<contactref element="BLUETOOTH1:C1" pad="2"/>
-<contactref element="BLUETOOTH1:U$1" pad="16"/>
-<contactref element="BLUETOOTH1:U$1" pad="9"/>
-<contactref element="BLUETOOTH1:R2" pad="1"/>
-<contactref element="BLUETOOTH1:LED2" pad="C"/>
-<contactref element="BLUETOOTH1:LED3" pad="C"/>
-<contactref element="BLUETOOTH1:LED1" pad="C"/>
-<contactref element="BLUETOOTH1:U$1" pad="1"/>
-<contactref element="MICROCONTROLLER1:C1" pad="2"/>
-<contactref element="MICROCONTROLLER1:U1" pad="16"/>
-<contactref element="MICROCONTROLLER1:U1" pad="6"/>
-<contactref element="MICROCONTROLLER1:C3" pad="2"/>
-<contactref element="MICROCONTROLLER1:C4" pad="2"/>
-<contactref element="MICROCONTROLLER1:C2" pad="2"/>
-<contactref element="MICROCONTROLLER1:U1" pad="29"/>
-<contactref element="MICROCONTROLLER1:C5" pad="2"/>
-<contactref element="MICROCONTROLLER1:U1" pad="39"/>
-<contactref element="MICROCONTROLLER1:C6" pad="2"/>
-<contactref element="MICROCONTROLLER1:C7" pad="2"/>
-<contactref element="MICROCONTROLLER1:JP1" pad="4"/>
-<contactref element="MICROCONTROLLER1:LED2" pad="C"/>
-<contactref element="MICROCONTROLLER1:LED3" pad="C"/>
-<contactref element="MICROCONTROLLER1:LED4" pad="C"/>
-<contactref element="MICROCONTROLLER1:LED1" pad="C"/>
-<contactref element="BUTTON1:U1" pad="3"/>
-<contactref element="MICROCONTROLLER1:JP2" pad="1"/>
-<contactref element="MICROCONTROLLER1:R7" pad="2"/>
-<contactref element="MICROCONTROLLER1:R8" pad="2"/>
-<contactref element="MICROCONTROLLER1:R9" pad="2"/>
-<contactref element="BLUETOOTH1:U$1" pad="24"/>
-<contactref element="BUTTON1:C1" pad="1"/>
-<contactref element="BUTTON1:PAIRING_SW" pad="P$1"/>
+<contactref element="OFF-BOARD_PWR" pad="2"/>
+<contactref element="PS:U$3" pad="3"/>
+<contactref element="PS:U$1" pad="2"/>
+<contactref element="PS:R1" pad="1"/>
+<contactref element="PS:C1" pad="1"/>
+<contactref element="PS:C2" pad="1"/>
+<contactref element="BT:C1" pad="2"/>
+<contactref element="BT:U$1" pad="16"/>
+<contactref element="BT:U$1" pad="9"/>
+<contactref element="BT:R2" pad="1"/>
+<contactref element="BT:LED2" pad="C"/>
+<contactref element="BT:LED3" pad="C"/>
+<contactref element="BT:LED1" pad="C"/>
+<contactref element="BT:U$1" pad="1"/>
+<contactref element="UC:C1" pad="2"/>
+<contactref element="UC:U1" pad="16"/>
+<contactref element="UC:U1" pad="6"/>
+<contactref element="UC:C3" pad="2"/>
+<contactref element="UC:C4" pad="2"/>
+<contactref element="UC:C2" pad="2"/>
+<contactref element="UC:U1" pad="29"/>
+<contactref element="UC:C5" pad="2"/>
+<contactref element="UC:U1" pad="39"/>
+<contactref element="UC:C6" pad="2"/>
+<contactref element="UC:C7" pad="2"/>
+<contactref element="UC:JP1" pad="4"/>
+<contactref element="UC:LED2" pad="C"/>
+<contactref element="UC:LED3" pad="C"/>
+<contactref element="UC:LED4" pad="C"/>
+<contactref element="UC:LED1" pad="C"/>
+<contactref element="BTN:U1" pad="3"/>
+<contactref element="UC:JP2" pad="1"/>
+<contactref element="UC:R7" pad="2"/>
+<contactref element="UC:R8" pad="2"/>
+<contactref element="UC:R9" pad="2"/>
+<contactref element="BT:U$1" pad="24"/>
+<contactref element="BTN:C1" pad="1"/>
+<contactref element="BTN:PAIRING_SW" pad="P$1"/>
 <wire x1="72.8904" y1="11.169" x2="72.8904" y2="14.3688" width="0.254" layer="1"/>
 <wire x1="72.8904" y1="14.3688" x2="72.9488" y2="14.4272" width="0.254" layer="1"/>
-<wire x1="10.3784" y1="42.672" x2="10.9364" y2="37.7444" width="0" layer="19" extent="1-1"/>
-<wire x1="7.3304" y1="37.1856" x2="10.3784" y2="42.672" width="0" layer="19" extent="1-1"/>
-<wire x1="19.5936" y1="21.4884" x2="7.3304" y2="37.1856" width="0" layer="19" extent="1-1"/>
-<wire x1="19.7968" y1="18.1864" x2="19.5936" y2="21.4884" width="0" layer="19" extent="1-1"/>
-<wire x1="20.8128" y1="14.0716" x2="19.7968" y2="18.1864" width="0" layer="19" extent="1-1"/>
-<wire x1="33.8682" y1="44.7328" x2="10.9364" y2="37.7444" width="0" layer="19" extent="1-1"/>
-<wire x1="16.29" y1="25.64" x2="33.8682" y2="44.7328" width="0" layer="19" extent="1-1"/>
-<wire x1="14.21" y1="21.64" x2="16.29" y2="25.64" width="0" layer="19" extent="1-1"/>
-<wire x1="10.21" y1="23.12" x2="14.21" y2="21.64" width="0" layer="19" extent="1-1"/>
-<wire x1="4.21" y1="8.6" x2="10.21" y2="23.12" width="0" layer="19" extent="1-1"/>
-<wire x1="11.51" y1="8.82" x2="4.21" y2="8.6" width="0" layer="19" extent="1-1"/>
-<wire x1="11.51" y1="13.9" x2="11.51" y2="8.82" width="0" layer="19" extent="1-1"/>
-<wire x1="49.718" y1="32.1056" x2="11.51" y2="13.9" width="0" layer="19" extent="1-1"/>
-<wire x1="56.2204" y1="35.6108" x2="49.718" y2="32.1056" width="0" layer="19" extent="1-1"/>
-<wire x1="48.2956" y1="38.5064" x2="56.2204" y2="35.6108" width="0" layer="19" extent="1-1"/>
-<wire x1="50.9372" y1="34.8996" x2="48.2956" y2="38.5064" width="0" layer="19" extent="1-1"/>
-<wire x1="16.1392" y1="11.5316" x2="50.9372" y2="34.8996" width="0" layer="19" extent="1-1"/>
-<wire x1="39.0144" y1="2.032" x2="16.1392" y2="11.5316" width="0" layer="19" extent="1-1"/>
+<wire x1="63.6746" y1="30.4922" x2="72.736" y2="26.4356" width="0" layer="19" extent="1-1"/>
+<wire x1="61.836" y1="26.4356" x2="63.6746" y2="30.4922" width="0" layer="19" extent="1-1"/>
+<wire x1="53.2216" y1="27.432" x2="61.836" y2="26.4356" width="0" layer="19" extent="1-1"/>
+<wire x1="53.12" y1="22.5044" x2="53.2216" y2="27.432" width="0" layer="19" extent="1-1"/>
+<wire x1="53.12" y1="17.7292" x2="53.12" y2="22.5044" width="0" layer="19" extent="1-1"/>
+<wire x1="49.718" y1="32.1056" x2="53.2216" y2="27.432" width="0" layer="19" extent="1-1"/>
+<wire x1="50.9372" y1="34.8996" x2="49.718" y2="32.1056" width="0" layer="19" extent="1-1"/>
+<wire x1="48.2956" y1="38.5064" x2="50.9372" y2="34.8996" width="0" layer="19" extent="1-1"/>
+<wire x1="56.2204" y1="35.6108" x2="50.9372" y2="34.8996" width="0" layer="19" extent="1-1"/>
+<wire x1="61.836" y1="14.9356" x2="53.12" y2="17.7292" width="0" layer="19" extent="1-1"/>
+<wire x1="51.9684" y1="7.7724" x2="53.12" y2="17.7292" width="0" layer="19" extent="1-1"/>
+<wire x1="55.0316" y1="2.1764" x2="51.9684" y2="7.7724" width="0" layer="19" extent="1-1"/>
+<wire x1="72.736" y1="14.9356" x2="61.836" y2="14.9356" width="0" layer="19" extent="1-1"/>
+<wire x1="72.9488" y1="14.4272" x2="72.736" y2="14.9356" width="0" layer="19" extent="1-1"/>
+<wire x1="73.2952" y1="6.568" x2="72.8904" y2="11.169" width="0" layer="19" extent="1-1"/>
+<wire x1="39.0144" y1="2.032" x2="51.9684" y2="7.7724" width="0" layer="19" extent="1-1"/>
 <wire x1="33.6676" y1="15.0264" x2="39.0144" y2="2.032" width="0" layer="19" extent="1-1"/>
 <wire x1="38.5676" y1="20.7264" x2="33.6676" y2="15.0264" width="0" layer="19" extent="1-1"/>
 <wire x1="32.8676" y1="26.4264" x2="38.5676" y2="20.7264" width="0" layer="19" extent="1-1"/>
 <wire x1="27.1676" y1="21.5264" x2="32.8676" y2="26.4264" width="0" layer="19" extent="1-1"/>
-<wire x1="51.9684" y1="7.7724" x2="39.0144" y2="2.032" width="0" layer="19" extent="1-1"/>
-<wire x1="55.0316" y1="2.1764" x2="51.9684" y2="7.7724" width="0" layer="19" extent="1-1"/>
-<wire x1="53.12" y1="17.7292" x2="51.9684" y2="7.7724" width="0" layer="19" extent="1-1"/>
-<wire x1="53.12" y1="22.5044" x2="53.12" y2="17.7292" width="0" layer="19" extent="1-1"/>
-<wire x1="53.2216" y1="27.432" x2="53.12" y2="22.5044" width="0" layer="19" extent="1-1"/>
-<wire x1="61.836" y1="26.4356" x2="53.2216" y2="27.432" width="0" layer="19" extent="1-1"/>
-<wire x1="63.6746" y1="30.4922" x2="61.836" y2="26.4356" width="0" layer="19" extent="1-1"/>
-<wire x1="61.836" y1="14.9356" x2="53.12" y2="17.7292" width="0" layer="19" extent="1-1"/>
-<wire x1="72.736" y1="26.4356" x2="63.6746" y2="30.4922" width="0" layer="19" extent="1-1"/>
-<wire x1="72.736" y1="14.9356" x2="61.836" y2="14.9356" width="0" layer="19" extent="1-1"/>
-<wire x1="72.9488" y1="14.4272" x2="72.736" y2="14.9356" width="0" layer="19" extent="1-1"/>
-<wire x1="73.2952" y1="6.568" x2="72.8904" y2="11.169" width="0" layer="19" extent="1-1"/>
-<wire x1="17.018" y1="40.7416" x2="32.8676" y2="26.4264" width="0" layer="19" extent="1-1"/>
-<wire x1="20.9448" y1="46.0248" x2="17.018" y2="40.7416" width="0" layer="19" extent="1-1"/>
-<wire x1="1.8796" y1="21.0312" x2="17.018" y2="40.7416" width="0" layer="19" extent="1-1"/>
+<wire x1="19.5936" y1="21.4884" x2="27.1676" y2="21.5264" width="0" layer="19" extent="1-1"/>
+<wire x1="19.7968" y1="18.1864" x2="19.5936" y2="21.4884" width="0" layer="19" extent="1-1"/>
+<wire x1="20.8128" y1="14.0716" x2="19.7968" y2="18.1864" width="0" layer="19" extent="1-1"/>
+<wire x1="16.29" y1="25.64" x2="19.5936" y2="21.4884" width="0" layer="19" extent="1-1"/>
+<wire x1="14.21" y1="21.64" x2="16.29" y2="25.64" width="0" layer="19" extent="1-1"/>
+<wire x1="10.21" y1="23.12" x2="14.21" y2="21.64" width="0" layer="19" extent="1-1"/>
+<wire x1="16.1392" y1="11.5316" x2="20.8128" y2="14.0716" width="0" layer="19" extent="1-1"/>
+<wire x1="11.51" y1="13.9" x2="16.1392" y2="11.5316" width="0" layer="19" extent="1-1"/>
+<wire x1="11.51" y1="8.82" x2="11.51" y2="13.9" width="0" layer="19" extent="1-1"/>
+<wire x1="4.21" y1="8.6" x2="11.51" y2="8.82" width="0" layer="19" extent="1-1"/>
+<wire x1="1.8796" y1="21.0312" x2="10.21" y2="23.12" width="0" layer="19" extent="1-1"/>
+<wire x1="15.05" y1="39" x2="16.29" y2="25.64" width="0" layer="19" extent="1-1"/>
+<wire x1="13.0552" y1="41.9752" x2="15.05" y2="39" width="0" layer="19" extent="1-1"/>
+<wire x1="8" y1="39.3716" x2="13.0552" y2="41.9752" width="0" layer="19" extent="1-1"/>
+<wire x1="7.1" y1="43" x2="8" y2="39.3716" width="0" layer="19" extent="1-1"/>
+<wire x1="2.05" y1="34" x2="8" y2="39.3716" width="0" layer="19" extent="1-1"/>
+<wire x1="23.375" y1="45.2" x2="15.05" y2="39" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="BLUETOOTH1:N$6">
-<contactref element="BLUETOOTH1:R3" pad="1"/>
-<contactref element="BLUETOOTH1:LED2" pad="A"/>
+<signal name="BT:N$6">
+<contactref element="BT:R3" pad="1"/>
+<contactref element="BT:LED2" pad="A"/>
 <wire x1="51.0692" y1="24.9428" x2="51.1216" y2="27.432" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="BLUETOOTH1:N$7">
-<contactref element="BLUETOOTH1:R4" pad="1"/>
-<contactref element="BLUETOOTH1:LED3" pad="A"/>
+<signal name="BT:N$7">
+<contactref element="BT:R4" pad="1"/>
+<contactref element="BT:LED3" pad="A"/>
 <wire x1="51.0184" y1="20.1676" x2="51.02" y2="22.5044" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="BLUETOOTH1:N$8">
-<contactref element="BLUETOOTH1:R1" pad="1"/>
-<contactref element="BLUETOOTH1:LED1" pad="A"/>
+<signal name="BT:N$8">
+<contactref element="BT:R1" pad="1"/>
+<contactref element="BT:LED1" pad="A"/>
 <wire x1="51.02" y1="17.7292" x2="51.0184" y2="15.3924" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MICROCONTROLLER1:N$1">
-<contactref element="MICROCONTROLLER1:U1" pad="18"/>
-<contactref element="MICROCONTROLLER1:R1" pad="2"/>
+<signal name="UC:N$1">
+<contactref element="UC:U1" pad="18"/>
+<contactref element="UC:R1" pad="2"/>
 <wire x1="27.1676" y1="19.9264" x2="22.2352" y2="25.908" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MICROCONTROLLER1:!MCLR">
-<contactref element="MICROCONTROLLER1:R1" pad="1"/>
-<contactref element="MICROCONTROLLER1:R2" pad="1"/>
-<contactref element="MICROCONTROLLER1:SJ1" pad="1"/>
-<contactref element="MICROCONTROLLER1:JP1" pad="6"/>
-<wire x1="43.1444" y1="34.4932" x2="43.3324" y2="30.226" width="0" layer="19" extent="1-1"/>
-<wire x1="1.8796" y1="26.1112" x2="43.1444" y2="34.4932" width="0" layer="19" extent="1-1"/>
-<wire x1="20.3352" y1="25.908" x2="1.8796" y2="26.1112" width="0" layer="19" extent="1-1"/>
+<signal name="UC:!MCLR">
+<contactref element="UC:R1" pad="1"/>
+<contactref element="UC:R2" pad="1"/>
+<contactref element="UC:SJ1" pad="1"/>
+<contactref element="UC:JP1" pad="6"/>
+<wire x1="43.3324" y1="30.226" x2="43.1444" y2="34.4932" width="0" layer="19" extent="1-1"/>
+<wire x1="20.3352" y1="25.908" x2="43.3324" y2="30.226" width="0" layer="19" extent="1-1"/>
+<wire x1="1.8796" y1="26.1112" x2="20.3352" y2="25.908" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MICROCONTROLLER1:N$2">
-<contactref element="MICROCONTROLLER1:SJ1" pad="2"/>
-<contactref element="MICROCONTROLLER1:C1" pad="1"/>
+<signal name="UC:N$2">
+<contactref element="UC:SJ1" pad="2"/>
+<contactref element="UC:C1" pad="1"/>
 <wire x1="14.2392" y1="11.5316" x2="44.8564" y2="30.226" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MICROCONTROLLER1:PGD">
-<contactref element="MICROCONTROLLER1:JP1" pad="3"/>
-<contactref element="MICROCONTROLLER1:U1" pad="21"/>
+<signal name="UC:PGD">
+<contactref element="UC:JP1" pad="3"/>
+<contactref element="UC:U1" pad="21"/>
 <wire x1="1.8796" y1="18.4912" x2="27.1676" y2="17.5264" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MICROCONTROLLER1:PGC">
-<contactref element="MICROCONTROLLER1:JP1" pad="2"/>
-<contactref element="MICROCONTROLLER1:U1" pad="22"/>
+<signal name="UC:PGC">
+<contactref element="UC:JP1" pad="2"/>
+<contactref element="UC:U1" pad="22"/>
 <wire x1="1.8796" y1="15.9512" x2="27.1676" y2="16.7264" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MICROCONTROLLER1:N$3">
-<contactref element="MICROCONTROLLER1:U1" pad="7"/>
-<contactref element="MICROCONTROLLER1:C3" pad="1"/>
+<signal name="UC:N$3">
+<contactref element="UC:U1" pad="7"/>
+<contactref element="UC:C3" pad="1"/>
 <wire x1="32.0676" y1="26.4264" x2="46.3956" y2="38.5064" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MICROCONTROLLER1:OSC1">
-<contactref element="MICROCONTROLLER1:U2" pad="1"/>
-<contactref element="MICROCONTROLLER1:C6" pad="1"/>
-<contactref element="MICROCONTROLLER1:U1" pad="30"/>
-<wire x1="33.858" y1="8.9916" x2="9.61" y2="13.9" width="0" layer="19" extent="1-1"/>
-<wire x1="34.4676" y1="15.0264" x2="33.858" y2="8.9916" width="0" layer="19" extent="1-1"/>
+<signal name="UC:OSC1">
+<contactref element="UC:U2" pad="1"/>
+<contactref element="UC:C6" pad="1"/>
+<contactref element="UC:U1" pad="30"/>
+<wire x1="33.858" y1="8.9916" x2="34.4676" y2="15.0264" width="0" layer="19" extent="1-1"/>
+<wire x1="9.61" y1="13.9" x2="33.858" y2="8.9916" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MICROCONTROLLER1:OSC2">
-<contactref element="MICROCONTROLLER1:U2" pad="2"/>
-<contactref element="MICROCONTROLLER1:C7" pad="1"/>
-<contactref element="MICROCONTROLLER1:U1" pad="31"/>
-<wire x1="43.358" y1="8.9916" x2="9.61" y2="8.82" width="0" layer="19" extent="1-1"/>
+<signal name="UC:OSC2">
+<contactref element="UC:U2" pad="2"/>
+<contactref element="UC:C7" pad="1"/>
+<contactref element="UC:U1" pad="31"/>
 <wire x1="35.2676" y1="15.0264" x2="43.358" y2="8.9916" width="0" layer="19" extent="1-1"/>
+<wire x1="9.61" y1="8.82" x2="35.2676" y2="15.0264" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MICROCONTROLLER1:N$4">
-<contactref element="MICROCONTROLLER1:R3" pad="1"/>
-<contactref element="MICROCONTROLLER1:LED2" pad="A"/>
-<wire x1="4.21" y1="6.5" x2="3.26" y2="2.47" width="0" layer="19" extent="1-1"/>
+<signal name="UC:N$4">
+<contactref element="UC:R3" pad="1"/>
+<contactref element="UC:LED2" pad="A"/>
+<wire x1="3.26" y1="2.47" x2="4.21" y2="6.5" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MICROCONTROLLER1:LED2">
-<contactref element="MICROCONTROLLER1:R3" pad="2"/>
-<contactref element="MICROCONTROLLER1:U1" pad="1"/>
-<wire x1="36.8676" y1="26.4264" x2="5.16" y2="2.47" width="0" layer="19" extent="1-1"/>
+<signal name="UC:LED2">
+<contactref element="UC:R3" pad="2"/>
+<contactref element="UC:U1" pad="1"/>
+<wire x1="5.16" y1="2.47" x2="36.8676" y2="26.4264" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MICROCONTROLLER1:N$6">
-<contactref element="MICROCONTROLLER1:R4" pad="1"/>
-<contactref element="MICROCONTROLLER1:LED3" pad="A"/>
-<wire x1="10.21" y1="21.02" x2="9.26" y2="16.99" width="0" layer="19" extent="1-1"/>
+<signal name="UC:N$6">
+<contactref element="UC:R4" pad="1"/>
+<contactref element="UC:LED3" pad="A"/>
+<wire x1="9.26" y1="16.99" x2="10.21" y2="21.02" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MICROCONTROLLER1:LED3">
-<contactref element="MICROCONTROLLER1:R4" pad="2"/>
-<contactref element="MICROCONTROLLER1:U1" pad="19"/>
-<wire x1="27.1676" y1="19.1264" x2="11.16" y2="16.99" width="0" layer="19" extent="1-1"/>
+<signal name="UC:LED3">
+<contactref element="UC:R4" pad="2"/>
+<contactref element="UC:U1" pad="19"/>
+<wire x1="11.16" y1="16.99" x2="27.1676" y2="19.1264" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MICROCONTROLLER1:N$8">
-<contactref element="MICROCONTROLLER1:R5" pad="1"/>
-<contactref element="MICROCONTROLLER1:LED4" pad="A"/>
-<wire x1="14.21" y1="19.54" x2="13.26" y2="16.51" width="0" layer="19" extent="1-1"/>
+<signal name="UC:N$8">
+<contactref element="UC:R5" pad="1"/>
+<contactref element="UC:LED4" pad="A"/>
+<wire x1="13.26" y1="16.51" x2="14.21" y2="19.54" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MICROCONTROLLER1:LED4">
-<contactref element="MICROCONTROLLER1:R5" pad="2"/>
-<contactref element="MICROCONTROLLER1:U1" pad="20"/>
-<wire x1="27.1676" y1="18.3264" x2="15.16" y2="16.51" width="0" layer="19" extent="1-1"/>
+<signal name="UC:LED4">
+<contactref element="UC:R5" pad="2"/>
+<contactref element="UC:U1" pad="20"/>
+<wire x1="15.16" y1="16.51" x2="27.1676" y2="18.3264" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MICROCONTROLLER1:N$10">
-<contactref element="MICROCONTROLLER1:R6" pad="1"/>
-<contactref element="MICROCONTROLLER1:LED1" pad="A"/>
+<signal name="UC:N$10">
+<contactref element="UC:R6" pad="1"/>
+<contactref element="UC:LED1" pad="A"/>
 <wire x1="16.29" y1="23.54" x2="25.26" y2="31.43" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MICROCONTROLLER1:LED1">
-<contactref element="MICROCONTROLLER1:R6" pad="2"/>
-<contactref element="MICROCONTROLLER1:U1" pad="37"/>
+<signal name="UC:LED1">
+<contactref element="UC:R6" pad="2"/>
+<contactref element="UC:U1" pad="37"/>
 <wire x1="38.5676" y1="19.1264" x2="27.16" y2="31.43" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="N$3">
-<contactref element="MOTOR_DRIVERS" pad="1"/>
-<contactref element="MICROCONTROLLER1:U1" pad="10"/>
-<wire x1="29.6676" y1="26.4264" x2="49.7486" y2="45.1392" width="0" layer="19" extent="1-1"/>
-</signal>
 <signal name="N$5">
-<contactref element="OFF-BOARD_POWER" pad="1"/>
-<contactref element="POWER_SUPPLY1:LED1" pad="A"/>
-<contactref element="POWER_SUPPLY1:C1" pad="2"/>
-<contactref element="POWER_SUPPLY1:U$1" pad="1"/>
-<contactref element="POWER_SUPPLY1:POWER_SW" pad="3"/>
-<wire x1="12.2784" y1="42.672" x2="35.1182" y2="44.7328" width="0" layer="19" extent="1-1"/>
-<wire x1="13.168" y1="48.236" x2="12.2784" y2="42.672" width="0" layer="19" extent="1-1"/>
-<wire x1="17.018" y1="41.6814" x2="35.1182" y2="44.7328" width="0" layer="19" extent="1-1"/>
-<wire x1="16.6116" y1="44.8224" x2="17.018" y2="41.6814" width="0" layer="19" extent="1-1"/>
+<contactref element="OFF-BOARD_PWR" pad="1"/>
+<contactref element="PS:LED1" pad="A"/>
+<contactref element="PS:C1" pad="2"/>
+<contactref element="PS:U$1" pad="1"/>
+<contactref element="PS:POWER_SW" pad="1"/>
+<wire x1="16.5" y1="45.5" x2="24.625" y2="45.2" width="0" layer="19" extent="1-1"/>
+<wire x1="17.05" y1="42" x2="16.5" y2="45.5" width="0" layer="19" extent="1-1"/>
+<wire x1="16.95" y1="39" x2="17.05" y2="42" width="0" layer="19" extent="1-1"/>
+<wire x1="8.9398" y1="39.3716" x2="16.95" y2="39" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="POWER_SUPPLY1:N$3">
-<contactref element="POWER_SUPPLY1:R1" pad="2"/>
-<contactref element="POWER_SUPPLY1:LED1" pad="C"/>
-<wire x1="16.6116" y1="46.9224" x2="22.8448" y2="46.0248" width="0" layer="19" extent="1-1"/>
+<signal name="PS:N$3">
+<contactref element="PS:R1" pad="2"/>
+<contactref element="PS:LED1" pad="C"/>
+<wire x1="11.1552" y1="41.9752" x2="14.95" y2="42" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="POWER_SUPPLY1:N$5">
-<contactref element="POWER_SUPPLY1:U$1" pad="4"/>
-<contactref element="POWER_SUPPLY1:R2" pad="1"/>
-<wire x1="14.2392" y1="33.9344" x2="19.7612" y2="39.8018" width="0" layer="19" extent="1-1"/>
+<signal name="PS:N$5">
+<contactref element="PS:U$1" pad="4"/>
+<contactref element="PS:R2" pad="1"/>
+<wire x1="7.05" y1="34" x2="7.0602" y2="36.6284" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="POWER_SUPPLY1:BATT_V+">
-<contactref element="POWER_SUPPLY1:BATTERY" pad="2"/>
-<contactref element="POWER_SUPPLY1:U$3" pad="1"/>
-<contactref element="POWER_SUPPLY1:POWER_SW" pad="2"/>
-<wire x1="4.2384" y1="42.6058" x2="12.8864" y2="37.0944" width="0" layer="19" extent="1-1"/>
-<wire x1="10.668" y1="48.236" x2="12.8864" y2="37.0944" width="0" layer="19" extent="1-1"/>
+<signal name="PS:BATT_V+">
+<contactref element="PS:BATTERY" pad="2"/>
+<contactref element="PS:U$3" pad="1"/>
+<contactref element="PS:POWER_SW" pad="2"/>
+<wire x1="9.05" y1="42.35" x2="14" y2="45.5" width="0" layer="19" extent="1-1"/>
+<wire x1="4.8" y1="42.375" x2="9.05" y2="42.35" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="POWER_SUPPLY1:BATT_V-">
-<contactref element="POWER_SUPPLY1:BATTERY" pad="1"/>
-<contactref element="POWER_SUPPLY1:U$3" pad="2"/>
-<wire x1="4.2384" y1="43.8558" x2="12.8864" y2="38.3944" width="0" layer="19" extent="1-1"/>
+<signal name="PS:BATT_V-">
+<contactref element="PS:BATTERY" pad="1"/>
+<contactref element="PS:U$3" pad="2"/>
+<wire x1="4.8" y1="43.625" x2="9.05" y2="43.65" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+3V3">
-<contactref element="MICROCONTROLLER1:R2" pad="2"/>
-<contactref element="MICROCONTROLLER1:C2" pad="1"/>
-<contactref element="MICROCONTROLLER1:U1" pad="17"/>
-<contactref element="MICROCONTROLLER1:C4" pad="1"/>
-<contactref element="MICROCONTROLLER1:U1" pad="28"/>
-<contactref element="MICROCONTROLLER1:C5" pad="1"/>
-<contactref element="MICROCONTROLLER1:U1" pad="40"/>
-<contactref element="MICROCONTROLLER1:JP1" pad="5"/>
-<contactref element="MICROCONTROLLER1:JP2" pad="4"/>
-<contactref element="BUTTON1:R1" pad="2"/>
-<contactref element="BUTTON1:U1" pad="5"/>
-<contactref element="POWER_SUPPLY1:R2" pad="2"/>
-<contactref element="POWER_SUPPLY1:U$1" pad="3"/>
-<contactref element="POWER_SUPPLY1:C2" pad="2"/>
-<contactref element="POWER_SUPPLY1:U$1" pad="5"/>
-<contactref element="BLUETOOTH1:C1" pad="1"/>
-<contactref element="BLUETOOTH1:U$1" pad="23"/>
-<wire x1="54.3204" y1="35.6108" x2="47.818" y2="32.1056" width="0" layer="19" extent="1-1"/>
+<contactref element="UC:R2" pad="2"/>
+<contactref element="UC:C2" pad="1"/>
+<contactref element="UC:U1" pad="17"/>
+<contactref element="UC:C4" pad="1"/>
+<contactref element="UC:U1" pad="28"/>
+<contactref element="UC:C5" pad="1"/>
+<contactref element="UC:U1" pad="40"/>
+<contactref element="UC:JP1" pad="5"/>
+<contactref element="UC:JP2" pad="4"/>
+<contactref element="BTN:R1" pad="2"/>
+<contactref element="BTN:U1" pad="5"/>
+<contactref element="PS:R2" pad="2"/>
+<contactref element="PS:U$1" pad="3"/>
+<contactref element="PS:C2" pad="2"/>
+<contactref element="PS:U$1" pad="5"/>
+<contactref element="BT:C1" pad="1"/>
+<contactref element="BT:U$1" pad="23"/>
 <wire x1="49.0372" y1="34.8996" x2="54.3204" y2="35.6108" width="0" layer="19" extent="1-1"/>
-<wire x1="45.0444" y1="34.4932" x2="49.0372" y2="34.8996" width="0" layer="19" extent="1-1"/>
-<wire x1="9.2304" y1="37.1856" x2="47.818" y2="32.1056" width="0" layer="19" extent="1-1"/>
-<wire x1="16.1392" y1="33.9344" x2="9.2304" y2="37.1856" width="0" layer="19" extent="1-1"/>
-<wire x1="31.3944" y1="2.032" x2="45.0444" y2="34.4932" width="0" layer="19" extent="1-1"/>
-<wire x1="32.8676" y1="15.0264" x2="31.3944" y2="2.032" width="0" layer="19" extent="1-1"/>
+<wire x1="47.818" y1="32.1056" x2="49.0372" y2="34.8996" width="0" layer="19" extent="1-1"/>
+<wire x1="45.0444" y1="34.4932" x2="47.818" y2="32.1056" width="0" layer="19" extent="1-1"/>
+<wire x1="38.5676" y1="21.5264" x2="47.818" y2="32.1056" width="0" layer="19" extent="1-1"/>
+<wire x1="32.8676" y1="15.0264" x2="38.5676" y2="21.5264" width="0" layer="19" extent="1-1"/>
 <wire x1="27.1676" y1="20.7264" x2="32.8676" y2="15.0264" width="0" layer="19" extent="1-1"/>
-<wire x1="38.5676" y1="21.5264" x2="32.8676" y2="15.0264" width="0" layer="19" extent="1-1"/>
+<wire x1="31.3944" y1="2.032" x2="32.8676" y2="15.0264" width="0" layer="19" extent="1-1"/>
 <wire x1="53.8988" y1="9.0932" x2="38.5676" y2="21.5264" width="0" layer="19" extent="1-1"/>
 <wire x1="61.3512" y1="1.524" x2="53.8988" y2="9.0932" width="0" layer="19" extent="1-1"/>
 <wire x1="70.9904" y1="11.169" x2="61.3512" y2="1.524" width="0" layer="19" extent="1-1"/>
 <wire x1="71.536" y1="14.9356" x2="70.9904" y2="11.169" width="0" layer="19" extent="1-1"/>
-<wire x1="17.018" y1="39.8018" x2="27.1676" y2="20.7264" width="0" layer="19" extent="1-1"/>
-<wire x1="19.7612" y1="41.6814" x2="17.018" y2="39.8018" width="0" layer="19" extent="1-1"/>
-<wire x1="1.8796" y1="23.5712" x2="17.018" y2="39.8018" width="0" layer="19" extent="1-1"/>
+<wire x1="8.95" y1="34" x2="27.1676" y2="20.7264" width="0" layer="19" extent="1-1"/>
+<wire x1="8.9398" y1="36.6284" x2="8.95" y2="34" width="0" layer="19" extent="1-1"/>
+<wire x1="7.0602" y1="39.3716" x2="8.9398" y2="36.6284" width="0" layer="19" extent="1-1"/>
+<wire x1="3.95" y1="34" x2="8.9398" y2="36.6284" width="0" layer="19" extent="1-1"/>
+<wire x1="1.8796" y1="23.5712" x2="3.95" y2="34" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="BUTTON1:N$2">
-<contactref element="BUTTON1:C1" pad="2"/>
-<contactref element="BUTTON1:U1" pad="2"/>
-<contactref element="BUTTON1:R2" pad="1"/>
-<contactref element="BUTTON1:U$1" pad="1"/>
+<signal name="BTN:N$2">
+<contactref element="BTN:C1" pad="2"/>
+<contactref element="BTN:U1" pad="2"/>
+<contactref element="BTN:R2" pad="1"/>
+<contactref element="BTN:U$1" pad="1"/>
 <wire x1="60.6044" y1="6.5676" x2="66.0044" y2="2.3876" width="0" layer="19" extent="1-1"/>
 <wire x1="53.1316" y1="2.1764" x2="60.6044" y2="6.5676" width="0" layer="19" extent="1-1"/>
 <wire x1="51.9684" y1="8.4328" x2="53.1316" y2="2.1764" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="BUTTON1:N$1">
-<contactref element="BUTTON1:R1" pad="1"/>
-<contactref element="BUTTON1:R2" pad="2"/>
-<contactref element="BUTTON1:U$1" pad="2"/>
-<contactref element="BUTTON1:PAIRING_SW" pad="P$2"/>
+<signal name="BTN:N$1">
+<contactref element="BTN:R1" pad="1"/>
+<contactref element="BTN:R2" pad="2"/>
+<contactref element="BTN:U$1" pad="2"/>
+<contactref element="BTN:PAIRING_SW" pad="P$2"/>
 <wire x1="67.9044" y1="2.3876" x2="68.2952" y2="6.568" width="0" layer="19" extent="1-1"/>
 <wire x1="60.6044" y1="8.3676" x2="68.2952" y2="6.568" width="0" layer="19" extent="1-1"/>
 <wire x1="59.4512" y1="1.524" x2="60.6044" y2="8.3676" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
-<contactref element="BUTTON1:U1" pad="4"/>
-<contactref element="MICROCONTROLLER1:U1" pad="36"/>
+<contactref element="BTN:U1" pad="4"/>
+<contactref element="UC:U1" pad="36"/>
 <wire x1="38.5676" y1="18.3264" x2="53.8988" y2="7.7724" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MICROCONTROLLER1:UART2_RX">
-<contactref element="MICROCONTROLLER1:U1" pad="33"/>
-<contactref element="MICROCONTROLLER1:JP2" pad="3"/>
+<signal name="UC:UART2_RX">
+<contactref element="UC:U1" pad="33"/>
+<contactref element="UC:JP2" pad="3"/>
 <wire x1="33.9344" y1="2.032" x2="36.8676" y2="15.0264" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MICROCONTROLLER1:UART2_TX">
-<contactref element="MICROCONTROLLER1:U1" pad="34"/>
-<contactref element="MICROCONTROLLER1:JP2" pad="2"/>
+<signal name="UC:UART2_TX">
+<contactref element="UC:U1" pad="34"/>
+<contactref element="UC:JP2" pad="2"/>
 <wire x1="36.4744" y1="2.032" x2="38.5676" y2="16.7264" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
-<contactref element="BLUETOOTH1:U$1" pad="14"/>
-<contactref element="MICROCONTROLLER1:U1" pad="27"/>
+<contactref element="BT:U$1" pad="14"/>
+<contactref element="UC:U1" pad="27"/>
 <wire x1="32.0676" y1="15.0264" x2="61.836" y2="18.8856" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$6">
-<contactref element="BLUETOOTH1:U$1" pad="18"/>
-<contactref element="MICROCONTROLLER1:U1" pad="41"/>
+<contactref element="BT:U$1" pad="18"/>
+<contactref element="UC:U1" pad="41"/>
 <wire x1="38.5676" y1="22.3264" x2="65.536" y2="14.9356" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$7">
-<contactref element="BLUETOOTH1:U$1" pad="5"/>
-<contactref element="MICROCONTROLLER1:U1" pad="5"/>
+<contactref element="BT:U$1" pad="5"/>
+<contactref element="UC:U1" pad="5"/>
 <wire x1="33.6676" y1="26.4264" x2="67.936" y2="26.4356" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$8">
-<contactref element="BLUETOOTH1:U$1" pad="6"/>
-<contactref element="MICROCONTROLLER1:U1" pad="4"/>
+<contactref element="BT:U$1" pad="6"/>
+<contactref element="UC:U1" pad="4"/>
 <wire x1="34.4676" y1="26.4264" x2="66.736" y2="26.4356" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$9">
-<contactref element="BLUETOOTH1:U$1" pad="15"/>
-<contactref element="MICROCONTROLLER1:U1" pad="38"/>
+<contactref element="BT:U$1" pad="15"/>
+<contactref element="UC:U1" pad="38"/>
 <wire x1="38.5676" y1="19.9264" x2="61.836" y2="17.6856" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$10">
-<contactref element="BLUETOOTH1:U$1" pad="7"/>
-<contactref element="BLUETOOTH1:R2" pad="2"/>
-<contactref element="MICROCONTROLLER1:U1" pad="3"/>
+<contactref element="BT:U$1" pad="7"/>
+<contactref element="BT:R2" pad="2"/>
+<contactref element="UC:U1" pad="3"/>
 <wire x1="65.536" y1="26.4356" x2="65.5746" y2="30.4922" width="0" layer="19" extent="1-1"/>
 <wire x1="35.2676" y1="26.4264" x2="65.536" y2="26.4356" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$11">
-<contactref element="BLUETOOTH1:U$1" pad="8"/>
-<contactref element="MICROCONTROLLER1:U1" pad="2"/>
+<contactref element="BT:U$1" pad="8"/>
+<contactref element="UC:U1" pad="2"/>
 <wire x1="36.0676" y1="26.4264" x2="64.336" y2="26.4356" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$12">
-<contactref element="BLUETOOTH1:U$1" pad="10"/>
-<contactref element="MICROCONTROLLER1:U1" pad="44"/>
-<contactref element="BLUETOOTH1:SJ2" pad="1"/>
+<contactref element="BT:U$1" pad="10"/>
+<contactref element="UC:U1" pad="44"/>
+<contactref element="BT:SJ2" pad="1"/>
 <wire x1="55.88" y1="26.9748" x2="61.836" y2="23.6856" width="0" layer="19" extent="1-1"/>
 <wire x1="38.5676" y1="24.7264" x2="55.88" y2="26.9748" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$13">
-<contactref element="BLUETOOTH1:U$1" pad="11"/>
-<contactref element="MICROCONTROLLER1:U1" pad="43"/>
-<contactref element="BLUETOOTH1:SJ3" pad="1"/>
+<contactref element="BT:U$1" pad="11"/>
+<contactref element="UC:U1" pad="43"/>
+<contactref element="BT:SJ3" pad="1"/>
 <wire x1="55.88" y1="22.098" x2="61.836" y2="22.4856" width="0" layer="19" extent="1-1"/>
 <wire x1="38.5676" y1="23.9264" x2="55.88" y2="22.098" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$14">
-<contactref element="BLUETOOTH1:U$1" pad="12"/>
-<contactref element="MICROCONTROLLER1:U1" pad="42"/>
-<contactref element="BLUETOOTH1:SJ1" pad="1"/>
+<contactref element="BT:U$1" pad="12"/>
+<contactref element="UC:U1" pad="42"/>
+<contactref element="BT:SJ1" pad="1"/>
 <wire x1="55.88" y1="17.2212" x2="61.836" y2="21.2856" width="0" layer="19" extent="1-1"/>
 <wire x1="38.5676" y1="23.1264" x2="55.88" y2="17.2212" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="N$4">
-<contactref element="MICROCONTROLLER1:U1" pad="8"/>
-<contactref element="MOTOR_DRIVERS" pad="2"/>
-<wire x1="31.2676" y1="26.4264" x2="48.4986" y2="45.1392" width="0" layer="19" extent="1-1"/>
-</signal>
 <signal name="N$15">
 <contactref element="ANALOG_SENSOR" pad="1"/>
-<contactref element="MICROCONTROLLER1:U1" pad="23"/>
+<contactref element="UC:U1" pad="23"/>
 <wire x1="19.949" y1="4.1368" x2="28.8676" y2="15.0264" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$16">
 <contactref element="ANALOG_SENSOR" pad="2"/>
-<contactref element="MICROCONTROLLER1:U1" pad="24"/>
+<contactref element="UC:U1" pad="24"/>
 <wire x1="21.199" y1="4.1368" x2="29.6676" y2="15.0264" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MICROCONTROLLER1:N$5">
-<contactref element="MICROCONTROLLER1:U1" pad="12"/>
-<contactref element="MICROCONTROLLER1:R7" pad="1"/>
-<contactref element="MICROCONTROLLER1:U1" pad="13"/>
-<contactref element="MICROCONTROLLER1:U1" pad="11"/>
-<contactref element="MICROCONTROLLER1:U1" pad="9"/>
-<contactref element="MICROCONTROLLER1:U1" pad="14"/>
+<signal name="UC:N$5">
+<contactref element="UC:U1" pad="12"/>
+<contactref element="UC:R7" pad="1"/>
+<contactref element="UC:U1" pad="13"/>
+<contactref element="UC:U1" pad="11"/>
+<contactref element="UC:U1" pad="9"/>
+<contactref element="UC:U1" pad="14"/>
 <wire x1="30.4676" y1="26.4264" x2="28.8676" y2="26.4264" width="0" layer="19" extent="1-1"/>
 <wire x1="27.1676" y1="24.7264" x2="28.8676" y2="26.4264" width="0" layer="19" extent="1-1"/>
 <wire x1="27.1676" y1="23.9264" x2="27.1676" y2="24.7264" width="0" layer="19" extent="1-1"/>
 <wire x1="27.1676" y1="23.1264" x2="27.1676" y2="23.9264" width="0" layer="19" extent="1-1"/>
 <wire x1="17.6936" y1="21.4884" x2="27.1676" y2="23.1264" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MICROCONTROLLER1:N$7">
-<contactref element="MICROCONTROLLER1:R8" pad="1"/>
-<contactref element="MICROCONTROLLER1:U1" pad="26"/>
-<contactref element="MICROCONTROLLER1:U1" pad="25"/>
-<wire x1="30.4676" y1="15.0264" x2="17.8968" y2="18.1864" width="0" layer="19" extent="1-1"/>
-<wire x1="31.2676" y1="15.0264" x2="30.4676" y2="15.0264" width="0" layer="19" extent="1-1"/>
+<signal name="UC:N$7">
+<contactref element="UC:R8" pad="1"/>
+<contactref element="UC:U1" pad="26"/>
+<contactref element="UC:U1" pad="25"/>
+<wire x1="30.4676" y1="15.0264" x2="31.2676" y2="15.0264" width="0" layer="19" extent="1-1"/>
+<wire x1="17.8968" y1="18.1864" x2="30.4676" y2="15.0264" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MICROCONTROLLER1:N$9">
-<contactref element="MICROCONTROLLER1:U1" pad="32"/>
-<contactref element="MICROCONTROLLER1:R9" pad="1"/>
-<contactref element="MICROCONTROLLER1:U1" pad="35"/>
-<wire x1="36.0676" y1="15.0264" x2="18.9128" y2="14.0716" width="0" layer="19" extent="1-1"/>
-<wire x1="38.5676" y1="17.5264" x2="36.0676" y2="15.0264" width="0" layer="19" extent="1-1"/>
+<signal name="UC:N$9">
+<contactref element="UC:U1" pad="32"/>
+<contactref element="UC:R9" pad="1"/>
+<contactref element="UC:U1" pad="35"/>
+<wire x1="36.0676" y1="15.0264" x2="38.5676" y2="17.5264" width="0" layer="19" extent="1-1"/>
+<wire x1="18.9128" y1="14.0716" x2="36.0676" y2="15.0264" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="BLUETOOTH1:N$1">
-<contactref element="BLUETOOTH1:R3" pad="2"/>
-<contactref element="BLUETOOTH1:SJ2" pad="2"/>
+<signal name="BT:N$1">
+<contactref element="BT:R3" pad="2"/>
+<contactref element="BT:SJ2" pad="2"/>
 <wire x1="52.9692" y1="24.9428" x2="55.88" y2="25.4508" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="BLUETOOTH1:N$2">
-<contactref element="BLUETOOTH1:R4" pad="2"/>
-<contactref element="BLUETOOTH1:SJ3" pad="2"/>
+<signal name="BT:N$2">
+<contactref element="BT:R4" pad="2"/>
+<contactref element="BT:SJ3" pad="2"/>
 <wire x1="52.9184" y1="20.1676" x2="55.88" y2="20.574" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="BLUETOOTH1:N$3">
-<contactref element="BLUETOOTH1:R1" pad="2"/>
-<contactref element="BLUETOOTH1:SJ1" pad="2"/>
+<signal name="BT:N$3">
+<contactref element="BT:R1" pad="2"/>
+<contactref element="BT:SJ1" pad="2"/>
 <wire x1="52.9184" y1="15.3924" x2="55.88" y2="15.6972" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$3">
+<contactref element="MOTOR_DRIVERS" pad="2"/>
+<contactref element="UC:U1" pad="10"/>
+<wire x1="29.6676" y1="26.4264" x2="33.4986" y2="45.1392" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$4">
+<contactref element="UC:U1" pad="8"/>
+<contactref element="MOTOR_DRIVERS" pad="1"/>
+<wire x1="31.2676" y1="26.4264" x2="34.7486" y2="45.1392" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>
