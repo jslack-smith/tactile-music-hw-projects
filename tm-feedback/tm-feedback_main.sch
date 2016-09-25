@@ -12665,7 +12665,7 @@ debugging</text>
 <label x="177.8" y="132.08" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="UART1_!CTS" class="0">
+<net name="BLE_WAKE_HW" class="0">
 <segment>
 <pinref part="U1" gate="U1" pin="PGED2/ASDA2/RP37/RB5"/>
 <wire x1="177.8" y1="129.54" x2="185.42" y2="129.54" width="0.1524" layer="91"/>
@@ -12679,7 +12679,7 @@ debugging</text>
 <label x="177.8" y="93.98" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="BLE_WAKE_HW" class="0">
+<net name="UART1_!CTS" class="0">
 <segment>
 <pinref part="U1" gate="U1" pin="SCL1/RP153/RC5"/>
 <wire x1="177.8" y1="121.92" x2="185.42" y2="121.92" width="0.1524" layer="91"/>
@@ -13293,7 +13293,6 @@ LED</text>
 <approved hash="102,1@MICROCONTROLLER,58.166,19.05,+3V3,3V3,,,,"/>
 <approved hash="102,1@MICROCONTROLLER,78.486,19.05,+3V3,3V3,,,,"/>
 <approved hash="102,1@MICROCONTROLLER,45.72,162.56,+3V3,3V3,,,,"/>
-<approved hash="102,1@MICROCONTROLLER,226.06,147.32,+3V3,3V3,,,,"/>
 <approved hash="104,1@BLUETOOTH,152.4,134.62,U$1,VDD,3V3,,,"/>
 <approved hash="104,1@MICROCONTROLLER,96.52,124.46,U1,VSS,GND,,,"/>
 <approved hash="104,1@MICROCONTROLLER,96.52,99.06,U1,AVSS,GND,,,"/>
