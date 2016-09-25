@@ -145,8 +145,8 @@ DIN A4, landscape with extra doc field</description>
 <smd name="22" x="5.75" y="-1.25" dx="0.8" dy="2" layer="1" rot="R90"/>
 <smd name="23" x="5.75" y="-0.05" dx="0.8" dy="2" layer="1" rot="R90"/>
 <smd name="24" x="5.75" y="1.15" dx="0.8" dy="2" layer="1" rot="R90"/>
-<smd name="9A" x="-4.95" y="-8.75" dx="1" dy="1.4" layer="1" roundness="100"/>
-<smd name="16A" x="4.95" y="-8.75" dx="1" dy="1.4" layer="1" roundness="100"/>
+<smd name="9A" x="-4.95" y="-8.75" dx="1" dy="1" layer="1" roundness="100"/>
+<smd name="16A" x="4.95" y="-8.75" dx="1" dy="1" layer="1" roundness="100"/>
 <smd name="1A" x="-4.95" y="2.95" dx="1" dy="1.6" layer="1" roundness="100"/>
 <smd name="24A" x="4.95" y="2.95" dx="1" dy="1.6" layer="1" roundness="100"/>
 <smd name="9" x="-5.75" y="-9.75" dx="1.2" dy="1.2" layer="1" roundness="100"/>
@@ -435,8 +435,8 @@ package type TQ</description>
 <wire x1="-4.65" y1="1.75" x2="-3.45" y2="1.75" width="0.127" layer="21"/>
 <wire x1="3.45" y1="1.75" x2="4.65" y2="1.75" width="0.127" layer="21"/>
 <wire x1="4.65" y1="1.75" x2="4.65" y2="-2" width="0.127" layer="21"/>
-<text x="-5.08" y="5.08" size="1.27" layer="25">&gt;NAMES</text>
-<text x="-5.08" y="3.81" size="1.27" layer="27">&gt;VALUES</text>
+<text x="-5.08" y="5.08" size="1.27" layer="25">&gt;NAME</text>
+<text x="-5.08" y="3.81" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 <package name="THRU-TACTILE-BTN">
 <pad name="P$1" x="2.5" y="0" drill="1"/>
@@ -12075,15 +12075,18 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="LED1" library="led" deviceset="LED" device="CHIPLED_0805" value="BLUE"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
+<part name="SJ2" library="jumper" deviceset="SJ" device=""/>
+<part name="SJ3" library="jumper" deviceset="SJ" device=""/>
+<part name="SJ1" library="jumper" deviceset="SJ" device=""/>
 </parts>
 <sheets>
 <sheet>
 <description>Bluetooth Module</description>
 <plain>
-<text x="111.76" y="50.8" size="1.778" layer="98">LED Indicators</text>
-<wire x1="99.06" y1="0" x2="99.06" y2="55.88" width="0.1524" layer="98"/>
-<wire x1="99.06" y1="55.88" x2="142.24" y2="55.88" width="0.1524" layer="98"/>
-<wire x1="142.24" y1="55.88" x2="142.24" y2="0" width="0.1524" layer="98"/>
+<text x="111.76" y="58.42" size="1.778" layer="98">LED Indicators</text>
+<wire x1="99.06" y1="0" x2="99.06" y2="60.96" width="0.1524" layer="98"/>
+<wire x1="99.06" y1="60.96" x2="142.24" y2="60.96" width="0.1524" layer="98"/>
+<wire x1="142.24" y1="60.96" x2="142.24" y2="0" width="0.1524" layer="98"/>
 </plain>
 <instances>
 <instance part="BLUETOOTH_MODULE" gate="G$1" x="0" y="0"/>
@@ -12106,6 +12109,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <instance part="LED1" gate="G$1" x="132.08" y="17.78"/>
 <instance part="GND6" gate="1" x="132.08" y="7.62"/>
 <instance part="GND7" gate="1" x="86.36" y="139.7" rot="R270"/>
+<instance part="SJ2" gate="1" x="106.68" y="40.64" rot="R270"/>
+<instance part="SJ3" gate="1" x="119.38" y="40.64" rot="R270"/>
+<instance part="SJ1" gate="1" x="132.08" y="40.64" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -12225,9 +12231,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="109.22" y="63.5" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="106.68" y1="33.02" x2="106.68" y2="38.1" width="0.1524" layer="91"/>
-<label x="106.68" y="35.56" size="1.778" layer="95" rot="R90"/>
+<pinref part="SJ2" gate="1" pin="1"/>
+<wire x1="106.68" y1="45.72" x2="106.68" y2="48.26" width="0.1524" layer="91"/>
+<label x="106.68" y="45.72" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="MLDP_EV" class="0">
@@ -12237,9 +12243,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="114.3" y="63.5" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="119.38" y1="33.02" x2="119.38" y2="38.1" width="0.1524" layer="91"/>
-<label x="119.38" y="35.56" size="1.778" layer="95" rot="R90"/>
+<pinref part="SJ3" gate="1" pin="1"/>
+<wire x1="119.38" y1="45.72" x2="119.38" y2="48.26" width="0.1524" layer="91"/>
+<label x="119.38" y="45.72" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="WS" class="0">
@@ -12249,9 +12255,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="119.38" y="63.5" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="132.08" y1="33.02" x2="132.08" y2="38.1" width="0.1524" layer="91"/>
-<label x="132.08" y="35.56" size="1.778" layer="95" rot="R90"/>
+<pinref part="SJ1" gate="1" pin="1"/>
+<wire x1="132.08" y1="45.72" x2="132.08" y2="48.26" width="0.1524" layer="91"/>
+<label x="132.08" y="45.72" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="UART_CTS" class="0">
@@ -12279,6 +12285,27 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="U$1" gate="G$1" pin="VDD"/>
 <wire x1="152.4" y1="134.62" x2="154.94" y2="134.62" width="0.1524" layer="91"/>
 <label x="154.94" y="134.62" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="R3" gate="G$1" pin="2"/>
+<pinref part="SJ2" gate="1" pin="2"/>
+<wire x1="106.68" y1="33.02" x2="106.68" y2="35.56" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="R4" gate="G$1" pin="2"/>
+<pinref part="SJ3" gate="1" pin="2"/>
+<wire x1="119.38" y1="33.02" x2="119.38" y2="35.56" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="R1" gate="G$1" pin="2"/>
+<pinref part="SJ1" gate="1" pin="2"/>
+<wire x1="132.08" y1="33.02" x2="132.08" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
