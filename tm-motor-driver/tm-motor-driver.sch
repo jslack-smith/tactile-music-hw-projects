@@ -153,8 +153,15 @@ DIN A4, landscape with extra doc field</description>
 <smd name="P$2" x="3.175" y="-0.8" dx="2.1" dy="3" layer="1"/>
 <smd name="1" x="-0.625" y="1.8" dx="0.8" dy="1.6" layer="1"/>
 <smd name="2" x="0.625" y="1.8" dx="0.8" dy="1.6" layer="1"/>
-<text x="-7.4" y="1.3" size="1.27" layer="25">&gt;NAME</text>
-<text x="2.1" y="1.3" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-7.3" y="2.6" size="1.27" layer="25">&gt;NAME</text>
+<text x="2.1" y="2.6" size="1.27" layer="27">&gt;VALUE</text>
+<wire x1="-3.825" y1="2.1" x2="-3.8" y2="2.1" width="0.127" layer="21"/>
+<wire x1="-3.8" y1="2.1" x2="-1.3" y2="2.1" width="0.127" layer="21"/>
+<wire x1="-3.8" y1="2.1" x2="-3.8" y2="0.9" width="0.127" layer="21"/>
+<wire x1="3.825" y1="2.1" x2="3.8" y2="2.1" width="0.127" layer="21"/>
+<wire x1="3.8" y1="2.1" x2="1.3" y2="2.1" width="0.127" layer="21"/>
+<wire x1="3.8" y1="2.1" x2="3.8" y2="0.8" width="0.127" layer="21"/>
+<wire x1="-2" y1="-2" x2="1.9" y2="-2" width="0.127" layer="21"/>
 </package>
 <package name="SOT95P270X145-5N">
 <smd name="1" x="-1.3716" y="0.9398" dx="1.3208" dy="0.5588" layer="1"/>
@@ -320,6 +327,7 @@ DIN A4, landscape with extra doc field</description>
 </devices>
 </deviceset>
 <deviceset name="PICOBLADE">
+<description>PICOBLADE connector</description>
 <gates>
 <gate name="G$1" symbol="PICOBLADE" x="0" y="0"/>
 </gates>
