@@ -3176,12 +3176,12 @@ design rules under a new name.</description>
 <contactref element="MICROCONTROLLER1:JP1" pad="5"/>
 <contactref element="MICROCONTROLLER1:JP2" pad="4"/>
 <contactref element="BUTTON1:R1" pad="2"/>
-<contactref element="BLUETOOTH1:C1" pad="1"/>
 <contactref element="BUTTON1:U1" pad="5"/>
 <contactref element="POWER_SUPPLY1:R2" pad="2"/>
 <contactref element="POWER_SUPPLY1:U$1" pad="3"/>
 <contactref element="POWER_SUPPLY1:C2" pad="2"/>
 <contactref element="POWER_SUPPLY1:U$1" pad="5"/>
+<contactref element="BLUETOOTH1:C1" pad="1"/>
 <contactref element="BLUETOOTH1:U$1" pad="23"/>
 <wire x1="-57.4548" y1="-159.3596" x2="-72.07" y2="-179.07" width="0" layer="19" extent="1-1"/>
 <wire x1="-59.7916" y1="-140.6398" x2="-57.4548" y2="-159.3596" width="0" layer="19" extent="1-1"/>

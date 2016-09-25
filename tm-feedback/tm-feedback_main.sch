@@ -12012,7 +12012,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <modules>
 <module name="BLUETOOTH" prefix="" dx="30.48" dy="20.32">
 <ports>
-<port name="VDD" side="top" coord="0" direction="pwr"/>
 <port name="GND" side="bottom" coord="0" direction="pwr"/>
 <port name="UART_TX" side="right" coord="-2.54" direction="out"/>
 <port name="UART_RX" side="right" coord="-5.08" direction="in"/>
@@ -12020,10 +12019,11 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <port name="UART_RTS" side="right" coord="5.08" direction="io"/>
 <port name="CMD/MLDP" side="left" coord="-2.54" direction="in"/>
 <port name="WAKE_SW" side="left" coord="-5.08" direction="in"/>
-<port name="WAKE_HW" side="left" coord="-7.62" direction="in"/>
+<port name="WAKE_HW" side="left" coord="-7.62" direction="io"/>
 <port name="CONN" side="left" coord="7.62" direction="out"/>
 <port name="MLDP_EV" side="left" coord="5.08" direction="out"/>
 <port name="WS" side="left" coord="2.54" direction="out"/>
+<port name="3V3" side="top" coord="0" direction="pwr"/>
 </ports>
 <variantdefs>
 </variantdefs>
@@ -12240,12 +12240,12 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="134.62" y="63.5" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
-<net name="VDD" class="0">
+<net name="3V3" class="0">
 <segment>
-<pinref part="+3V3" gate="G$1" pin="+3V3"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="175.26" y1="149.86" x2="175.26" y2="147.32" width="0.1524" layer="91"/>
-<label x="182.88" y="149.86" size="1.778" layer="95" rot="R180"/>
+<pinref part="+3V3" gate="G$1" pin="+3V3"/>
+<wire x1="175.26" y1="147.32" x2="175.26" y2="149.86" width="0.1524" layer="91"/>
+<label x="175.26" y="147.32" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="VDD"/>
@@ -12263,19 +12263,19 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <port name="GND" side="bottom" coord="0" direction="pwr"/>
 <port name="MOTOR_PWM_1" side="right" coord="15.24" direction="out"/>
 <port name="MOTOR_PWM_2" side="right" coord="12.7" direction="out"/>
-<port name="BTN_SIGNAL" side="left" coord="-15.24" direction="in"/>
+<port name="BTN_SIGNAL" side="left" coord="-15.24" direction="io"/>
 <port name="UART1_!CTS" side="left" coord="7.62" direction="io"/>
 <port name="UART1_!RTS" side="left" coord="10.16" direction="io"/>
-<port name="UART1_RX" side="left" coord="5.08" direction="in"/>
+<port name="UART1_RX" side="left" coord="5.08" direction="io"/>
 <port name="UART1_TX" side="left" coord="-2.54" direction="out"/>
-<port name="BLE_CONN" side="left" coord="12.7" direction="in"/>
-<port name="BLE_MLDP_EV" side="left" coord="15.24" direction="in"/>
-<port name="BLE_WS" side="left" coord="17.78" direction="in"/>
+<port name="BLE_CONN" side="left" coord="12.7" direction="io"/>
+<port name="BLE_MLDP_EV" side="left" coord="15.24" direction="io"/>
+<port name="BLE_WS" side="left" coord="17.78" direction="io"/>
 <port name="BLE_WAKE_HW" side="left" coord="-5.08" direction="out"/>
 <port name="BLE_WAKE_SW" side="left" coord="-7.62" direction="out"/>
 <port name="BLE_CMD" side="left" coord="-10.16" direction="out"/>
-<port name="ANALOG_2" side="right" coord="-15.24" direction="in"/>
-<port name="ANALOG_1" side="right" coord="-12.7" direction="in"/>
+<port name="ANALOG_2" side="right" coord="-15.24" direction="io"/>
+<port name="ANALOG_1" side="right" coord="-12.7" direction="io"/>
 </ports>
 <variantdefs>
 </variantdefs>
@@ -12292,21 +12292,21 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="SJ1" library="jumper" deviceset="SJ" device="" value="MCLR_CAP"/>
 <part name="C2" library="rcl" deviceset="C-EU" device="C0805" value="0.1uF"/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
-<part name="P+2" library="supply1" deviceset="VCC" device=""/>
+<part name="P+2" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="C3" library="rcl" deviceset="C-EU" device="C0805" value="10uF"/>
 <part name="C4" library="rcl" deviceset="C-EU" device="C0805" value="0.1uF"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
-<part name="P+3" library="supply1" deviceset="VCC" device=""/>
+<part name="P+3" library="supply1" deviceset="+3V3" device=""/>
 <part name="C5" library="rcl" deviceset="C-EU" device="C0805" value="0.1uF"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="P+4" library="supply1" deviceset="VCC" device=""/>
+<part name="P+4" library="supply1" deviceset="+3V3" device=""/>
 <part name="U2" library="tactile-music" deviceset="MCRSD20000F183000RR" device=""/>
 <part name="C6" library="rcl" deviceset="C-EU" device="C0805" value="27pF"/>
 <part name="C7" library="rcl" deviceset="C-EU" device="C0805" value="27pF"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
-<part name="P+5" library="supply1" deviceset="VCC" device=""/>
+<part name="P+5" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="LED2" library="led" deviceset="LED" device="CHIPLED_0805" value="RED"/>
 <part name="R3" library="resistor" deviceset="R-US_" device="R0805" value="69Ω"/>
@@ -12321,7 +12321,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="R6" library="resistor" deviceset="R-US_" device="R0805" value="60Ω"/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
-<part name="P+6" library="supply1" deviceset="VCC" device=""/>
+<part name="P+6" library="supply1" deviceset="+3V3" device=""/>
 <part name="R7" library="resistor" deviceset="R-US_" device="R0805" value="10kΩ"/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="R8" library="resistor" deviceset="R-US_" device="R0805" value="10kΩ"/>
@@ -12383,21 +12383,21 @@ debugging</text>
 <instance part="SJ1" gate="1" x="66.04" y="88.9" rot="R270"/>
 <instance part="C2" gate="G$1" x="42.926" y="13.97"/>
 <instance part="GND2" gate="1" x="42.926" y="3.81"/>
-<instance part="P+2" gate="VCC" x="42.926" y="21.59"/>
+<instance part="P+2" gate="G$1" x="42.926" y="21.59"/>
 <instance part="GND3" gate="1" x="63.5" y="124.46" rot="R270"/>
 <instance part="C3" gate="G$1" x="71.12" y="121.92" rot="R270"/>
 <instance part="C4" gate="G$1" x="58.166" y="13.97"/>
 <instance part="GND4" gate="1" x="58.166" y="3.81"/>
-<instance part="P+3" gate="VCC" x="58.166" y="21.59"/>
+<instance part="P+3" gate="G$1" x="58.166" y="21.59"/>
 <instance part="C5" gate="G$1" x="78.486" y="13.97"/>
 <instance part="GND5" gate="1" x="78.486" y="3.81"/>
-<instance part="P+4" gate="VCC" x="78.486" y="21.59"/>
+<instance part="P+4" gate="G$1" x="78.486" y="21.59"/>
 <instance part="U2" gate="G$1" x="248.92" y="104.14"/>
 <instance part="C6" gate="G$1" x="241.3" y="99.06"/>
 <instance part="C7" gate="G$1" x="256.54" y="99.06"/>
 <instance part="GND6" gate="1" x="241.3" y="88.9"/>
 <instance part="GND7" gate="1" x="256.54" y="88.9"/>
-<instance part="P+5" gate="VCC" x="45.72" y="165.1"/>
+<instance part="P+5" gate="G$1" x="45.72" y="165.1"/>
 <instance part="GND8" gate="1" x="45.72" y="152.4"/>
 <instance part="LED2" gate="G$1" x="116.84" y="15.24"/>
 <instance part="R3" gate="G$1" x="116.84" y="25.4" rot="R90"/>
@@ -12412,7 +12412,7 @@ debugging</text>
 <instance part="R6" gate="G$1" x="106.68" y="25.4" rot="R90"/>
 <instance part="GND12" gate="1" x="106.68" y="5.08"/>
 <instance part="GND13" gate="1" x="226.06" y="167.64" rot="R180"/>
-<instance part="P+6" gate="VCC" x="226.06" y="144.78" rot="R180"/>
+<instance part="P+6" gate="G$1" x="226.06" y="144.78" rot="R180"/>
 <instance part="R7" gate="G$1" x="83.82" y="109.22" rot="R180"/>
 <instance part="GND14" gate="1" x="73.66" y="109.22" rot="R270"/>
 <instance part="R8" gate="G$1" x="205.74" y="91.44"/>
@@ -12455,7 +12455,7 @@ debugging</text>
 </segment>
 <segment>
 <pinref part="C2" gate="G$1" pin="1"/>
-<pinref part="P+2" gate="VCC" pin="VCC"/>
+<pinref part="P+2" gate="G$1" pin="+3V3"/>
 <wire x1="42.926" y1="16.51" x2="42.926" y2="19.05" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -12465,7 +12465,7 @@ debugging</text>
 </segment>
 <segment>
 <pinref part="C4" gate="G$1" pin="1"/>
-<pinref part="P+3" gate="VCC" pin="VCC"/>
+<pinref part="P+3" gate="G$1" pin="+3V3"/>
 <wire x1="58.166" y1="16.51" x2="58.166" y2="19.05" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -12475,7 +12475,7 @@ debugging</text>
 </segment>
 <segment>
 <pinref part="C5" gate="G$1" pin="1"/>
-<pinref part="P+4" gate="VCC" pin="VCC"/>
+<pinref part="P+4" gate="G$1" pin="+3V3"/>
 <wire x1="78.486" y1="16.51" x2="78.486" y2="19.05" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -12484,7 +12484,7 @@ debugging</text>
 <label x="177.8" y="127" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="P+5" gate="VCC" pin="VCC"/>
+<pinref part="P+5" gate="G$1" pin="+3V3"/>
 <wire x1="45.72" y1="162.56" x2="45.72" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="A" pin="5"/>
 <wire x1="45.72" y1="160.02" x2="22.86" y2="160.02" width="0.1524" layer="91"/>
@@ -12494,7 +12494,7 @@ debugging</text>
 <pinref part="JP2" gate="A" pin="4"/>
 <wire x1="233.68" y1="152.4" x2="226.06" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="152.4" x2="226.06" y2="147.32" width="0.1524" layer="91"/>
-<pinref part="P+6" gate="VCC" pin="VCC"/>
+<pinref part="P+6" gate="G$1" pin="+3V3"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -13285,10 +13285,6 @@ LED</text>
 <wire x1="127" y1="167.64" x2="127" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="+3V3" gate="G$1" pin="+3V3"/>
-<portref moduleinst="BLUETOOTH1" port="VDD"/>
-</segment>
-<segment>
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
 <portref moduleinst="MICROCONTROLLER1" port="3V3"/>
 <wire x1="104.14" y1="134.62" x2="104.14" y2="139.7" width="0.1524" layer="91"/>
@@ -13297,6 +13293,10 @@ LED</text>
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
 <portref moduleinst="BUTTON1" port="+3V3"/>
 <wire x1="40.64" y1="76.2" x2="40.64" y2="78.74" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="+3V3" gate="G$1" pin="+3V3"/>
+<portref moduleinst="BLUETOOTH1" port="3V3"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -13421,6 +13421,14 @@ LED</text>
 </sheet>
 </sheets>
 <errors>
+<approved hash="102,1@BLUETOOTH,175.26,149.86,+3V3,3V3,,,,"/>
+<approved hash="102,1@MICROCONTROLLER,66.04,109.22,VCC,3V3,,,,"/>
+<approved hash="102,1@MICROCONTROLLER,42.926,19.05,+3V3,3V3,,,,"/>
+<approved hash="102,1@MICROCONTROLLER,58.166,19.05,+3V3,3V3,,,,"/>
+<approved hash="102,1@MICROCONTROLLER,78.486,19.05,+3V3,3V3,,,,"/>
+<approved hash="102,1@MICROCONTROLLER,45.72,162.56,+3V3,3V3,,,,"/>
+<approved hash="102,1@MICROCONTROLLER,226.06,147.32,+3V3,3V3,,,,"/>
+<approved hash="104,1@BLUETOOTH,152.4,134.62,U$1,VDD,3V3,,,"/>
 <approved hash="104,1@MICROCONTROLLER,96.52,124.46,U1,VSS,GND,,,"/>
 <approved hash="104,1@MICROCONTROLLER,96.52,99.06,U1,AVSS,GND,,,"/>
 <approved hash="104,1@MICROCONTROLLER,96.52,96.52,U1,AVDD,3V3,,,"/>
