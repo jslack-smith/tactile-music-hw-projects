@@ -148,24 +148,13 @@ DIN A4, landscape with extra doc field</description>
 <text x="2" y="-0.05" size="0.5" layer="27">&gt;VALUE</text>
 <dimension x1="1.05" y1="0.65" x2="1.05" y2="-0.65" x3="5.35" y3="0" textsize="0.5" layer="47"/>
 </package>
-<package name="JST-SMD-2">
-<description>JST SMD Right Angle Connector</description>
-<smd name="3" x="-3.35" y="-3.1" dx="2" dy="1.5" layer="1" rot="R90"/>
-<smd name="4" x="3.35" y="-3.1" dx="2" dy="1.5" layer="1" rot="R90"/>
-<smd name="1" x="-1" y="2" dx="4" dy="1" layer="1" rot="R90"/>
-<smd name="2" x="1" y="2" dx="4" dy="1" layer="1" rot="R90"/>
-<wire x1="4.05" y1="-5.5" x2="4.05" y2="2.15" width="0.127" layer="51"/>
-<wire x1="-4.05" y1="-5.5" x2="-4.05" y2="2.1" width="0.127" layer="51"/>
-<wire x1="-4.05" y1="-5.5" x2="4.05" y2="-5.5" width="0.127" layer="51"/>
-<wire x1="-4.05" y1="2.15" x2="4.05" y2="2.15" width="0.127" layer="51"/>
-<wire x1="-4.3" y1="-5.5" x2="-4.3" y2="2.4" width="0.127" layer="21"/>
-<wire x1="-4.3" y1="2.4" x2="-2" y2="2.4" width="0.127" layer="21"/>
-<wire x1="-0.25" y1="2.4" x2="0.25" y2="2.4" width="0.127" layer="21"/>
-<wire x1="2" y1="2.4" x2="4.3" y2="2.4" width="0.127" layer="21"/>
-<wire x1="4.3" y1="2.4" x2="4.3" y2="-5.5" width="0.127" layer="21"/>
-<wire x1="-0.6" y1="-5.5" x2="0.6" y2="-5.5" width="0.127" layer="21"/>
-<text x="4.6" y="0.9" size="1.27" layer="25">&gt;NAME</text>
-<text x="4.6" y="-1.3" size="1.27" layer="27">&gt;VALUE</text>
+<package name="PICOBLADE">
+<smd name="P$1" x="-3.175" y="-0.8" dx="2.1" dy="3" layer="1"/>
+<smd name="P$2" x="3.175" y="-0.8" dx="2.1" dy="3" layer="1"/>
+<smd name="1" x="-0.625" y="1.8" dx="0.8" dy="1.6" layer="1"/>
+<smd name="2" x="0.625" y="1.8" dx="0.8" dy="1.6" layer="1"/>
+<text x="-7.4" y="1.3" size="1.27" layer="25">&gt;NAME</text>
+<text x="2.1" y="1.3" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 <package name="SOT95P270X145-5N">
 <smd name="1" x="-1.3716" y="0.9398" dx="1.3208" dy="0.5588" layer="1"/>
@@ -267,7 +256,7 @@ DIN A4, landscape with extra doc field</description>
 <text x="-7.62" y="7.112" size="1.016" layer="95">&gt;NAME</text>
 <text x="-7.62" y="5.08" size="1.016" layer="96">&gt;VALUE</text>
 </symbol>
-<symbol name="JST-2">
+<symbol name="PICOBLADE">
 <description>JST Connector</description>
 <wire x1="-5.08" y1="5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="-5.08" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
@@ -330,13 +319,12 @@ DIN A4, landscape with extra doc field</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="JST-SMD-2">
-<description>JST SMD Right Angle Connecter 2 Pins</description>
+<deviceset name="PICOBLADE">
 <gates>
-<gate name="G$1" symbol="JST-2" x="0" y="0"/>
+<gate name="G$1" symbol="PICOBLADE" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="JST-SMD-2">
+<device name="" package="PICOBLADE">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -8711,7 +8699,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="FRAME1" library="frames" deviceset="DINA4_L" device="" value="Motor Driver"/>
 <part name="D_0" library="tactile-music" deviceset="DB2S308" device=""/>
 <part name="MOSFET_0" library="tactile-music" deviceset="PMF370XN" device=""/>
-<part name="MOTOR_0" library="tactile-music" deviceset="JST-SMD-2" device=""/>
+<part name="MOTOR_0" library="tactile-music" deviceset="PICOBLADE" device=""/>
 <part name="R1" library="resistor" deviceset="R-US_" device="R0805" value="10k"/>
 <part name="LED_0" library="led" deviceset="LED" device="CHIPLED_0805" value="RED"/>
 <part name="VREG" library="tactile-music" deviceset="MCP1824T-3302E/OT" device=""/>
@@ -8722,7 +8710,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
 <part name="D_1" library="tactile-music" deviceset="DB2S308" device=""/>
 <part name="MOSFET_1" library="tactile-music" deviceset="PMF370XN" device=""/>
-<part name="MOTOR_1" library="tactile-music" deviceset="JST-SMD-2" device=""/>
+<part name="MOTOR_1" library="tactile-music" deviceset="PICOBLADE" device=""/>
 <part name="R3" library="resistor" deviceset="R-US_" device="R0805" value="10k"/>
 <part name="LED_1" library="led" deviceset="LED" device="CHIPLED_0805" value="RED"/>
 <part name="R4" library="resistor" deviceset="R-US_" device="R0805" value="60"/>
@@ -8734,8 +8722,8 @@ Source: AVX .. aphvc.pdf</description>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="C2" library="rcl" deviceset="C-EU" device="C0805" value="10uF"/>
 <part name="R5" library="resistor" deviceset="R-US_" device="R0805" value="10k"/>
-<part name="POWER" library="tactile-music" deviceset="JST-SMD-2" device=""/>
-<part name="PWM" library="tactile-music" deviceset="JST-SMD-2" device=""/>
+<part name="POWER" library="tactile-music" deviceset="PICOBLADE" device=""/>
+<part name="PWM" library="tactile-music" deviceset="PICOBLADE" device=""/>
 </parts>
 <sheets>
 <sheet>

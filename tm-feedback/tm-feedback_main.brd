@@ -338,24 +338,13 @@ package type TQ</description>
 <wire x1="-5.7" y1="2.35" x2="-5.7" y2="1.2" width="0.127" layer="27"/>
 <wire x1="-5.7" y1="-2.35" x2="-5.7" y2="-1.2" width="0.127" layer="27"/>
 </package>
-<package name="JST-SMD-2">
-<description>JST SMD Right Angle Connector</description>
-<smd name="3" x="-3.35" y="-3.1" dx="2" dy="1.5" layer="1" rot="R90"/>
-<smd name="4" x="3.35" y="-3.1" dx="2" dy="1.5" layer="1" rot="R90"/>
-<smd name="1" x="-1" y="2" dx="4" dy="1" layer="1" rot="R90"/>
-<smd name="2" x="1" y="2" dx="4" dy="1" layer="1" rot="R90"/>
-<wire x1="4.05" y1="-5.5" x2="4.05" y2="2.15" width="0.127" layer="51"/>
-<wire x1="-4.05" y1="-5.5" x2="-4.05" y2="2.1" width="0.127" layer="51"/>
-<wire x1="-4.05" y1="-5.5" x2="4.05" y2="-5.5" width="0.127" layer="51"/>
-<wire x1="-4.05" y1="2.15" x2="4.05" y2="2.15" width="0.127" layer="51"/>
-<wire x1="-4.3" y1="-5.5" x2="-4.3" y2="2.4" width="0.127" layer="21"/>
-<wire x1="-4.3" y1="2.4" x2="-2" y2="2.4" width="0.127" layer="21"/>
-<wire x1="-0.25" y1="2.4" x2="0.25" y2="2.4" width="0.127" layer="21"/>
-<wire x1="2" y1="2.4" x2="4.3" y2="2.4" width="0.127" layer="21"/>
-<wire x1="4.3" y1="2.4" x2="4.3" y2="-5.5" width="0.127" layer="21"/>
-<wire x1="-0.6" y1="-5.5" x2="0.6" y2="-5.5" width="0.127" layer="21"/>
-<text x="4.6" y="0.9" size="1.27" layer="25">&gt;NAME</text>
-<text x="4.6" y="-1.3" size="1.27" layer="27">&gt;VALUE</text>
+<package name="PICOBLADE">
+<smd name="P$1" x="-3.175" y="-0.8" dx="2.1" dy="3" layer="1"/>
+<smd name="P$2" x="3.175" y="-0.8" dx="2.1" dy="3" layer="1"/>
+<smd name="1" x="-0.625" y="1.8" dx="0.8" dy="1.6" layer="1"/>
+<smd name="2" x="0.625" y="1.8" dx="0.8" dy="1.6" layer="1"/>
+<text x="-7.4" y="1.3" size="1.27" layer="25">&gt;NAME</text>
+<text x="2.1" y="1.3" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 <package name="SOT323(SC-70)">
 <smd name="3" x="-0.9" y="0" dx="0.6" dy="0.65" layer="1" rot="R90"/>
@@ -2935,15 +2924,15 @@ design rules under a new name.</description>
 <element name="MICROCONTROLLER1:R5" library="resistor" package="R0805" value="60Ω" x="-97.79" y="-364.49"/>
 <element name="MICROCONTROLLER1:LED1" library="led" package="CHIPLED_0805" value="GREEN" x="-92.71" y="-359.41"/>
 <element name="MICROCONTROLLER1:R6" library="resistor" package="R0805" value="60Ω" x="-97.79" y="-369.57"/>
-<element name="OFF-BOARD_POWER" library="tactile-music" package="JST-SMD-2" value="JST-SMD-2" x="-95.25" y="-375.92"/>
-<element name="MOTOR_DRIVERS" library="tactile-music" package="JST-SMD-2" value="JST-SMD-2" x="-95.25" y="-386.08"/>
-<element name="POWER_SUPPLY1:BATTERY" library="tactile-music" package="JST-SMD-2" value="JST-SMD-2" x="-95.25" y="-396.24"/>
+<element name="OFF-BOARD_POWER" library="tactile-music" package="PICOBLADE" value="PICOBLADE" x="-95.25" y="-375.92"/>
+<element name="MOTOR_DRIVERS" library="tactile-music" package="PICOBLADE" value="PICOBLADE" x="-95.25" y="-386.08"/>
+<element name="POWER_SUPPLY1:BATTERY" library="tactile-music" package="PICOBLADE" value="PICOBLADE" x="-95.25" y="-396.24"/>
 <element name="POWER_SUPPLY1:U$3" library="tactile-music" package="SOT323(SC-70)" value="PMF370XN" x="-95.25" y="-407.67"/>
 <element name="POWER_SUPPLY1:C1" library="rcl" package="C0805" value="" x="-97.79" y="-416.56"/>
 <element name="POWER_SUPPLY1:C2" library="rcl" package="C0805" value="" x="-97.79" y="-421.64"/>
 <element name="POWER_SUPPLY1:R2" library="resistor" package="R0805" value="60" x="-97.79" y="-426.72"/>
 <element name="POWER_SUPPLY1:POWER_SW" library="tactile-music" package="JS102011SAQN" value="JS102011SAQN" x="-93.98" y="-436.88"/>
-<element name="ANALOG_SENSOR" library="tactile-music" package="JST-SMD-2" value="JST-SMD-2" x="-95.25" y="-444.5"/>
+<element name="ANALOG_SENSOR" library="tactile-music" package="PICOBLADE" value="PICOBLADE" x="-95.25" y="-444.5"/>
 <element name="MICROCONTROLLER1:R7" library="resistor" package="R0805" value="10kΩ" x="-97.79" y="-453.39"/>
 <element name="MICROCONTROLLER1:R8" library="resistor" package="R0805" value="10kΩ" x="-97.79" y="-459.74"/>
 <element name="MICROCONTROLLER1:R9" library="resistor" package="R0805" value="10kΩ" x="-97.79" y="-466.09"/>
@@ -2992,8 +2981,8 @@ design rules under a new name.</description>
 <wire x1="-96.84" y1="-453.39" x2="-98.74" y2="-421.64" width="0" layer="19" extent="1-1"/>
 <wire x1="-96.84" y1="-459.74" x2="-96.84" y2="-453.39" width="0" layer="19" extent="1-1"/>
 <wire x1="-96.84" y1="-466.09" x2="-96.84" y2="-459.74" width="0" layer="19" extent="1-1"/>
-<wire x1="-94.25" y1="-373.92" x2="-96.15" y2="-407.67" width="0" layer="19" extent="1-1"/>
-<wire x1="-92.71" y1="-358.36" x2="-94.25" y2="-373.92" width="0" layer="19" extent="1-1"/>
+<wire x1="-94.625" y1="-374.12" x2="-96.15" y2="-407.67" width="0" layer="19" extent="1-1"/>
+<wire x1="-92.71" y1="-358.36" x2="-94.625" y2="-374.12" width="0" layer="19" extent="1-1"/>
 <wire x1="-97.79" y1="-358.36" x2="-92.71" y2="-358.36" width="0" layer="19" extent="1-1"/>
 <wire x1="-97.79" y1="-327.88" x2="-97.79" y2="-358.36" width="0" layer="19" extent="1-1"/>
 <wire x1="-97.79" y1="-297.4" x2="-97.79" y2="-327.88" width="0" layer="19" extent="1-1"/>
@@ -3130,7 +3119,7 @@ design rules under a new name.</description>
 <signal name="N$3">
 <contactref element="MOTOR_DRIVERS" pad="1"/>
 <contactref element="MICROCONTROLLER1:U1" pad="10"/>
-<wire x1="-93.33" y1="-236.88" x2="-96.25" y2="-384.08" width="0" layer="19" extent="1-1"/>
+<wire x1="-93.33" y1="-236.88" x2="-95.875" y2="-384.28" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$5">
 <contactref element="OFF-BOARD_POWER" pad="1"/>
@@ -3138,9 +3127,9 @@ design rules under a new name.</description>
 <contactref element="POWER_SUPPLY1:C1" pad="2"/>
 <contactref element="POWER_SUPPLY1:U$1" pad="1"/>
 <contactref element="POWER_SUPPLY1:POWER_SW" pad="3"/>
-<wire x1="-96.84" y1="-416.56" x2="-96.25" y2="-373.92" width="0" layer="19" extent="1-1"/>
+<wire x1="-96.84" y1="-416.56" x2="-95.875" y2="-374.12" width="0" layer="19" extent="1-1"/>
 <wire x1="-91.48" y1="-435.38" x2="-96.84" y2="-416.56" width="0" layer="19" extent="1-1"/>
-<wire x1="-59.7916" y1="-138.7602" x2="-96.25" y2="-373.92" width="0" layer="19" extent="1-1"/>
+<wire x1="-59.7916" y1="-138.7602" x2="-95.875" y2="-374.12" width="0" layer="19" extent="1-1"/>
 <wire x1="-16.51" y1="-63.28" x2="-59.7916" y2="-138.7602" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="POWER_SUPPLY1:N$3">
@@ -3157,13 +3146,13 @@ design rules under a new name.</description>
 <contactref element="POWER_SUPPLY1:BATTERY" pad="2"/>
 <contactref element="POWER_SUPPLY1:U$3" pad="1"/>
 <contactref element="POWER_SUPPLY1:POWER_SW" pad="2"/>
-<wire x1="-94.25" y1="-394.24" x2="-94.2" y2="-408.32" width="0" layer="19" extent="1-1"/>
+<wire x1="-94.625" y1="-394.44" x2="-94.2" y2="-408.32" width="0" layer="19" extent="1-1"/>
 <wire x1="-93.98" y1="-435.38" x2="-94.2" y2="-408.32" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="POWER_SUPPLY1:BATT_V-">
 <contactref element="POWER_SUPPLY1:BATTERY" pad="1"/>
 <contactref element="POWER_SUPPLY1:U$3" pad="2"/>
-<wire x1="-96.25" y1="-394.24" x2="-94.2" y2="-407.02" width="0" layer="19" extent="1-1"/>
+<wire x1="-95.875" y1="-394.44" x2="-94.2" y2="-407.02" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+3V3">
 <contactref element="MICROCONTROLLER1:R2" pad="2"/>
@@ -3292,17 +3281,17 @@ design rules under a new name.</description>
 <signal name="N$4">
 <contactref element="MICROCONTROLLER1:U1" pad="8"/>
 <contactref element="MOTOR_DRIVERS" pad="2"/>
-<wire x1="-93.33" y1="-235.28" x2="-94.25" y2="-384.08" width="0" layer="19" extent="1-1"/>
+<wire x1="-93.33" y1="-235.28" x2="-94.625" y2="-384.28" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$15">
 <contactref element="ANALOG_SENSOR" pad="1"/>
 <contactref element="MICROCONTROLLER1:U1" pad="23"/>
-<wire x1="-96.25" y1="-442.5" x2="-81.93" y2="-237.68" width="0" layer="19" extent="1-1"/>
+<wire x1="-95.875" y1="-442.7" x2="-81.93" y2="-237.68" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$16">
 <contactref element="ANALOG_SENSOR" pad="2"/>
 <contactref element="MICROCONTROLLER1:U1" pad="24"/>
-<wire x1="-94.25" y1="-442.5" x2="-81.93" y2="-236.88" width="0" layer="19" extent="1-1"/>
+<wire x1="-94.625" y1="-442.7" x2="-81.93" y2="-236.88" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MICROCONTROLLER1:N$5">
 <contactref element="MICROCONTROLLER1:U1" pad="12"/>
