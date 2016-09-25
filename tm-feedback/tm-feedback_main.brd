@@ -388,6 +388,14 @@ package type TQ</description>
 <text x="-5.08" y="5.08" size="1.27" layer="25">&gt;NAMES</text>
 <text x="-5.08" y="3.81" size="1.27" layer="27">&gt;VALUES</text>
 </package>
+<package name="THRU-TACTILE-BTN">
+<pad name="P$1" x="2.5" y="0" drill="1"/>
+<pad name="P$2" x="-2.5" y="0" drill="1"/>
+<dimension x1="-3" y1="0" x2="-2" y2="0" x3="-2.5" y3="2" textsize="1.27" layer="47"/>
+<dimension x1="-2.5" y1="0" x2="2.5" y2="0" x3="0" y3="-3.2" textsize="1.27" layer="47"/>
+<text x="4.3" y="-0.5" size="1.27" layer="25">&gt;NAME</text>
+<text x="4.3" y="-2.4" size="1.27" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 </library>
 <library name="rcl">
@@ -2884,7 +2892,7 @@ design rules under a new name.</description>
 <element name="POWER_SUPPLY1:LED1" library="led" package="CHIPLED_0805" value="RED" x="-16.51" y="-62.23"/>
 <element name="POWER_SUPPLY1:R1" library="resistor" package="R0805" value="60" x="-16.51" y="-68.58"/>
 <element name="MICROCONTROLLER1:R1" library="resistor" package="R0805" value="330Ω" x="-16.51" y="-73.66"/>
-<element name="BUTTON1:R1" library="resistor" package="R0805" value="" x="-29.21" y="-83.82"/>
+<element name="BUTTON1:R1" library="resistor" package="R0805" value="33k" x="-29.21" y="-83.82"/>
 <element name="MICROCONTROLLER1:JP1" library="pinhead" package="1X06/90" value="PICKIT" x="-54.61" y="-114.3"/>
 <element name="MICROCONTROLLER1:JP2" library="pinhead" package="1X04/90" value="UART_PC" x="-57.15" y="-128.27"/>
 <element name="POWER_SUPPLY1:U$1" library="tactile-music" package="SOT95P270X145-5N" value="MCP1824T-3302E/OT" x="-58.42" y="-139.7">
@@ -2901,9 +2909,9 @@ design rules under a new name.</description>
 <attribute name="PACKAGE" value="TSSOP-5" x="-58.42" y="-160.02" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="2164682 " x="-58.42" y="-160.02" size="1.778" layer="27" display="off"/>
 </element>
-<element name="BUTTON1:R2" library="resistor" package="R0805" value="" x="-63.5" y="-168.91"/>
+<element name="BUTTON1:R2" library="resistor" package="R0805" value="18k" x="-63.5" y="-168.91"/>
 <element name="BUTTON1:U$1" library="tactile-music" package="SOD-523" value="DB2S308" x="-69.85" y="-163.83"/>
-<element name="BUTTON1:C1" library="rcl" package="C0805" value="" x="-71.12" y="-173.99"/>
+<element name="BUTTON1:C1" library="rcl" package="C0805" value="1uF" x="-71.12" y="-173.99"/>
 <element name="BLUETOOTH1:C1" library="rcl" package="C0805" value="4.7uF" x="-71.12" y="-179.07"/>
 <element name="BLUETOOTH1:R2" library="resistor" package="R0805" value="10kΩ" x="-71.12" y="-184.15"/>
 <element name="BLUETOOTH1:R3" library="resistor" package="R0805" value="60Ω" x="-71.12" y="-189.23"/>
@@ -2943,6 +2951,7 @@ design rules under a new name.</description>
 <element name="MICROCONTROLLER1:R7" library="resistor" package="R0805" value="10kΩ" x="-97.79" y="-453.39"/>
 <element name="MICROCONTROLLER1:R8" library="resistor" package="R0805" value="10kΩ" x="-97.79" y="-459.74"/>
 <element name="MICROCONTROLLER1:R9" library="resistor" package="R0805" value="10kΩ" x="-97.79" y="-466.09"/>
+<element name="BUTTON1:PAIRING_SW" library="tactile-music" package="THRU-TACTILE-BTN" value="MC32881_TACTILE" x="-94" y="-474"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -2977,17 +2986,19 @@ design rules under a new name.</description>
 <contactref element="MICROCONTROLLER1:LED4" pad="C"/>
 <contactref element="MICROCONTROLLER1:LED1" pad="C"/>
 <contactref element="BUTTON1:U1" pad="3"/>
-<contactref element="BUTTON1:C1" pad="1"/>
 <contactref element="MICROCONTROLLER1:JP2" pad="1"/>
 <contactref element="MICROCONTROLLER1:R7" pad="2"/>
 <contactref element="MICROCONTROLLER1:R8" pad="2"/>
 <contactref element="MICROCONTROLLER1:R9" pad="2"/>
 <contactref element="BLUETOOTH1:U$1" pad="24"/>
+<contactref element="BUTTON1:C1" pad="1"/>
+<contactref element="BUTTON1:PAIRING_SW" pad="P$1"/>
 <wire x1="-98.74" y1="-416.56" x2="-96.15" y2="-407.67" width="0" layer="19" extent="1-1"/>
 <wire x1="-98.74" y1="-421.64" x2="-98.74" y2="-416.56" width="0" layer="19" extent="1-1"/>
 <wire x1="-96.84" y1="-453.39" x2="-98.74" y2="-421.64" width="0" layer="19" extent="1-1"/>
 <wire x1="-96.84" y1="-459.74" x2="-96.84" y2="-453.39" width="0" layer="19" extent="1-1"/>
 <wire x1="-96.84" y1="-466.09" x2="-96.84" y2="-459.74" width="0" layer="19" extent="1-1"/>
+<wire x1="-91.5" y1="-474" x2="-96.84" y2="-466.09" width="0" layer="19" extent="1-1"/>
 <wire x1="-94.625" y1="-374.12" x2="-96.15" y2="-407.67" width="0" layer="19" extent="1-1"/>
 <wire x1="-92.71" y1="-358.36" x2="-94.625" y2="-374.12" width="0" layer="19" extent="1-1"/>
 <wire x1="-97.79" y1="-358.36" x2="-92.71" y2="-358.36" width="0" layer="19" extent="1-1"/>
@@ -3209,8 +3220,10 @@ design rules under a new name.</description>
 <contactref element="BUTTON1:R1" pad="1"/>
 <contactref element="BUTTON1:R2" pad="2"/>
 <contactref element="BUTTON1:U$1" pad="2"/>
+<contactref element="BUTTON1:PAIRING_SW" pad="P$2"/>
 <wire x1="-62.55" y1="-168.91" x2="-69.85" y2="-162.93" width="0" layer="19" extent="1-1"/>
 <wire x1="-30.16" y1="-83.82" x2="-69.85" y2="-162.93" width="0" layer="19" extent="1-1"/>
+<wire x1="-96.5" y1="-474" x2="-62.55" y2="-168.91" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
 <contactref element="BUTTON1:U1" pad="4"/>

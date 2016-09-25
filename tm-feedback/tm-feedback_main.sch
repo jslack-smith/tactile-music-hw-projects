@@ -438,6 +438,14 @@ package type TQ</description>
 <text x="-5.08" y="5.08" size="1.27" layer="25">&gt;NAMES</text>
 <text x="-5.08" y="3.81" size="1.27" layer="27">&gt;VALUES</text>
 </package>
+<package name="THRU-TACTILE-BTN">
+<pad name="P$1" x="2.5" y="0" drill="1"/>
+<pad name="P$2" x="-2.5" y="0" drill="1"/>
+<dimension x1="-3" y1="0" x2="-2" y2="0" x3="-2.5" y3="2" textsize="1.27" layer="47"/>
+<dimension x1="-2.5" y1="0" x2="2.5" y2="0" x3="0" y3="-3.2" textsize="1.27" layer="47"/>
+<text x="4.3" y="-0.5" size="1.27" layer="25">&gt;NAME</text>
+<text x="4.3" y="-2.4" size="1.27" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="RN4020">
@@ -636,6 +644,13 @@ Microchip / 44 pin</description>
 <circle x="0" y="2.54" radius="0.508" width="0.254" layer="94"/>
 <circle x="0" y="-2.54" radius="0.508" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="0" x2="0" y2="1.524" width="0.254" layer="94"/>
+</symbol>
+<symbol name="TACTILE_SWITCH">
+<pin name="1" x="-5.08" y="0" visible="off" length="short"/>
+<pin name="2" x="5.08" y="0" visible="off" length="short" rot="R180"/>
+<text x="-5.08" y="-2.54" size="1.27" layer="95">&gt;NAME</text>
+<text x="-5.08" y="-5.08" size="1.27" layer="96">&gt;VALUE</text>
+<wire x1="-2.54" y1="0" x2="2.032" y2="1.27" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -869,6 +884,23 @@ PIC with Digital Signal Processor from microchip.</description>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="3" pad="3"/>
 <connect gate="G$1" pin="C" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MC32881_TACTILE">
+<description>Tactile button</description>
+<gates>
+<gate name="G$1" symbol="TACTILE_SWITCH" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="THRU-TACTILE-BTN">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -12927,20 +12959,20 @@ debugging</text>
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" deviceset="DINA4_L" device="" value="Button"/>
-<part name="R1" library="resistor" deviceset="R-US_" device="R0805"/>
+<part name="R1" library="resistor" deviceset="R-US_" device="R0805" value="33k"/>
 <part name="U1" library="tactile-music" deviceset="74AUP1G17GW" device=""/>
-<part name="R2" library="resistor" deviceset="R-US_" device="R0805"/>
+<part name="R2" library="resistor" deviceset="R-US_" device="R0805" value="18k"/>
 <part name="U$1" library="tactile-music" deviceset="DB2S308" device=""/>
-<part name="C1" library="rcl" deviceset="C-EU" device="C0805"/>
+<part name="C1" library="rcl" deviceset="C-EU" device="C0805" value="1uF"/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
+<part name="PAIRING_SW" library="tactile-music" deviceset="MC32881_TACTILE" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="63.5" y="119.38" size="1.778" layer="98">TACTILE_SWITCH goes here</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -12954,9 +12986,10 @@ debugging</text>
 </instance>
 <instance part="C1" gate="G$1" x="114.3" y="116.84" rot="R180"/>
 <instance part="+3V1" gate="G$1" x="127" y="134.62"/>
-<instance part="GND1" gate="1" x="127" y="109.22"/>
+<instance part="GND1" gate="1" x="127" y="101.6"/>
 <instance part="+3V2" gate="G$1" x="86.36" y="147.32"/>
-<instance part="GND2" gate="1" x="86.36" y="109.22"/>
+<instance part="GND2" gate="1" x="86.36" y="101.6"/>
+<instance part="PAIRING_SW" gate="G$1" x="86.36" y="116.84" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -12981,14 +13014,18 @@ debugging</text>
 <pinref part="U1" gate="A" pin="GND"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="129.54" y1="114.3" x2="127" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="127" y1="114.3" x2="127" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="127" y1="114.3" x2="127" y2="104.14" width="0.1524" layer="91"/>
 <label x="124.46" y="114.3" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="114.3" y1="114.3" x2="114.3" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="114.3" y1="114.3" x2="86.36" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="114.3" x2="86.36" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="109.22" x2="86.36" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="109.22" x2="86.36" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="PAIRING_SW" gate="G$1" pin="1"/>
+<wire x1="86.36" y1="109.22" x2="86.36" y2="111.76" width="0.1524" layer="91"/>
+<junction x="86.36" y="109.22"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -13015,6 +13052,9 @@ debugging</text>
 <pinref part="U$1" gate="G$1" pin="ANODE"/>
 <wire x1="93.98" y1="129.54" x2="86.36" y2="129.54" width="0.1524" layer="91"/>
 <junction x="86.36" y="129.54"/>
+<pinref part="PAIRING_SW" gate="G$1" pin="2"/>
+<wire x1="86.36" y1="121.92" x2="86.36" y2="124.46" width="0.1524" layer="91"/>
+<junction x="86.36" y="124.46"/>
 </segment>
 </net>
 <net name="BTN_OUT" class="0">
