@@ -540,10 +540,10 @@ package type TQ</description>
 <circle x="-1.27" y="-2.54" radius="1.27" width="0.254" layer="94"/>
 </symbol>
 <symbol name="MCP1824T-3302E/OT">
-<pin name="VIN" x="-17.78" y="2.54" length="middle" direction="pwr"/>
+<pin name="VIN" x="-17.78" y="2.54" length="middle"/>
 <pin name="~SHDN" x="-17.78" y="-2.54" length="middle" direction="in"/>
 <pin name="GND" x="-17.78" y="-7.62" length="middle" direction="pwr"/>
-<pin name="VOUT" x="17.78" y="2.54" length="middle" direction="pwr" rot="R180"/>
+<pin name="VOUT" x="17.78" y="2.54" length="middle" rot="R180"/>
 <pin name="PWRGD" x="17.78" y="0" length="middle" direction="out" rot="R180"/>
 <wire x1="-12.7" y1="7.62" x2="-12.7" y2="-12.7" width="0.4064" layer="94"/>
 <wire x1="-12.7" y1="-12.7" x2="12.7" y2="-12.7" width="0.4064" layer="94"/>
@@ -12061,9 +12061,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <instance part="BLUETOOTH_MODULE" gate="G$1" x="0" y="0"/>
 <instance part="BLUETOOTH_MODULE" gate="G$2" x="162.56" y="0"/>
 <instance part="U$1" gate="G$1" x="121.92" y="116.84"/>
-<instance part="C1" gate="G$1" x="170.18" y="137.16" rot="R180"/>
-<instance part="+3V3" gate="G$1" x="170.18" y="129.54" rot="R180"/>
-<instance part="GND" gate="1" x="170.18" y="149.86" rot="R180"/>
+<instance part="C1" gate="G$1" x="175.26" y="144.78"/>
+<instance part="+3V3" gate="G$1" x="175.26" y="152.4"/>
+<instance part="GND" gate="1" x="175.26" y="132.08"/>
 <instance part="GND1" gate="1" x="142.24" y="71.12"/>
 <instance part="GND2" gate="1" x="101.6" y="71.12"/>
 <instance part="R2" gate="G$1" x="71.12" y="101.6" rot="R90"/>
@@ -12086,13 +12086,8 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
 <pinref part="GND" gate="1" pin="GND"/>
-<wire x1="170.18" y1="142.24" x2="170.18" y2="144.78" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="GND@4"/>
-<wire x1="170.18" y1="144.78" x2="170.18" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="144.78" x2="152.4" y2="139.7" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="144.78" x2="170.18" y2="144.78" width="0.1524" layer="91"/>
-<junction x="170.18" y="144.78"/>
-<label x="172.72" y="144.78" size="1.778" layer="95"/>
+<wire x1="175.26" y1="139.7" x2="175.26" y2="134.62" width="0.1524" layer="91"/>
+<label x="172.72" y="137.16" size="1.778" layer="95" rot="R180"/>
 </segment>
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
@@ -12128,6 +12123,11 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="U$1" gate="G$1" pin="GND@3"/>
 <pinref part="GND7" gate="1" pin="GND"/>
 <wire x1="91.44" y1="139.7" x2="88.9" y2="139.7" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="GND@4"/>
+<wire x1="152.4" y1="139.7" x2="154.94" y2="139.7" width="0.1524" layer="91"/>
+<label x="154.94" y="139.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="UART_TX" class="0">
@@ -12244,11 +12244,13 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <segment>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="170.18" y1="132.08" x2="170.18" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="149.86" x2="175.26" y2="147.32" width="0.1524" layer="91"/>
+<label x="182.88" y="149.86" size="1.778" layer="95" rot="R180"/>
+</segment>
+<segment>
 <pinref part="U$1" gate="G$1" pin="VDD"/>
-<wire x1="152.4" y1="134.62" x2="170.18" y2="134.62" width="0.1524" layer="91"/>
-<junction x="170.18" y="134.62"/>
-<label x="162.56" y="132.08" size="1.778" layer="95"/>
+<wire x1="152.4" y1="134.62" x2="154.94" y2="134.62" width="0.1524" layer="91"/>
+<label x="154.94" y="134.62" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
@@ -12414,9 +12416,9 @@ debugging</text>
 <instance part="R7" gate="G$1" x="83.82" y="109.22" rot="R180"/>
 <instance part="GND14" gate="1" x="73.66" y="109.22" rot="R270"/>
 <instance part="R8" gate="G$1" x="205.74" y="91.44"/>
-<instance part="GND15" gate="1" x="215.9" y="91.44" rot="R90"/>
+<instance part="GND15" gate="1" x="213.36" y="88.9"/>
 <instance part="R9" gate="G$1" x="205.74" y="111.76"/>
-<instance part="GND16" gate="1" x="215.9" y="111.76" rot="R90"/>
+<instance part="GND16" gate="1" x="213.36" y="109.22"/>
 </instances>
 <busses>
 </busses>
@@ -13032,9 +13034,9 @@ debugging</text>
 </module>
 <module name="POWER_SUPPLY" prefix="" dx="30.48" dy="20.32">
 <ports>
-<port name="VIN" side="right" coord="-5.08" direction="pwr"/>
+<port name="V+" side="right" coord="-5.08" direction="pwr"/>
 <port name="GND" side="right" coord="-7.62" direction="pwr"/>
-<port name="VOUT" side="right" coord="7.62" direction="pwr"/>
+<port name="+3V3" side="right" coord="7.62" direction="pwr"/>
 </ports>
 <variantdefs>
 </variantdefs>
@@ -13135,7 +13137,7 @@ LED</text>
 <pinref part="GND2" gate="1" pin="GND"/>
 </segment>
 </net>
-<net name="VIN" class="0">
+<net name="V+" class="0">
 <segment>
 <pinref part="LED1" gate="G$1" pin="A"/>
 <wire x1="81.28" y1="152.4" x2="81.28" y2="149.86" width="0.1524" layer="91"/>
@@ -13150,7 +13152,7 @@ LED</text>
 <junction x="81.28" y="152.4"/>
 </segment>
 </net>
-<net name="VOUT" class="0">
+<net name="+3V3" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
@@ -13169,7 +13171,7 @@ LED</text>
 <wire x1="149.86" y1="152.4" x2="149.86" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="160.02" x2="152.4" y2="160.02" width="0.1524" layer="91"/>
 <junction x="152.4" y="160.02"/>
-<label x="152.4" y="160.02" size="1.778" layer="95"/>
+<label x="160.02" y="160.02" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -13271,14 +13273,14 @@ LED</text>
 <net name="N$5" class="0">
 <segment>
 <pinref part="OFF-BOARD_POWER" gate="G$1" pin="1"/>
-<portref moduleinst="POWER_SUPPLY1" port="VIN"/>
+<portref moduleinst="POWER_SUPPLY1" port="V+"/>
 <wire x1="124.46" y1="154.94" x2="137.16" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
-<portref moduleinst="POWER_SUPPLY1" port="VOUT"/>
+<portref moduleinst="POWER_SUPPLY1" port="+3V3"/>
 <wire x1="124.46" y1="167.64" x2="127" y2="167.64" width="0.1524" layer="91"/>
 <wire x1="127" y1="167.64" x2="127" y2="170.18" width="0.1524" layer="91"/>
 </segment>
