@@ -124,10 +124,10 @@ DIN A4, landscape with extra doc field</description>
 <package name="SOD-523">
 <smd name="2" x="0" y="0.9" dx="0.7" dy="0.8" layer="1" rot="R90"/>
 <smd name="1" x="0" y="-0.9" dx="0.7" dy="0.8" layer="1" rot="R90"/>
-<wire x1="0.45" y1="0.4" x2="0.45" y2="-0.4" width="0.127" layer="21"/>
-<wire x1="-0.45" y1="0.4" x2="-0.45" y2="-0.4" width="0.127" layer="21"/>
-<wire x1="0.7" y1="-0.25" x2="0.85" y2="-0.25" width="0.127" layer="21"/>
-<wire x1="0.25" y1="-0.25" x2="-0.25" y2="-0.25" width="0.127" layer="21"/>
+<wire x1="0.45" y1="0.3" x2="0.45" y2="-0.3" width="0.127" layer="21"/>
+<wire x1="-0.45" y1="0.3" x2="-0.45" y2="-0.3" width="0.127" layer="21"/>
+<wire x1="0.7" y1="-0.15" x2="0.85" y2="-0.15" width="0.127" layer="21"/>
+<wire x1="0.25" y1="-0.15" x2="-0.25" y2="-0.15" width="0.127" layer="21"/>
 <text x="-1.6" y="-1" size="0.5" layer="25" rot="R90">&gt;NAME</text>
 <text x="-0.7" y="-1" size="0.5" layer="27" rot="R90">&gt;VALUE</text>
 </package>
@@ -155,13 +155,12 @@ DIN A4, landscape with extra doc field</description>
 <smd name="2" x="0.625" y="1.8" dx="0.8" dy="1.6" layer="1"/>
 <text x="-7.3" y="2.6" size="1.27" layer="25">&gt;NAME</text>
 <text x="2.1" y="2.6" size="1.27" layer="27">&gt;VALUE</text>
-<wire x1="-3.825" y1="2.1" x2="-3.8" y2="2.1" width="0.127" layer="21"/>
-<wire x1="-3.8" y1="2.1" x2="-1.3" y2="2.1" width="0.127" layer="21"/>
-<wire x1="-3.8" y1="2.1" x2="-3.8" y2="0.9" width="0.127" layer="21"/>
-<wire x1="3.825" y1="2.1" x2="3.8" y2="2.1" width="0.127" layer="21"/>
-<wire x1="3.8" y1="2.1" x2="1.3" y2="2.1" width="0.127" layer="21"/>
-<wire x1="3.8" y1="2.1" x2="3.8" y2="0.8" width="0.127" layer="21"/>
-<wire x1="-2" y1="-2" x2="1.9" y2="-2" width="0.127" layer="21"/>
+<wire x1="-3.8" y1="2.1" x2="-1.4" y2="2.1" width="0.127" layer="21"/>
+<wire x1="-3.8" y1="2.1" x2="-3.8" y2="1.1" width="0.127" layer="21"/>
+<wire x1="3.8" y1="2.1" x2="3.725" y2="2.1" width="0.127" layer="21"/>
+<wire x1="3.725" y1="2.1" x2="1.4" y2="2.1" width="0.127" layer="21"/>
+<wire x1="3.8" y1="2.1" x2="3.8" y2="1" width="0.127" layer="21"/>
+<wire x1="-1.8" y1="-2" x2="1.7" y2="-2" width="0.127" layer="21"/>
 </package>
 <package name="SOT95P270X145-5N">
 <smd name="1" x="-1.3716" y="0.9398" dx="1.3208" dy="0.5588" layer="1"/>
