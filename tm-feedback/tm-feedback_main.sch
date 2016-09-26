@@ -13005,7 +13005,7 @@ LED</text>
 <wire x1="78.74" y1="152.4" x2="78.74" y2="157.48" width="0.1524" layer="91"/>
 <junction x="81.28" y="152.4"/>
 <pinref part="POWER_SW" gate="G$1" pin="1"/>
-<wire x1="78.74" y1="157.48" x2="73.66" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="157.48" x2="78.74" y2="157.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -13030,7 +13030,7 @@ LED</text>
 <label x="160.02" y="160.02" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$5" class="0">
+<net name="PWRGD" class="0">
 <segment>
 <pinref part="U$1" gate="A" pin="PWRGD"/>
 <pinref part="R2" gate="G$1" pin="1"/>
