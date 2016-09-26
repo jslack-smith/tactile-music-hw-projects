@@ -145,8 +145,8 @@ DIN A4, landscape with extra doc field</description>
 <smd name="22" x="5.75" y="-1.25" dx="0.8" dy="2" layer="1" rot="R90"/>
 <smd name="23" x="5.75" y="-0.05" dx="0.8" dy="2" layer="1" rot="R90"/>
 <smd name="24" x="5.75" y="1.15" dx="0.8" dy="2" layer="1" rot="R90"/>
-<smd name="9A" x="-4.95" y="-8.75" dx="1" dy="1" layer="1" roundness="100"/>
-<smd name="16A" x="4.95" y="-8.75" dx="1" dy="1" layer="1" roundness="100"/>
+<smd name="9A" x="-4.6" y="-8.55" dx="1" dy="1" layer="1" roundness="100"/>
+<smd name="16A" x="4.65" y="-8.55" dx="1" dy="1" layer="1" roundness="100"/>
 <smd name="1A" x="-4.95" y="2.95" dx="1" dy="1.6" layer="1" roundness="100"/>
 <smd name="24A" x="4.95" y="2.95" dx="1" dy="1.6" layer="1" roundness="100"/>
 <smd name="9" x="-5.75" y="-9.75" dx="1.2" dy="1.2" layer="1" roundness="100"/>
@@ -184,10 +184,10 @@ DIN A4, landscape with extra doc field</description>
 <package name="SOD-523">
 <smd name="2" x="0" y="0.9" dx="0.7" dy="0.8" layer="1" rot="R90"/>
 <smd name="1" x="0" y="-0.9" dx="0.7" dy="0.8" layer="1" rot="R90"/>
-<wire x1="0.45" y1="0.4" x2="0.45" y2="-0.4" width="0.127" layer="21"/>
-<wire x1="-0.45" y1="0.4" x2="-0.45" y2="-0.4" width="0.127" layer="21"/>
-<wire x1="0.7" y1="-0.25" x2="0.85" y2="-0.25" width="0.127" layer="21"/>
-<wire x1="0.25" y1="-0.25" x2="-0.25" y2="-0.25" width="0.127" layer="21"/>
+<wire x1="0.45" y1="0.3" x2="0.45" y2="-0.3" width="0.127" layer="21"/>
+<wire x1="-0.45" y1="0.3" x2="-0.45" y2="-0.3" width="0.127" layer="21"/>
+<wire x1="0.7" y1="-0.15" x2="0.85" y2="-0.15" width="0.127" layer="21"/>
+<wire x1="0.25" y1="-0.15" x2="-0.25" y2="-0.15" width="0.127" layer="21"/>
 <text x="-1.6" y="-1" size="0.5" layer="25" rot="R90">&gt;NAME</text>
 <text x="-0.7" y="-1" size="0.5" layer="27" rot="R90">&gt;VALUE</text>
 </package>
@@ -198,13 +198,12 @@ DIN A4, landscape with extra doc field</description>
 <smd name="2" x="0.625" y="1.8" dx="0.8" dy="1.6" layer="1"/>
 <text x="-7.3" y="2.6" size="1.27" layer="25">&gt;NAME</text>
 <text x="2.1" y="2.6" size="1.27" layer="27">&gt;VALUE</text>
-<wire x1="-3.825" y1="2.1" x2="-3.8" y2="2.1" width="0.127" layer="21"/>
-<wire x1="-3.8" y1="2.1" x2="-1.3" y2="2.1" width="0.127" layer="21"/>
-<wire x1="-3.8" y1="2.1" x2="-3.8" y2="0.9" width="0.127" layer="21"/>
-<wire x1="3.825" y1="2.1" x2="3.8" y2="2.1" width="0.127" layer="21"/>
-<wire x1="3.8" y1="2.1" x2="1.3" y2="2.1" width="0.127" layer="21"/>
-<wire x1="3.8" y1="2.1" x2="3.8" y2="0.8" width="0.127" layer="21"/>
-<wire x1="-2" y1="-2" x2="1.9" y2="-2" width="0.127" layer="21"/>
+<wire x1="-3.8" y1="2.1" x2="-1.4" y2="2.1" width="0.127" layer="21"/>
+<wire x1="-3.8" y1="2.1" x2="-3.8" y2="1.1" width="0.127" layer="21"/>
+<wire x1="3.8" y1="2.1" x2="3.725" y2="2.1" width="0.127" layer="21"/>
+<wire x1="3.725" y1="2.1" x2="1.4" y2="2.1" width="0.127" layer="21"/>
+<wire x1="3.8" y1="2.1" x2="3.8" y2="1" width="0.127" layer="21"/>
+<wire x1="-1.8" y1="-2" x2="1.7" y2="-2" width="0.127" layer="21"/>
 </package>
 <package name="SOT95P270X145-5N">
 <smd name="1" x="-1.3716" y="0.9398" dx="1.3208" dy="0.5588" layer="1"/>
@@ -308,14 +307,14 @@ DIN A4, landscape with extra doc field</description>
 <package name="TQFP44">
 <description>&lt;b&gt;Thin Quad Flat Pack&lt;/b&gt;&lt;p&gt;
 package type TQ</description>
-<wire x1="-4.8" y1="4.4" x2="-4.4" y2="4.8" width="0.2032" layer="21"/>
-<wire x1="-4.4" y1="4.8" x2="4.4" y2="4.8" width="0.2032" layer="21"/>
-<wire x1="4.4" y1="4.8" x2="4.8" y2="4.4" width="0.2032" layer="21"/>
-<wire x1="4.8" y1="4.4" x2="4.8" y2="-4.4" width="0.2032" layer="21"/>
-<wire x1="4.8" y1="-4.4" x2="4.4" y2="-4.8" width="0.2032" layer="21"/>
-<wire x1="4.4" y1="-4.8" x2="-4.4" y2="-4.8" width="0.2032" layer="21"/>
-<wire x1="-4.4" y1="-4.8" x2="-4.8" y2="-4.4" width="0.2032" layer="21"/>
-<wire x1="-4.8" y1="-4.4" x2="-4.8" y2="4.4" width="0.2032" layer="21"/>
+<wire x1="-4.6" y1="4.4" x2="-4.4" y2="4.6" width="0.2032" layer="21"/>
+<wire x1="-4.4" y1="4.6" x2="4.4" y2="4.6" width="0.2032" layer="21"/>
+<wire x1="4.4" y1="4.6" x2="4.6" y2="4.4" width="0.2032" layer="21"/>
+<wire x1="4.6" y1="4.4" x2="4.6" y2="-4.4" width="0.2032" layer="21"/>
+<wire x1="4.6" y1="-4.4" x2="4.4" y2="-4.6" width="0.2032" layer="21"/>
+<wire x1="4.4" y1="-4.6" x2="-4.4" y2="-4.6" width="0.2032" layer="21"/>
+<wire x1="-4.4" y1="-4.6" x2="-4.6" y2="-4.4" width="0.2032" layer="21"/>
+<wire x1="-4.6" y1="-4.4" x2="-4.6" y2="4.4" width="0.2032" layer="21"/>
 <circle x="-4" y="4" radius="0.2827" width="0.254" layer="21"/>
 <smd name="1" x="-5.7" y="4" dx="1.5" dy="0.55" layer="1"/>
 <smd name="2" x="-5.7" y="3.2" dx="1.5" dy="0.55" layer="1"/>
@@ -362,7 +361,7 @@ package type TQ</description>
 <smd name="43" x="-3.2" y="5.7" dx="0.55" dy="1.5" layer="1"/>
 <smd name="44" x="-4" y="5.7" dx="0.55" dy="1.5" layer="1"/>
 <text x="-4.064" y="6.858" size="1.778" layer="25">&gt;NAME</text>
-<text x="-4.064" y="-1.7701" size="1.778" layer="27">&gt;VALUE</text>
+<text x="-4.764" y="-8.6701" size="1.778" layer="27">&gt;VALUE</text>
 <rectangle x1="-6.1001" y1="3.8001" x2="-4.95" y2="4.1999" layer="51"/>
 <rectangle x1="-6.1001" y1="3" x2="-4.95" y2="3.4" layer="51"/>
 <rectangle x1="-6.1001" y1="2.1999" x2="-4.95" y2="2.5999" layer="51"/>
@@ -418,9 +417,11 @@ package type TQ</description>
 <text x="-5.08" y="-3.81" size="1.27" layer="25">&gt;NAME</text>
 <text x="-5.08" y="-5.08" size="1.27" layer="27">&gt;VALUE</text>
 <wire x1="-3.5" y1="2.05" x2="3.5" y2="2.05" width="0.127" layer="21"/>
-<wire x1="3.5" y1="2.05" x2="3.5" y2="-2.05" width="0.127" layer="21"/>
 <wire x1="3.5" y1="-2.05" x2="-3.5" y2="-2.05" width="0.127" layer="21"/>
-<wire x1="-3.5" y1="-2.05" x2="-3.5" y2="2.05" width="0.127" layer="21"/>
+<wire x1="-3.5" y1="2" x2="-3.5" y2="1" width="0.127" layer="21"/>
+<wire x1="-3.5" y1="-2" x2="-3.5" y2="-1.1" width="0.127" layer="21"/>
+<wire x1="3.5" y1="2" x2="3.5" y2="1" width="0.127" layer="21"/>
+<wire x1="3.5" y1="-2" x2="3.5" y2="-1.1" width="0.127" layer="21"/>
 </package>
 <package name="JS102011SAQN">
 <description>STDP Switch</description>
