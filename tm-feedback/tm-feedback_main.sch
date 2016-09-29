@@ -11965,14 +11965,14 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="R2" library="resistor" deviceset="R-US_" device="R0805" value="10kΩ"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
-<part name="R3" library="resistor" deviceset="R-US_" device="R0805" value="60Ω"/>
-<part name="LED2" library="led" deviceset="LED" device="CHIPLED_0805" value="GREEN"/>
+<part name="R3" library="resistor" deviceset="R-US_" device="R0805" value="53.6Ω"/>
+<part name="LED2" library="led" deviceset="LED" device="CHIPLED_0805" value="RED"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
-<part name="R4" library="resistor" deviceset="R-US_" device="R0805" value="60Ω"/>
-<part name="LED3" library="led" deviceset="LED" device="CHIPLED_0805" value="RED"/>
+<part name="R4" library="resistor" deviceset="R-US_" device="R0805" value="53.6Ω"/>
+<part name="LED3" library="led" deviceset="LED" device="CHIPLED_0805" value="GREEN"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="R1" library="resistor" deviceset="R-US_" device="R0805" value="60Ω"/>
-<part name="LED1" library="led" deviceset="LED" device="CHIPLED_0805" value="BLUE"/>
+<part name="R1" library="resistor" deviceset="R-US_" device="R0805" value="53.6Ω"/>
+<part name="LED1" library="led" deviceset="LED" device="CHIPLED_0805" value="YELLOW"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 </parts>
@@ -12231,11 +12231,11 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="C7" library="rcl" deviceset="C-EU" device="C0805" value="27pF"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
-<part name="LED2" library="led" deviceset="LED" device="CHIPLED_0805" value="RED"/>
-<part name="R3" library="resistor" deviceset="R-US_" device="R0805" value="69Ω"/>
+<part name="LED2" library="led" deviceset="LED" device="CHIPLED_0805" value="GREEN"/>
+<part name="R3" library="resistor" deviceset="R-US_" device="R0805" value="53.6Ω"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="LED1" library="led" deviceset="LED" device="CHIPLED_0805" value="GREEN"/>
-<part name="R6" library="resistor" deviceset="R-US_" device="R0805" value="60Ω"/>
+<part name="R6" library="resistor" deviceset="R-US_" device="R0805" value="53.6Ω"/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="R7" library="resistor" deviceset="R-US_" device="R0805" value="10kΩ"/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
@@ -12897,7 +12897,7 @@ debugging</text>
 <parts>
 <part name="FRAME1" library="frames" deviceset="DINA4_L" device="" value="Power Supply"/>
 <part name="LED1" library="led" deviceset="LED" device="CHIPLED_0805" value="RED"/>
-<part name="R1" library="resistor" deviceset="R-US_" device="R0805" value="60"/>
+<part name="R1" library="resistor" deviceset="R-US_" device="R0805" value="53.6Ω"/>
 <part name="U$1" library="tactile-music" deviceset="MCP1824T-3302E/OT" device=""/>
 <part name="BATTERY" library="tactile-music" deviceset="PICOBLADE" device=""/>
 <part name="U$3" library="tactile-music" deviceset="PMF370XN" device=""/>
