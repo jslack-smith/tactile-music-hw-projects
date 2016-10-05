@@ -12902,9 +12902,9 @@ debugging</text>
 <part name="BATTERY" library="tactile-music" deviceset="PICOBLADE" device=""/>
 <part name="U$3" library="tactile-music" deviceset="PMF370XN" device=""/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
-<part name="C1" library="rcl" deviceset="C-EU" device="C0805"/>
-<part name="C2" library="rcl" deviceset="C-EU" device="C0805"/>
-<part name="R2" library="resistor" deviceset="R-US_" device="R0805" value="60"/>
+<part name="C1" library="rcl" deviceset="C-EU" device="C0805" value="10uF"/>
+<part name="C2" library="rcl" deviceset="C-EU" device="C0805" value="10uF"/>
+<part name="R2" library="resistor" deviceset="R-US_" device="R0805" value="10k"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="POWER_SW" library="tactile-music" deviceset="JS102011SAQN" device=""/>
@@ -12998,35 +12998,33 @@ LED</text>
 <pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="81.28" y1="152.4" x2="99.06" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="A" pin="VIN"/>
-<wire x1="99.06" y1="152.4" x2="109.22" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="152.4" x2="106.68" y2="152.4" width="0.1524" layer="91"/>
 <junction x="99.06" y="152.4"/>
 <label x="81.28" y="152.4" size="1.778" layer="95"/>
+<wire x1="106.68" y1="152.4" x2="109.22" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="152.4" x2="78.74" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="152.4" x2="78.74" y2="157.48" width="0.1524" layer="91"/>
 <junction x="81.28" y="152.4"/>
 <pinref part="POWER_SW" gate="G$1" pin="1"/>
 <wire x1="73.66" y1="157.48" x2="78.74" y2="157.48" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="A" pin="~SHDN"/>
+<wire x1="109.22" y1="147.32" x2="106.68" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="147.32" x2="106.68" y2="152.4" width="0.1524" layer="91"/>
+<junction x="106.68" y="152.4"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
-<wire x1="152.4" y1="160.02" x2="157.48" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="160.02" x2="157.48" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="157.48" y1="160.02" x2="157.48" y2="165.1" width="0.1524" layer="91"/>
 <junction x="157.48" y="160.02"/>
-<pinref part="U$1" gate="A" pin="~SHDN"/>
-<wire x1="109.22" y1="147.32" x2="106.68" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="147.32" x2="106.68" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="132.08" x2="152.4" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="132.08" x2="152.4" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="2"/>
 <wire x1="157.48" y1="160.02" x2="170.18" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="A" pin="VOUT"/>
 <wire x1="144.78" y1="152.4" x2="149.86" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="152.4" x2="149.86" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="160.02" x2="152.4" y2="160.02" width="0.1524" layer="91"/>
-<junction x="152.4" y="160.02"/>
 <label x="160.02" y="160.02" size="1.778" layer="95"/>
 </segment>
 </net>

@@ -8798,10 +8798,15 @@ soldering diodes on the PCB.</text>
 <pinref part="VREG" gate="A" pin="VIN"/>
 <label x="30.48" y="154.94" size="1.778" layer="95"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="38.1" y1="152.4" x2="45.72" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="152.4" x2="43.18" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="POWER" gate="G$1" pin="2"/>
+<wire x1="43.18" y1="152.4" x2="45.72" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="152.4" x2="22.86" y2="152.4" width="0.1524" layer="91"/>
 <junction x="38.1" y="152.4"/>
+<pinref part="VREG" gate="A" pin="~SHDN"/>
+<wire x1="45.72" y1="147.32" x2="43.18" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="147.32" x2="43.18" y2="152.4" width="0.1524" layer="91"/>
+<junction x="43.18" y="152.4"/>
 </segment>
 </net>
 <net name="PWM0" class="0">
@@ -8909,17 +8914,10 @@ soldering diodes on the PCB.</text>
 <pinref part="VREG" gate="A" pin="VOUT"/>
 <wire x1="81.28" y1="152.4" x2="83.82" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="152.4" x2="83.82" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="160.02" x2="86.36" y2="160.02" width="0.1524" layer="91"/>
 <junction x="91.44" y="160.02"/>
 <pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="86.36" y1="160.02" x2="91.44" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="160.02" x2="91.44" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="160.02" x2="91.44" y2="160.02" width="0.1524" layer="91"/>
-<pinref part="VREG" gate="A" pin="~SHDN"/>
-<wire x1="45.72" y1="147.32" x2="43.18" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="147.32" x2="43.18" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="132.08" x2="86.36" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="132.08" x2="86.36" y2="160.02" width="0.1524" layer="91"/>
-<junction x="86.36" y="160.02"/>
 </segment>
 </net>
 <net name="N$2" class="0">
